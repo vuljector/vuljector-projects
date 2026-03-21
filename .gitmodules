@@ -1,0 +1,68 @@
+[submodule "jsoncpp/codebase/jsoncpp"]
+	path = jsoncpp/codebase/jsoncpp
+	url = https://github.com/open-source-parsers/jsoncpp
+[submodule "quickjs/codebase/quickjs"]
+	path = quickjs/codebase/quickjs
+	url = https://github.com/bellard/quickjs
+[submodule "hcl/codebase/hcl"]
+	path = hcl/codebase/hcl
+	url = https://github.com/hashicorp/hcl
+[submodule "ansible/codebase/ansible"]
+	path = ansible/codebase/ansible
+	url = https://github.com/ansible/ansible
+[submodule "pygments/codebase/pygments"]
+	path = pygments/codebase/pygments
+	url = https://github.com/pygments/pygments
+[submodule "rhai/codebase/rhai"]
+	path = rhai/codebase/rhai
+	url = https://github.com/rhaiscript/rhai
+[submodule "quartz/codebase/quartz"]
+	path = quartz/codebase/quartz
+	url = https://github.com/quartz-scheduler/quartz
+[submodule "php/codebase/php-src"]
+	path = php/codebase/php-src
+	url = https://github.com/php/php-src
+	branch = master
+[submodule "ruby/codebase/ruby"]
+	path = ruby/codebase/ruby
+	url = https://github.com/ruby/ruby
+[submodule "coturn/codebase/coturn"]
+	path = coturn/codebase/coturn
+	url = https://github.com/coturn/coturn
+[submodule "wamr/codebase/wasm-micro-runtime"]
+	path = wamr/codebase/wasm-micro-runtime
+	url = https://github.com/bytecodealliance/wasm-micro-runtime
+[submodule "hdf5/codebase/hdf5"]
+	path = hdf5/codebase/hdf5
+	url = https://github.com/HDFGroup/hdf5
+[submodule "golang/codebase/go"]
+	path = golang/codebase/go
+	url = https://github.com/golang/go
+[submodule "u-root/codebase/u-root"]
+	path = u-root/codebase/u-root
+	url = https://github.com/u-root/u-root
+[submodule "flask/codebase/flask"]
+	path = flask/codebase/flask
+	url = https://github.com/pallets/flask
+[submodule "pip/codebase/pip"]
+	path = pip/codebase/pip
+	url = https://github.com/pypa/pip
+[submodule "pyodbc/codebase/pyodbc"]
+	path = pyodbc/codebase/pyodbc
+	url = https://github.com/mkleehammer/pyodbc
+[submodule "thrift-js/codebase/thrift"]
+	path = thrift-js/codebase/thrift
+	url = https://github.com/apache/thrift
+[submodule "thrift-rust/codebase/thrift"]
+	path = thrift-rust/codebase/thrift
+	url = https://github.com/apache/thrift
+[submodule "linkerd2-proxy/codebase/linkerd2-proxy"]
+	path = linkerd2-proxy/codebase/linkerd2-proxy
+	url = https://github.com/linkerd/linkerd2-proxy
+[submodule "jackson-databind/codebase/jackson-databind"]
+	path = jackson-databind/codebase/jackson-databind
+	url = https://github.com/FasterXML/jackson-databind
+[submodule "openssl/codebase/openssl"]
+	path = openssl/codebase/openssl
+	url = https://github.com/openssl/openssl
+	branch = openssl-3.6

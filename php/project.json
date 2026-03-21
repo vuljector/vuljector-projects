@@ -1,0 +1,14 @@
+{
+  "schema_version": "v2",
+  "project": "php",
+  "repo": {
+    "url": "https://github.com/php/php-src",
+    "branch": "master"
+  },
+  "target_dir": "php-src",
+  "secure_base_commit": "c524773a4f4f73d7c084ef827d3d3cea8c3dfa86",
+  "unit_tests": {
+    "enabled": false,
+    "expected_passing_count": null
+  }
+}

@@ -1,4 +1,6 @@
-# Copyright 2022 Google LLC
+#!/usr/bin/python3
+
+# Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,14 +13,25 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
-################################################################################
 
-FROM gcr.io/oss-fuzz-base/base-builder-python
-RUN apt-get update && apt-get install -y libffi-dev
-RUN python3 -m pip install --upgrade pip
-RUN git clone https://github.com/pallets/werkzeug
-RUN git clone https://github.com/corydolphin/flask-cors
-RUN git clone --depth=1 https://github.com/google/fuzzing/
-RUN pip3 install markupsafe itsdangerous jinja2
-COPY build.sh *.py $SRC/
+import atheris
+
+import sys
+import pygments
+import pygments.lexers
+import pygments.util
+
+def TestOneInput(data: bytes) -> int:
+  if len(data) > (2 << 18):
+    return
+
+  try:
+    lexer = pygments.lexers.guess_lexer(str(data))
+  except pygments.util.ClassNotFound:
+    return 0
+  return 0
+
+
+atheris.instrument_all()
+atheris.Setup(sys.argv, TestOneInput)
+atheris.Fuzz()

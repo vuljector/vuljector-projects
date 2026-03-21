@@ -1,4 +1,0 @@
-# Reference only. Copied from oss-fuzz/projects/example.
-main_repo: https://github.com/vuljector/example
-language: c++
-fuzzing_engines: libfuzzer

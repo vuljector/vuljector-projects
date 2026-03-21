@@ -13,32 +13,36 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import atheris
 import sys
+import atheris
 
-with atheris.instrument_imports():
-  import werkzeug.http as whttp
+import pip._internal.req.req_file as pipreq
+from pip._internal.exceptions import RequirementsFileParseError
+from pip._internal.network.session import PipSession
 
 
-def TestOneInput(data):
-  fdp = atheris.FuzzedDataProvider(data)
+@atheris.instrument_func
+def TestOneInput(input_bytes):
+  with open("temp.req", "wb") as fd:
+      fd.write(input_bytes)
   try:
-    whttp.parse_content_range_header(fdp.ConsumeUnicode(100))
-    whttp.parse_range_header(fdp.ConsumeUnicode(100))
-    whttp.parse_set_header(fdp.ConsumeUnicode(100))
-    whttp.parse_etags(fdp.ConsumeUnicode(100))
-    whttp.parse_if_range_header(fdp.ConsumeUnicode(100))
-    whttp.parse_dict_header(fdp.ConsumeUnicode(100))
-  except ValueError as e:
-    if "Bad range provided" in str(e):
-      # https://github.com/pallets/werkzeug/blob/main/src/werkzeug/datastructures.py#L2580
-      # https://github.com/pallets/werkzeug/blob/main/src/werkzeug/datastructures.py#L2596
-      pass
-    else:
-      raise e
+    [_ for _ in pipreq.parse_requirements(
+      "temp.req",
+      PipSession(),
+      finder=None,
+      options=None,
+      constraint=None
+    )]
+  except UnicodeDecodeError:
+    # Catch this because I think it's a user issue if Unicode exceptions happen
+    None
+  except RequirementsFileParseError:
+    # Exception thrown by the requirements reader
+    None
 
 
 def main():
+  atheris.instrument_all()
   atheris.Setup(sys.argv, TestOneInput, enable_python_coverage=True)
   atheris.Fuzz()
 

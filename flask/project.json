@@ -1,18 +1,14 @@
 {
   "schema_version": "v2",
   "project": "flask",
-  "source": {
-    "oss_fuzz_project_dir": "oss-fuzz/projects/flask"
-  },
-  "repos": {
-    "original_main_repo": "https://github.com/pallets/flask",
-    "forked_main_repo": "https://github.com/vuljector/flask"
+  "repo": {
+    "url": "https://github.com/pallets/flask",
+    "branch": null
   },
   "target_dir": "flask",
   "secure_base_commit": "4cae5d8e411b1e69949d8fae669afeacbd3e5908",
   "unit_tests": {
     "enabled": false,
-    "script": "unit_tests/test.sh",
     "expected_passing_count": null
   }
 }

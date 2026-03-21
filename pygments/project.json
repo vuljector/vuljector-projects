@@ -1,0 +1,14 @@
+{
+  "schema_version": "v2",
+  "project": "pygments",
+  "repo": {
+    "url": "https://github.com/pygments/pygments",
+    "branch": null
+  },
+  "target_dir": "pygments",
+  "secure_base_commit": "75cbbe6d5a31324dca4b74aa5ffa73e279093ecf",
+  "unit_tests": {
+    "enabled": false,
+    "expected_passing_count": null
+  }
+}

@@ -1,3 +1,4 @@
+#!/bin/bash -eu
 # Copyright 2022 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,11 +15,25 @@
 #
 ################################################################################
 
-FROM gcr.io/oss-fuzz-base/base-builder-python
-RUN apt-get update && apt-get install -y libffi-dev
-RUN python3 -m pip install --upgrade pip
-RUN git clone https://github.com/pallets/werkzeug
-RUN git clone https://github.com/corydolphin/flask-cors
-RUN git clone --depth=1 https://github.com/google/fuzzing/
-RUN pip3 install markupsafe itsdangerous jinja2
-COPY build.sh *.py $SRC/
+mkdir my_build
+
+pushd my_build/
+cmake -DFUZZER=ON -DLIB_FUZZING_ENGINE="$LIB_FUZZING_ENGINE" \
+    -DCMAKE_EXE_LINKER_FLAGS="-Wl,-rpath,'\$ORIGIN/lib'" -DWITH_MYSQL=OFF -Wno-dev ../.
+make -j$(nproc)
+popd
+
+pushd my_build/fuzzing/
+cp FuzzStun $OUT/FuzzStun
+cp FuzzStunClient $OUT/FuzzStunClient
+popd
+
+pushd fuzzing/input/
+cp FuzzStun_seed_corpus.zip $OUT/FuzzStun_seed_corpus.zip
+cp FuzzStunClient_seed_corpus.zip $OUT/FuzzStunClient_seed_corpus.zip
+popd
+
+pushd /lib/x86_64-linux-gnu/
+mkdir $OUT/lib/
+cp libevent* $OUT/lib/.
+popd

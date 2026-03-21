@@ -1,3 +1,4 @@
+#!/bin/bash -eu
 # Copyright 2022 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,11 +15,14 @@
 #
 ################################################################################
 
-FROM gcr.io/oss-fuzz-base/base-builder-python
-RUN apt-get update && apt-get install -y libffi-dev
-RUN python3 -m pip install --upgrade pip
-RUN git clone https://github.com/pallets/werkzeug
-RUN git clone https://github.com/corydolphin/flask-cors
-RUN git clone --depth=1 https://github.com/google/fuzzing/
-RUN pip3 install markupsafe itsdangerous jinja2
-COPY build.sh *.py $SRC/
+# Compile the fake odbc driver
+clang -Wno-unused-result -Wsign-compare -Wunreachable-code \
+      -fwrapv  -Wno-write-strings -fPIC \
+      -shared -I/usr/local/include/python3.8 -I$PWD/src  \
+      -o $OUT/fuzzodbc.so $SRC/fake_odbc_driver.c
+
+python3 setup.py install
+pip3 install .
+for fuzzer in $(find $SRC -name 'fuzz_*.py'); do
+  LD_PRELOAD=$OUT/sanitizer_with_fuzzer.so ASAN_OPTIONS=detect_leaks=0 compile_python_fuzzer $fuzzer --add-data $OUT/fuzzodbc.so:.
+done

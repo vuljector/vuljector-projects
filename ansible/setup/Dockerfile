@@ -1,4 +1,4 @@
-# Copyright 2022 Google LLC
+# Copyright 2022 Google LLC.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,11 +14,17 @@
 #
 ################################################################################
 
-FROM gcr.io/oss-fuzz-base/base-builder-python
-RUN apt-get update && apt-get install -y libffi-dev
-RUN python3 -m pip install --upgrade pip
-RUN git clone https://github.com/pallets/werkzeug
-RUN git clone https://github.com/corydolphin/flask-cors
-RUN git clone --depth=1 https://github.com/google/fuzzing/
-RUN pip3 install markupsafe itsdangerous jinja2
-COPY build.sh *.py $SRC/
+FROM gcr.io/oss-fuzz-base/base-builder-python:ubuntu-24-04
+
+RUN apt-get update && apt-get install -y make autoconf automake build-essential
+RUN pip3 install --upgrade pip
+
+RUN pip3 install --upgrade pip && \
+    pip3 install cython cryptography
+
+RUN cd ansible && \
+    pip3 install -r ./requirements.txt
+
+WORKDIR ansible
+
+COPY build.sh fuzz_encrypt.sh *.py $SRC/

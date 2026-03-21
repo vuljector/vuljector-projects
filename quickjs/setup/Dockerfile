@@ -1,4 +1,4 @@
-# Copyright 2022 Google LLC
+# Copyright 2020 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,11 +14,16 @@
 #
 ################################################################################
 
-FROM gcr.io/oss-fuzz-base/base-builder-python
-RUN apt-get update && apt-get install -y libffi-dev
-RUN python3 -m pip install --upgrade pip
-RUN git clone https://github.com/pallets/werkzeug
-RUN git clone https://github.com/corydolphin/flask-cors
-RUN git clone --depth=1 https://github.com/google/fuzzing/
-RUN pip3 install markupsafe itsdangerous jinja2
-COPY build.sh *.py $SRC/
+FROM gcr.io/oss-fuzz-base/base-builder
+RUN apt-get update && apt-get install -y make
+RUN git clone --depth 1 https://github.com/renatahodovan/quickjs-corpus
+WORKDIR $SRC/quickjs
+COPY build.sh run_tests.sh run_tests_patch.diff $SRC/
+
+# At the time of writing, `tests/test_worker.js`
+# fails from latest master, so we remove it.
+# This is being tracked in https://github.com/bellard/quickjs/issues/390.
+# A TODO is to track when it has been patched
+# upstream and enable all tests.
+RUN git apply $SRC/run_tests_patch.diff
+

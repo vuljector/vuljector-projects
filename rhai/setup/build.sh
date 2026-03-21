@@ -1,4 +1,5 @@
-# Copyright 2022 Google LLC
+#!/bin/bash -eu
+# Copyright 2023 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,12 +14,14 @@
 # limitations under the License.
 #
 ################################################################################
+cargo +nightly fuzz build -O --debug-assertions
 
-FROM gcr.io/oss-fuzz-base/base-builder-python
-RUN apt-get update && apt-get install -y libffi-dev
-RUN python3 -m pip install --upgrade pip
-RUN git clone https://github.com/pallets/werkzeug
-RUN git clone https://github.com/corydolphin/flask-cors
-RUN git clone --depth=1 https://github.com/google/fuzzing/
-RUN pip3 install markupsafe itsdangerous jinja2
-COPY build.sh *.py $SRC/
+FUZZ_TARGET_OUTPUT_DIR=fuzz/target/x86_64-unknown-linux-gnu/release
+for f in fuzz/fuzz_targets/*.rs
+do
+    FUZZ_TARGET_NAME=$(basename ${f%.*})
+    cp $FUZZ_TARGET_OUTPUT_DIR/$FUZZ_TARGET_NAME $OUT/
+done
+
+find . -name '*.rhai' -exec zip $OUT/scripting_seed_corpus.zip {} \;
+cp $OUT/scripting_seed_corpus.zip $OUT/ast_seed_corpus.zip

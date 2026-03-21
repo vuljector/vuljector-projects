@@ -14,11 +14,10 @@
 #
 ################################################################################
 
-FROM gcr.io/oss-fuzz-base/base-builder-python
-RUN apt-get update && apt-get install -y libffi-dev
-RUN python3 -m pip install --upgrade pip
-RUN git clone https://github.com/pallets/werkzeug
-RUN git clone https://github.com/corydolphin/flask-cors
-RUN git clone --depth=1 https://github.com/google/fuzzing/
-RUN pip3 install markupsafe itsdangerous jinja2
-COPY build.sh *.py $SRC/
+# Held back because of github.com/google/oss-fuzz/pull/13407
+# Please fix the build failure + upgrade.
+
+FROM gcr.io/oss-fuzz-base/base-builder-python@sha256:d223a882810372830fd7968eb3e64533f3a2318c90be43ac753a46a15946faec
+RUN apt-get update && apt-get install -y make autoconf automake libtool unixodbc-dev
+WORKDIR pyodbc
+COPY build.sh *.py *.c $SRC/

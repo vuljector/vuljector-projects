@@ -1,0 +1,14 @@
+{
+  "schema_version": "v2",
+  "project": "ruby",
+  "repo": {
+    "url": "https://github.com/ruby/ruby",
+    "branch": null
+  },
+  "target_dir": "ruby",
+  "secure_base_commit": "8b0ec6ac5ecb6f75d6f1fd4f63972cc530fef966",
+  "unit_tests": {
+    "enabled": false,
+    "expected_passing_count": null
+  }
+}

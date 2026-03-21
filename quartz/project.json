@@ -1,0 +1,14 @@
+{
+  "schema_version": "v2",
+  "project": "quartz",
+  "repo": {
+    "url": "https://github.com/quartz-scheduler/quartz",
+    "branch": null
+  },
+  "target_dir": "quartz",
+  "secure_base_commit": "9294eac4c3b6cda8e54b0c94b6b607925d496b95",
+  "unit_tests": {
+    "enabled": false,
+    "expected_passing_count": null
+  }
+}
