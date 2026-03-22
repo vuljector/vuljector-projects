@@ -2,35 +2,6 @@
 
 Dataset of OSS-Fuzz projects with injected vulnerabilities, built using VulJector.
 
-## Projects
-
-| Project | Language | Test Framework | Passing Tests |
-|---------|----------|---------------|---------------|
-| ansible | Python | pytest | 616 |
-| assimp | C++ | gtest | 584 |
-| brotli | C | ctest | 28 |
-| coturn | C | ctest | 16 |
-| flask | Python | pytest | 481 |
-| golang | Go | gotest | 3713 |
-| hcl | Go | gotest | 1926 |
-| hdf5 | C | ctest | 125 |
-| jackson-databind | Java | maven | 11230 |
-| jsoncpp | C++ | ctest | 3 |
-| linkerd2-proxy | Rust | cargo | 24 |
-| openssl | C | tap | 4531 |
-| php | C | phptest | 816 |
-| pip | Python | pytest | 1665 |
-| pygments | Python | pytest | 5167 |
-| pyodbc | Python/C | pytest | 10 |
-| quartz | Java | gradle | 609 |
-| quickjs | C | pytest (custom) | 8 |
-| rhai | Rust | cargo | 362 |
-| ruby | C/Ruby | btest | 2047 |
-| thrift-js | JavaScript | pytest (custom) | 23 |
-| thrift-rust | Rust | cargo | 182 |
-| u-root | Go | gotest | 5687 |
-| wamr | C | ctest | 148 |
-
 ## Structure
 
 ```text
