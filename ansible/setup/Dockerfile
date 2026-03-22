@@ -19,6 +19,7 @@ FROM gcr.io/oss-fuzz-base/base-builder-python:ubuntu-24-04
 RUN apt-get update && apt-get install -y make autoconf automake build-essential
 RUN pip3 install --upgrade pip
 
+RUN git clone https://github.com/ansible/ansible
 RUN pip3 install --upgrade pip && \
     pip3 install cython cryptography
 

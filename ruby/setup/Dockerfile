@@ -26,4 +26,5 @@ RUN apt-get update && apt-get install -y \
     libtool \
     bison \
     wget
+RUN git clone --depth=1 --single-branch https://github.com/ruby/ruby $SRC/ruby
 COPY *.sh *.cpp *.c *.options $SRC/

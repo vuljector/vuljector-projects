@@ -23,6 +23,7 @@ RUN apt-get --yes update \
    && apt-get clean \
    && rm --recursive --force /var/lib/apt/lists/*
 
+RUN git clone --depth 1 https://github.com/linkerd/linkerd2-proxy
 
 COPY build.sh $SRC/
 WORKDIR $SRC

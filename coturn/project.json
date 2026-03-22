@@ -8,7 +8,7 @@
   "target_dir": "coturn",
   "secure_base_commit": "ba571ad79547460db7868542ef9532f07661d1c7",
   "unit_tests": {
-    "enabled": false,
-    "expected_passing_count": null
+    "enabled": true,
+    "expected_passing_count": 16
   }
 }

@@ -8,7 +8,7 @@
   "target_dir": "openssl",
   "secure_base_commit": "4e65cd46e74792f77b5523c12c46365fd4835f63",
   "unit_tests": {
-    "enabled": false,
-    "expected_passing_count": null
+    "enabled": true,
+    "expected_passing_count": 4531
   }
 }

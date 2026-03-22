@@ -33,5 +33,6 @@ RUN rustup component add clippy
 
 COPY build.sh $SRC/
 
+RUN git clone --depth 1 https://github.com/apache/thrift.git
 
 WORKDIR $SRC/thrift

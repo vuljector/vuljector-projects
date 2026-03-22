@@ -8,7 +8,7 @@
   "target_dir": "pygments",
   "secure_base_commit": "75cbbe6d5a31324dca4b74aa5ffa73e279093ecf",
   "unit_tests": {
-    "enabled": false,
-    "expected_passing_count": null
+    "enabled": true,
+    "expected_passing_count": 5167
   }
 }

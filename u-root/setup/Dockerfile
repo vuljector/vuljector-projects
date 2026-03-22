@@ -15,5 +15,6 @@
 ################################################################################
 
 FROM gcr.io/oss-fuzz-base/base-builder-go
+RUN git clone --depth 1  https://github.com/u-root/u-root
 WORKDIR u-root
 COPY build.sh $SRC/

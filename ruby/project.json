@@ -6,9 +6,9 @@
     "branch": null
   },
   "target_dir": "ruby",
-  "secure_base_commit": "8b0ec6ac5ecb6f75d6f1fd4f63972cc530fef966",
+  "secure_base_commit": "251fd7a11e442c34c1b60908409e5611f69ef858",
   "unit_tests": {
-    "enabled": false,
-    "expected_passing_count": null
+    "enabled": true,
+    "expected_passing_count": 2047
   }
 }

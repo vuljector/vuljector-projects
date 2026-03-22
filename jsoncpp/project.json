@@ -8,7 +8,7 @@
   "target_dir": "jsoncpp",
   "secure_base_commit": "cdc84831f1861c4372cc2ced8284f0b5d0bcec5a",
   "unit_tests": {
-    "enabled": false,
-    "expected_passing_count": null
+    "enabled": true,
+    "expected_passing_count": 69
   }
 }

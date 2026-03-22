@@ -8,7 +8,7 @@
   "target_dir": "hcl",
   "secure_base_commit": "63950438f246229292dd943d27610d48d0c4ee75",
   "unit_tests": {
-    "enabled": false,
-    "expected_passing_count": null
+    "enabled": true,
+    "expected_passing_count": 1926
   }
 }

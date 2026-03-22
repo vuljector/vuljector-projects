@@ -8,7 +8,7 @@
   "target_dir": "flask",
   "secure_base_commit": "4cae5d8e411b1e69949d8fae669afeacbd3e5908",
   "unit_tests": {
-    "enabled": false,
-    "expected_passing_count": null
+    "enabled": true,
+    "expected_passing_count": 481
   }
 }

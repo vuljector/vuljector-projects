@@ -15,6 +15,7 @@
 ################################################################################
 
 FROM gcr.io/oss-fuzz-base/base-builder-python
+RUN git clone https://github.com/pypa/pip/
 WORKDIR $SRC/pip
 COPY build.sh $SRC/
 COPY fuzz_* $SRC/

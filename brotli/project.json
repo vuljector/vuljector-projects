@@ -1,0 +1,14 @@
+{
+  "schema_version": "v2",
+  "project": "brotli",
+  "repo": {
+    "url": "https://github.com/google/brotli",
+    "branch": null
+  },
+  "target_dir": "brotli",
+  "secure_base_commit": "a413517b9419b68e2e3aff328dc967ed7c1e1712",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 28
+  }
+}

@@ -21,5 +21,6 @@ RUN curl -L https://download.java.net/openjdk/jdk11.0.0.1/ri/openjdk-11.0.0.1_li
 
 ENV JAVA_HOME="$SRC/jdk-11.0.0.1"
 ENV PATH="$JAVA_HOME/bin:$PATH"
+RUN git clone --depth 1 https://github.com/quartz-scheduler/quartz quartz
 COPY *.sh *.java $SRC/
 WORKDIR $SRC/quartz

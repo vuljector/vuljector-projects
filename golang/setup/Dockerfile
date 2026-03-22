@@ -17,6 +17,7 @@
 FROM gcr.io/oss-fuzz-base/base-builder-go
 
 RUN git clone --depth 1 https://github.com/dvyukov/go-fuzz-corpus golang
+RUN git clone --depth 1 https://github.com/golang/go
 RUN git clone --depth 1 https://github.com/golang/net
 RUN git clone --depth 1 https://github.com/golang/image
 RUN git clone --depth 1 https://github.com/golang/crypto

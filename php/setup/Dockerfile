@@ -17,5 +17,6 @@
 FROM gcr.io/oss-fuzz-base/base-builder
 RUN apt-get update && \
     apt-get install -y autoconf automake libtool bison re2c pkg-config
+RUN git clone --depth 1 --branch master https://github.com/php/php-src.git php-src
 WORKDIR php-src
 COPY replay_build.sh build.sh $SRC/

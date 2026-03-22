@@ -66,3 +66,9 @@
 	path = openssl/codebase/openssl
 	url = https://github.com/openssl/openssl
 	branch = openssl-3.6
+[submodule "assimp/codebase/assimp"]
+	path = assimp/codebase/assimp
+	url = https://github.com/assimp/assimp
+[submodule "brotli/codebase/brotli"]
+	path = brotli/codebase/brotli
+	url = https://github.com/google/brotli

@@ -8,7 +8,7 @@
   "target_dir": "ansible",
   "secure_base_commit": "02a65ab2923b9a4ec30ad82024ec4fa547080b6a",
   "unit_tests": {
-    "enabled": false,
-    "expected_passing_count": null
+    "enabled": true,
+    "expected_passing_count": 616
   }
 }

@@ -29,5 +29,6 @@ RUN wget https://archives.boost.io/release/1.87.0/source/boost_1_87_0.tar.gz && 
 
 COPY build.sh $SRC/
 
+RUN git clone --depth 1 https://github.com/apache/thrift.git
 
 WORKDIR $SRC/thrift
