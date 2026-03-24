@@ -1,0 +1,10 @@
+{
+  "project": "image-rs",
+  "main_repo_url": "https://github.com/image-rs/image",
+  "target_dir": "image",
+  "secure_base_commit": "c79d6091050646349ba062950f76472be48dbee0",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 511
+  }
+}

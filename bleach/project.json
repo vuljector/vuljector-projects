@@ -1,0 +1,10 @@
+{
+  "project": "bleach",
+  "main_repo_url": "https://github.com/mozilla/bleach",
+  "target_dir": "bleach",
+  "secure_base_commit": "cd47b4ce495859065da23c2116f651e591e1e90d",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 432
+  }
+}

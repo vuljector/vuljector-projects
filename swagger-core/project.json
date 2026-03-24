@@ -1,0 +1,10 @@
+{
+  "project": "swagger-core",
+  "main_repo_url": "https://github.com/swagger-api/swagger-core",
+  "target_dir": "swagger-core",
+  "secure_base_commit": "1d25dc1f9388e194c148524dda64eff015a56b89",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1760
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "libplist",
+  "main_repo_url": "https://github.com/libimobiledevice/libplist",
+  "target_dir": "libplist",
+  "secure_base_commit": "3edac28498d883f1f768699ee15ce85a82bb2a7b",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 42
+  }
+}

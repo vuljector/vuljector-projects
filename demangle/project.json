@@ -1,0 +1,10 @@
+{
+  "project": "demangle",
+  "main_repo_url": "https://github.com/ianlancetaylor/demangle",
+  "target_dir": "demangle",
+  "secure_base_commit": "96ee0021ea0fb9174681b8004d8deba3c499d7f5",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 30479
+  }
+}

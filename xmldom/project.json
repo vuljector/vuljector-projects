@@ -1,0 +1,10 @@
+{
+  "project": "xmldom",
+  "main_repo_url": "https://github.com/xmldom/xmldom",
+  "target_dir": "xmldom",
+  "secure_base_commit": "2d73ddd1515f8d8bcf1e96cf8434384271bf9587",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2230
+  }
+}

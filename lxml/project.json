@@ -1,0 +1,10 @@
+{
+  "project": "lxml",
+  "main_repo_url": "https://github.com/lxml/lxml",
+  "target_dir": "lxml",
+  "secure_base_commit": "8096c644bc53d596c26288825cc8ea3e1d0479f0",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1908
+  }
+}

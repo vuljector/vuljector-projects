@@ -1,0 +1,10 @@
+{
+  "project": "mongo-go-driver",
+  "main_repo_url": "https://github.com/mongodb/mongo-go-driver",
+  "target_dir": "mongo-go-driver",
+  "secure_base_commit": "8fe7e71d20cb313b3cc9ea9a0987ea17b6358c23",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 5903
+  }
+}

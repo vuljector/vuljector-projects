@@ -1,0 +1,10 @@
+{
+  "project": "rustls",
+  "main_repo_url": "https://github.com/ctz/rustls",
+  "target_dir": "rustls",
+  "secure_base_commit": "5243275b975c0e57cb4088ca28665e07daec83d7",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 241
+  }
+}

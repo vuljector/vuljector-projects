@@ -1,0 +1,10 @@
+{
+  "project": "libressl",
+  "main_repo_url": "https://github.com/libressl/portable",
+  "target_dir": "portable",
+  "secure_base_commit": "979d238b181325b2df6689275d7caf1b051b9689",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 136
+  }
+}

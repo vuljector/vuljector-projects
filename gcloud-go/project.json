@@ -1,0 +1,10 @@
+{
+  "project": "gcloud-go",
+  "main_repo_url": "https://github.com/googleapis/google-cloud-go",
+  "target_dir": "google-cloud-go",
+  "secure_base_commit": "901e8186f8d7b2d2a93bd1c003a5e00c4abe127e",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 119
+  }
+}

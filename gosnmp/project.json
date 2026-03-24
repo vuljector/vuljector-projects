@@ -1,0 +1,10 @@
+{
+  "project": "gosnmp",
+  "main_repo_url": "https://github.com/gosnmp/gosnmp",
+  "target_dir": "gosnmp",
+  "secure_base_commit": "9855b993e1dd70aaec45e6105b1a19d4bc60b305",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 5
+  }
+}

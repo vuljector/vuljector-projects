@@ -1,0 +1,10 @@
+{
+  "project": "jolt",
+  "main_repo_url": "https://github.com/bazaarvoice/jolt",
+  "target_dir": "jolt",
+  "secure_base_commit": "990aee98233362dd0a1c8975056f280c55305c19",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2370
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "glom",
+  "main_repo_url": "https://github.com/mahmoud/glom",
+  "target_dir": "glom",
+  "secure_base_commit": "c1b2d387548fd3bb736453a6dbd6f749cf329faa",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 198
+  }
+}

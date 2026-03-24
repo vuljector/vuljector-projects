@@ -1,0 +1,10 @@
+{
+  "project": "lz4_flex",
+  "main_repo_url": "https://github.com/PSeitz/lz4_flex",
+  "target_dir": "lz4_flex",
+  "secure_base_commit": "0b9bd1d62fc0ebef71e9435e3b1578504a513a48",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 72
+  }
+}

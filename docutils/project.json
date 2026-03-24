@@ -1,0 +1,10 @@
+{
+  "project": "docutils",
+  "main_repo_url": "https://github.com/jwilk-mirrors/docutils",
+  "target_dir": "docutils",
+  "secure_base_commit": "3903a8a063e3a6594baf22e4dd387238071ffeed",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 527
+  }
+}

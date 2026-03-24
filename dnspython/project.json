@@ -1,0 +1,10 @@
+{
+  "project": "dnspython",
+  "main_repo_url": "https://github.com/rthalley/dnspython",
+  "target_dir": "dnspython",
+  "secure_base_commit": "04ef19a280101f7c815162ee121e4bcd03d02012",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 15182
+  }
+}

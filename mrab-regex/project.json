@@ -1,0 +1,10 @@
+{
+  "project": "mrab-regex",
+  "main_repo_url": "https://github.com/mrabarnett/mrab-regex",
+  "target_dir": "mrab-regex",
+  "secure_base_commit": "df2d5ac9983af6febc0c2f32aff396a06142f8cb",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 9779326
+  }
+}

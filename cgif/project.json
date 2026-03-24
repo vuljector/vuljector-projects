@@ -1,0 +1,10 @@
+{
+  "project": "cgif",
+  "main_repo_url": "https://github.com/dloebl/cgif",
+  "target_dir": "cgif",
+  "secure_base_commit": "436d5a4508ab09e960c7d140b935a4199dd1fb55",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 60
+  }
+}

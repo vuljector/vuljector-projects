@@ -1,0 +1,10 @@
+{
+  "project": "quick-xml",
+  "main_repo_url": "https://github.com/tafia/quick-xml",
+  "target_dir": "quick-xml",
+  "secure_base_commit": "6238d8a16179d68718b43882e544ebd20982c79c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1251
+  }
+}

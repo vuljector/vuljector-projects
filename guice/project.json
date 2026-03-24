@@ -1,0 +1,10 @@
+{
+  "project": "guice",
+  "main_repo_url": "https://github.com/google/guice",
+  "target_dir": "guice",
+  "secure_base_commit": "6682b69d081371cceff2a100075a74f41b819a87",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 14718
+  }
+}

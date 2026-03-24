@@ -1,0 +1,10 @@
+{
+  "project": "unbound",
+  "main_repo_url": "https://github.com/NLnetLabs/unbound",
+  "target_dir": "unbound",
+  "secure_base_commit": "535d899beff4e14a409aecb499a840d349dc1c7b",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 443
+  }
+}

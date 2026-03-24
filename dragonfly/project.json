@@ -1,0 +1,10 @@
+{
+  "project": "dragonfly",
+  "main_repo_url": "https://github.com/dragonflyoss/Dragonfly",
+  "target_dir": "Dragonfly",
+  "secure_base_commit": "eda0bdca3d4831d868dcc28ac8c2d19cab0d0194",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1656
+  }
+}

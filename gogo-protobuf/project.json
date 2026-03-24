@@ -1,0 +1,10 @@
+{
+  "project": "gogo-protobuf",
+  "main_repo_url": "https://github.com/gogo/protobuf",
+  "target_dir": "protobuf",
+  "secure_base_commit": "f67b8970b736e53dbd7d0a27146c8f1ac52f74e5",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 5124
+  }
+}

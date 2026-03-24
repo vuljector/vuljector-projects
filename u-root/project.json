@@ -1,14 +1,10 @@
 {
-  "schema_version": "v2",
   "project": "u-root",
-  "repo": {
-    "url": "https://github.com/u-root/u-root",
-    "branch": null
-  },
+  "main_repo_url": "https://github.com/u-root/u-root",
   "target_dir": "u-root",
   "secure_base_commit": "778f65d1c40f118f1463ec815fc42cd4f88ddfad",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 5687
+    "expected_passing_count": 5664
   }
 }

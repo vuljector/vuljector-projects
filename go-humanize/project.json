@@ -1,0 +1,10 @@
+{
+  "project": "go-humanize",
+  "main_repo_url": "https://github.com/dustin/go-humanize",
+  "target_dir": "go-humanize",
+  "secure_base_commit": "4d1d9082551ec085912e7d2253a33ae547fca000",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 44
+  }
+}

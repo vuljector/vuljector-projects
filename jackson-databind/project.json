@@ -1,10 +1,6 @@
 {
-  "schema_version": "v2",
   "project": "jackson-databind",
-  "repo": {
-    "url": "https://github.com/FasterXML/jackson-databind",
-    "branch": null
-  },
+  "main_repo_url": "https://github.com/FasterXML/jackson-databind",
   "target_dir": "jackson-databind",
   "secure_base_commit": "21cfb7cf31f95fcf1c40527fb78bf745875b09f1",
   "unit_tests": {

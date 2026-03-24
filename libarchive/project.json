@@ -1,0 +1,10 @@
+{
+  "project": "libarchive",
+  "main_repo_url": "https://github.com/libarchive/libarchive",
+  "target_dir": "libarchive",
+  "secure_base_commit": "8f6614c378743e9daa3ab36b4c036bebfdd111a4",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 866
+  }
+}

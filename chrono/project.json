@@ -1,0 +1,10 @@
+{
+  "project": "chrono",
+  "main_repo_url": "https://github.com/chronotope/chrono",
+  "target_dir": "chrono",
+  "secure_base_commit": "c14b4599d07ef36ffa1f8a531fb0bc7eb3b42464",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 289
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "expr",
+  "main_repo_url": "https://github.com/expr-lang/expr",
+  "target_dir": "expr",
+  "secure_base_commit": "b90e77c64fb9ba94587b4284da4bb2cf28aae9db",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 66762
+  }
+}

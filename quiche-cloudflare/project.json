@@ -1,0 +1,10 @@
+{
+  "project": "quiche-cloudflare",
+  "main_repo_url": "https://github.com/cloudflare/quiche",
+  "target_dir": "quiche",
+  "secure_base_commit": "b30f9e76c32332aa35377dcb00f556626d47a841",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1181
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "tungstenite-rs",
+  "main_repo_url": "https://github.com/snapview/tungstenite-rs",
+  "target_dir": "tungstenite-rs",
+  "secure_base_commit": "c2921718b76f0ed8c69a895397ed981e4a321f6f",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 59
+  }
+}

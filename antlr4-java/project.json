@@ -1,0 +1,10 @@
+{
+  "project": "antlr4-java",
+  "main_repo_url": "https://github.com/antlr/antlr4",
+  "target_dir": "antlr4",
+  "secure_base_commit": "7d5770395bb7b02eb56e7c62662cb1d7c08f42a3",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2406
+  }
+}

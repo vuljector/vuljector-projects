@@ -1,0 +1,10 @@
+{
+  "project": "sqlparse",
+  "main_repo_url": "https://github.com/andialbrecht/sqlparse",
+  "target_dir": "sqlparse",
+  "secure_base_commit": "897eb2df8c0608b9ee4682e9728f669adf13595e",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 3464
+  }
+}

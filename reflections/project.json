@@ -1,0 +1,10 @@
+{
+  "project": "reflections",
+  "main_repo_url": "https://github.com/ronmamo/reflections",
+  "target_dir": "reflections",
+  "secure_base_commit": "f5514b125c4f4b58e92beb0979a40ddce48d5be1",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 136
+  }
+}

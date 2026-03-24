@@ -1,0 +1,10 @@
+{
+  "project": "exiv2",
+  "main_repo_url": "https://github.com/Exiv2/exiv2",
+  "target_dir": "exiv2",
+  "secure_base_commit": "f9efd0edea46f11867e7e4331503ea90d3af2217",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 6
+  }
+}

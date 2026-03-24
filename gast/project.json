@@ -1,0 +1,10 @@
+{
+  "project": "gast",
+  "main_repo_url": "https://github.com/serge-sans-paille/gast",
+  "target_dir": "gast",
+  "secure_base_commit": "bffc983e87ff982aabb2ae5ab4d937f157af2cbc",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 60
+  }
+}

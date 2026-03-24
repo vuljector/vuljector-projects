@@ -1,10 +1,6 @@
 {
-  "schema_version": "v2",
   "project": "pip",
-  "repo": {
-    "url": "https://github.com/pypa/pip",
-    "branch": null
-  },
+  "main_repo_url": "https://github.com/pypa/pip",
   "target_dir": "pip",
   "secure_base_commit": "f82e37d6352e2bc7b5f9e1982a4f7de6aec03956",
   "unit_tests": {

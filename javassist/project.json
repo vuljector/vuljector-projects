@@ -1,0 +1,10 @@
+{
+  "project": "javassist",
+  "main_repo_url": "https://github.com/jboss-javassist/javassist",
+  "target_dir": "javassist",
+  "secure_base_commit": "bbe0e077ef36ef399c67e3683d7bc8c2a8ad0444",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 888
+  }
+}

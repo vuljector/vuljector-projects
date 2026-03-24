@@ -1,0 +1,10 @@
+{
+  "project": "clock",
+  "main_repo_url": "https://github.com/benbjohnson/clock",
+  "target_dir": "clock",
+  "secure_base_commit": "fa525c8ac4e629b5385b7b6546d69e0e7de0560e",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 43
+  }
+}

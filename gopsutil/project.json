@@ -1,0 +1,10 @@
+{
+  "project": "gopsutil",
+  "main_repo_url": "https://github.com/shirou/gopsutil",
+  "target_dir": "gopsutil",
+  "secure_base_commit": "30959634e7f4c52c2fa427a259de81ac1388a1ca",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 177
+  }
+}

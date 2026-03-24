@@ -1,0 +1,10 @@
+{
+  "project": "gitdb",
+  "main_repo_url": "https://github.com/gitpython-developers/gitdb",
+  "target_dir": "gitdb",
+  "secure_base_commit": "5c1b3036a6e34782e0ab6ce85e5ae64fe777fdbe",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 23
+  }
+}

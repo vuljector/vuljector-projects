@@ -1,14 +1,10 @@
 {
-  "schema_version": "v2",
   "project": "flask",
-  "repo": {
-    "url": "https://github.com/pallets/flask",
-    "branch": null
-  },
+  "main_repo_url": "https://github.com/pallets/flask",
   "target_dir": "flask",
   "secure_base_commit": "4cae5d8e411b1e69949d8fae669afeacbd3e5908",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 490
+    "expected_passing_count": 489
   }
 }

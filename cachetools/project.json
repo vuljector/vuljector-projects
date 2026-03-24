@@ -1,0 +1,10 @@
+{
+  "project": "cachetools",
+  "main_repo_url": "https://github.com/tkem/cachetools",
+  "target_dir": "cachetools",
+  "secure_base_commit": "5dce86fc5c9c565c6e9c912e2be5d6abb9586a1d",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 277
+  }
+}

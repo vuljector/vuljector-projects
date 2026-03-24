@@ -1,0 +1,10 @@
+{
+  "project": "go-sftp",
+  "main_repo_url": "https://github.com/pkg/sftp",
+  "target_dir": "sftp",
+  "secure_base_commit": "ab3b1a348110878ba49035ce91904cc41743feb0",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 155
+  }
+}

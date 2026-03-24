@@ -1,0 +1,10 @@
+{
+  "project": "go-pprof",
+  "main_repo_url": "https://github.com/google/pprof",
+  "target_dir": "pprof",
+  "secure_base_commit": "a15ffb7f9dccb95074ad153aef0f1fcbb01e61e3",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 511
+  }
+}

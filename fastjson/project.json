@@ -1,0 +1,10 @@
+{
+  "project": "fastjson",
+  "main_repo_url": "https://github.com/valyala/fastjson",
+  "target_dir": "fastjson",
+  "secure_base_commit": "d652a1b1909d3520389b2c287ca3cf3aa3791451",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 95
+  }
+}

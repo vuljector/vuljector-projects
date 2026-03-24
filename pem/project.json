@@ -1,0 +1,10 @@
+{
+  "project": "pem",
+  "main_repo_url": "https://github.com/hynek/pem",
+  "target_dir": "pem",
+  "secure_base_commit": "a1f18f63a17c3a2d5c00ebd70b98932199c3289f",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 73
+  }
+}

@@ -1,10 +1,6 @@
 {
-  "schema_version": "v2",
   "project": "rhai",
-  "repo": {
-    "url": "https://github.com/rhaiscript/rhai",
-    "branch": null
-  },
+  "main_repo_url": "https://github.com/rhaiscript/rhai",
   "target_dir": "rhai",
   "secure_base_commit": "954abdc40dd2cb647221e827642c3ca4c360983c",
   "unit_tests": {

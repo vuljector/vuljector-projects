@@ -1,0 +1,10 @@
+{
+  "project": "tar-rs",
+  "main_repo_url": "https://github.com/alexcrichton/tar-rs",
+  "target_dir": "tar-rs",
+  "secure_base_commit": "8296b9a88cfcdbdd1e3b59cd820899b35e6151e1",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 108
+  }
+}

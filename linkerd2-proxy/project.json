@@ -1,10 +1,6 @@
 {
-  "schema_version": "v2",
   "project": "linkerd2-proxy",
-  "repo": {
-    "url": "https://github.com/linkerd/linkerd2-proxy",
-    "branch": null
-  },
+  "main_repo_url": "https://github.com/linkerd/linkerd2-proxy",
   "target_dir": "linkerd2-proxy",
   "secure_base_commit": "b28453f95e3592e8514cb5886bee63553246a3aa",
   "unit_tests": {

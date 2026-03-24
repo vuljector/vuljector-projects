@@ -1,0 +1,10 @@
+{
+  "project": "jackson-datatypes-collections",
+  "main_repo_url": "https://github.com/FasterXML/jackson-datatypes-collections",
+  "target_dir": "jackson-datatypes-collections",
+  "secure_base_commit": "54718c40d707bb6320a540f6070aace13f2f2ad3",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 624
+  }
+}

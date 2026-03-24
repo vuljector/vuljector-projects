@@ -1,0 +1,10 @@
+{
+  "project": "pycparser",
+  "main_repo_url": "https://github.com/eliben/pycparser",
+  "target_dir": "pycparser",
+  "secure_base_commit": "9cd0027f874fcceacca87fdfb163a387bf4d56b6",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 815
+  }
+}

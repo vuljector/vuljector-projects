@@ -1,0 +1,10 @@
+{
+  "project": "python-fastjsonschema",
+  "main_repo_url": "https://github.com/horejsek/python-fastjsonschema",
+  "target_dir": "python-fastjsonschema",
+  "secure_base_commit": "8e39084b0d7b4dbb98046ba106bc162784ed9fab",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 566
+  }
+}

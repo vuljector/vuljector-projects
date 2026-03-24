@@ -1,0 +1,10 @@
+{
+  "project": "jansi",
+  "main_repo_url": "https://github.com/fusesource/jansi",
+  "target_dir": "jansi",
+  "secure_base_commit": "70186aa41bef6877a83e1a0c3ed7ebe87185f377",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 210
+  }
+}

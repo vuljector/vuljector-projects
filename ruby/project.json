@@ -1,10 +1,6 @@
 {
-  "schema_version": "v2",
   "project": "ruby",
-  "repo": {
-    "url": "https://github.com/ruby/ruby",
-    "branch": null
-  },
+  "main_repo_url": "https://github.com/ruby/ruby",
   "target_dir": "ruby",
   "secure_base_commit": "251fd7a11e442c34c1b60908409e5611f69ef858",
   "unit_tests": {

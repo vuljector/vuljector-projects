@@ -1,0 +1,10 @@
+{
+  "project": "cron-utils",
+  "main_repo_url": "https://github.com/jmrozanec/cron-utils",
+  "target_dir": "cron-utils",
+  "secure_base_commit": "bac6e866caf5f53d695a9513fc1b938b8064eaeb",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1490
+  }
+}

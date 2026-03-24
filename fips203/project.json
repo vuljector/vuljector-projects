@@ -1,0 +1,10 @@
+{
+  "project": "fips203",
+  "main_repo_url": "https://github.com/integritychain/fips203",
+  "target_dir": "fips203",
+  "secure_base_commit": "fc4c4ae49f9fc1313f9e6ebe2de204593ad66097",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 27
+  }
+}

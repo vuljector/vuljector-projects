@@ -1,0 +1,10 @@
+{
+  "project": "pyjson5",
+  "main_repo_url": "https://github.com/dpranke/pyjson5",
+  "target_dir": "pyjson5",
+  "secure_base_commit": "b94034735ce8fe450da5ebe5561163aa1b49bbad",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 75
+  }
+}

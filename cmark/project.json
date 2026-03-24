@@ -1,0 +1,10 @@
+{
+  "project": "cmark",
+  "main_repo_url": "https://github.com/commonmark/cmark",
+  "target_dir": "cmark",
+  "secure_base_commit": "64efa3b3b3d35f2ffb604b57a8a9c89047cb420b",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 5
+  }
+}

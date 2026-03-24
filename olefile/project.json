@@ -1,0 +1,10 @@
+{
+  "project": "olefile",
+  "main_repo_url": "https://github.com/decalage2/olefile",
+  "target_dir": "olefile",
+  "secure_base_commit": "7c0f1ce6f27311e03f25a997024846b58fa9826f",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 24
+  }
+}

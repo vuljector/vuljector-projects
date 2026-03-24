@@ -1,0 +1,10 @@
+{
+  "project": "fmt",
+  "main_repo_url": "https://github.com/fmtlib/fmt",
+  "target_dir": "fmt",
+  "secure_base_commit": "ea85b81ccdb28dda636351e80a1888b1d279f325",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 21
+  }
+}

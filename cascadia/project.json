@@ -1,0 +1,10 @@
+{
+  "project": "cascadia",
+  "main_repo_url": "https://github.com/andybalholm/cascadia",
+  "target_dir": "cascadia",
+  "secure_base_commit": "5263deb988702df34b4de5b8cd2fe53add4bea3d",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 11
+  }
+}

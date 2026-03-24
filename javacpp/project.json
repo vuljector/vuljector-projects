@@ -1,0 +1,10 @@
+{
+  "project": "javacpp",
+  "main_repo_url": "https://github.com/bytedeco/javacpp",
+  "target_dir": "javacpp",
+  "secure_base_commit": "b073fa05b4b1dc8ede38b524b0806ede618338d6",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 142
+  }
+}

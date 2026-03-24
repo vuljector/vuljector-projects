@@ -1,0 +1,10 @@
+{
+  "project": "jackson-dataformats-binary",
+  "main_repo_url": "https://github.com/FasterXML/jackson-dataformats-binary",
+  "target_dir": "jackson-dataformats-binary",
+  "secure_base_commit": "b991b09366e30fbc08c812ea751eae635404f461",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2076
+  }
+}
