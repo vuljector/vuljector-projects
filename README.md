@@ -9,8 +9,6 @@ vuljector-projects/
 │
 └── <project>/
     ├── project.json
-    ├── codebase/
-    │   └── <repo_name>/              # git submodule of upstream repo
     ├── setup/
     │   ├── Dockerfile
     │   ├── build.sh
@@ -34,35 +32,29 @@ vuljector-projects/
             └── vulnerability_N/
 ```
 
-## `project.json` (schema v2)
+## `project.json`
 
 ```json
 {
-  "schema_version": "v2",
   "project": "flask",
-  "repo": {
-    "url": "https://github.com/pallets/flask",
-    "branch": null
-  },
+  "main_repo_url": "https://github.com/pallets/flask",
   "target_dir": "flask",
   "secure_base_commit": "<sha>",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 481
+    "expected_passing_count": 489
   }
 }
 ```
 
 | Field | Description |
 |-------|-------------|
-| `schema_version` | Always `"v2"` |
 | `project` | OSS-Fuzz project name |
-| `repo.url` | Upstream GitHub repository URL |
-| `repo.branch` | Branch to track (`null` = default branch) |
+| `main_repo_url` | Upstream GitHub repository URL |
 | `target_dir` | Directory name inside container (`/src/<target_dir>`) |
 | `secure_base_commit` | Commit SHA of the secure baseline |
 | `unit_tests.enabled` | Whether unit tests are configured for this project |
-| `unit_tests.expected_passing_count` | Baseline passing-test count (`null` if not enabled) |
+| `unit_tests.expected_passing_count` | Baseline passing-test count |
 
 ## Unit test scripts
 
@@ -72,11 +64,13 @@ summary as the last line:
 
 ```bash
 <test_command> 2>&1 | python3 /src/unit_tests/parse_results.py --framework <framework>
-# Output: {"passed": 481, "failed": 0}
+# Output: {"passed": 489, "failed": 0}
 ```
 
 Supported frameworks: `pytest`, `cargo`, `gotest`, `ctest`, `maven`, `gradle`,
 `jest`, `tap`, `phptest`, `btest`, `gtest`, `meson`, `unittest`, `generic`.
+
+A project is considered **PASS** if `passed == expected_passing_count` and `passed >= 4`.
 
 ## `vulnerability_metadata.json`
 
