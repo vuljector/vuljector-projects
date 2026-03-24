@@ -2,6 +2,7 @@
 cd /src/quickjs
 CFLAGS='' make clean >/dev/null 2>&1
 CFLAGS='' make -j$(nproc) 2>/dev/null
+CFLAGS='' make tests/bjson.so 2>/dev/null
 passed=0
 failed=0
 for t in tests/test_closure.js tests/test_language.js tests/test_builtin.js \

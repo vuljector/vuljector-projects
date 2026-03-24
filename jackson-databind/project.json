@@ -8,7 +8,7 @@
   "target_dir": "jackson-databind",
   "secure_base_commit": "21cfb7cf31f95fcf1c40527fb78bf745875b09f1",
   "unit_tests": {
-    "enabled": false,
-    "expected_passing_count": null
+    "enabled": true,
+    "expected_passing_count": 11230
   }
 }

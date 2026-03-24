@@ -8,7 +8,7 @@
   "target_dir": "thrift",
   "secure_base_commit": "98034d1f5f9d7a3daea90010689dc73dc6a01cd0",
   "unit_tests": {
-    "enabled": false,
-    "expected_passing_count": null
+    "enabled": true,
+    "expected_passing_count": 182
   }
 }

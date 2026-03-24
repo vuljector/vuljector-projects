@@ -8,7 +8,7 @@
   "target_dir": "hdf5",
   "secure_base_commit": "67c2b782b9236001b0be75372555ecdb1a3b99e2",
   "unit_tests": {
-    "enabled": false,
-    "expected_passing_count": null
+    "enabled": true,
+    "expected_passing_count": 125
   }
 }
