@@ -25,4 +25,4 @@ cmake --build . --target shared_utils_test \
                 --target linux_perf_test \
                 -j$(nproc) 2>&1 | tail -1
 
-ctest --output-on-failure --exclude-regex '_NOT_BUILT' 2>&1 | python3 /src/unit_tests/parse_results.py --framework ctest
+ctest --output-on-failure --exclude-regex '_NOT_BUILT' 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework ctest

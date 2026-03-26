@@ -7,4 +7,4 @@ if ! mvn --version 2>/dev/null | grep -q '3\.[89]'; then
   tar -xzf /tmp/maven.tgz -C /opt/ 2>/dev/null
   export PATH="/opt/apache-maven-3.9.9/bin:$PATH"
 fi
-mvn test -B -fn --no-transfer-progress 2>&1 | python3 /src/unit_tests/parse_results.py --framework maven
+mvn test -B -fn --no-transfer-progress 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework maven

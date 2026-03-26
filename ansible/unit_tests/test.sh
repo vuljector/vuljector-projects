@@ -16,4 +16,4 @@ pip install -q . 2>/dev/null
 # test_install_collection_with_circular_dependency fails due to environment constraints (no network/Galaxy access).
 python3 -m pytest test/units/parsing test/units/executor test/units/galaxy \
   --deselect test/units/galaxy/test_collection_install.py::test_install_collection_with_circular_dependency \
-  -q --tb=no 2>&1 | python3 /src/unit_tests/parse_results.py --framework pytest
+  -q --tb=no 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework pytest

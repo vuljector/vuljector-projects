@@ -18,4 +18,4 @@ for t in tests/test_closure.js tests/test_language.js tests/test_builtin.js \
     fi
   fi
 done
-echo "$passed passed, $failed failed" | python3 /src/unit_tests/parse_results.py --framework pytest
+echo "$passed passed, $failed failed" | python3 /workspace/run/unit_tests/parse_results.py --framework pytest

@@ -19,4 +19,4 @@ pip3 install -q \
     "flit-core>=3.11,<4" \
     2>/dev/null
 pip3 install -q -e . 2>/dev/null
-python3 -m pytest tests/unit -q --tb=no --override-ini="addopts=" -p no:cacheprovider 2>&1 | python3 /src/unit_tests/parse_results.py --framework pytest
+python3 -m pytest tests/unit -q --tb=no --override-ini="addopts=" -p no:cacheprovider 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework pytest

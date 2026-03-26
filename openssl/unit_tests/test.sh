@@ -5,4 +5,4 @@ unset SANITIZER_FLAGS LIB_FUZZING_ENGINE
 export CFLAGS="" CXXFLAGS="" LDFLAGS=""
 ./config 2>&1 | tail -1
 make -j$(nproc) 2>&1 | tail -1
-make test HARNESS_JOBS=$(nproc) 2>&1 | python3 /src/unit_tests/parse_results.py --framework tap
+make test HARNESS_JOBS=$(nproc) 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework tap

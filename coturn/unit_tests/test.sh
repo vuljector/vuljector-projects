@@ -18,4 +18,4 @@ cmake --build . --target turnutils_rfc5769check -j$(nproc) 2>&1 | tail -1
   FAIL=$(echo "$OUTPUT" | grep -c "failure" || true)
   TOTAL=$((PASS + FAIL))
   echo "${FAIL} tests failed out of ${TOTAL}"
-) 2>&1 | python3 /src/unit_tests/parse_results.py --framework ctest
+) 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework ctest

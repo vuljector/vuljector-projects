@@ -81,4 +81,4 @@ test('Protocol readBool returns object with value', () => {
 console.log(passed + ' passed, ' + failed + ' failed');
 EOF
 
-node /tmp/run_thrift_tests.js 2>&1 | python3 /src/unit_tests/parse_results.py --framework pytest
+node /tmp/run_thrift_tests.js 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework pytest

@@ -10,4 +10,4 @@ cmake --build . -j$(nproc) 2>&1 | tail -1
   cd /src/assimp
   OUTPUT=$(/tmp/build/bin/unit 2>&1)
   echo "$OUTPUT"
-) 2>&1 | python3 /src/unit_tests/parse_results.py --framework gtest
+) 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework gtest

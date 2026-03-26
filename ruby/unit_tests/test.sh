@@ -78,4 +78,4 @@ make -j"$(nproc)" 2>&1 | tail -3
 
 # --- Step 4: Run btest and parse results ---
 echo "[INFO] Running make btest..."
-make btest 2>&1 | python3 /src/unit_tests/parse_results.py --framework btest
+make btest 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework btest

@@ -14,7 +14,7 @@ if cd /tmp/go-build/src && bash make.bash >/dev/null 2>&1; then
     io io/fs path path/filepath os os/exec \
     sort strconv sync unicode utf8 regexp \
     math math/big math/rand net/url net/mail \
-    bufio context errors hash log mime time -v 2>&1 | python3 /src/unit_tests/parse_results.py --framework gotest
+    bufio context errors hash log mime time -v 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework gotest
 else
   # Fallback: test baked-in stdlib
   export GOROOT=/root/.go
@@ -24,5 +24,5 @@ else
   go test fmt encoding/json strings bytes crypto/sha256 \
     crypto/aes crypto/hmac crypto/rand crypto/rsa \
     compress/gzip io sort strconv sync regexp \
-    math math/big net/url bufio context errors hash log mime time -v 2>&1 | python3 /src/unit_tests/parse_results.py --framework gotest
+    math math/big net/url bufio context errors hash log mime time -v 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework gotest
 fi

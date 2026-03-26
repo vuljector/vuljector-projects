@@ -4,4 +4,4 @@ cd /src/Dragonfly
 PKGS=$(go list ./... | grep -v '/test/e2e')
 go test $PKGS -v -count=1 \
   -skip '^TestPreheat_CreatePreheatRequestsByManifestURL$|^TestExternalIPv6$' \
-  2>&1 | python3 /src/unit_tests/parse_results.py --framework gotest
+  2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework gotest

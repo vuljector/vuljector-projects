@@ -8,4 +8,4 @@ python3 -m pytest setuptools/tests \
   --ignore=setuptools/tests/test_find_packages.py \
   --ignore=setuptools/tests/test_find_py_modules.py \
   -v --tb=no -q --override-ini="addopts=" -p no:cacheprovider 2>&1 | \
-  python3 /src/unit_tests/parse_results.py --framework pytest
+  python3 /workspace/run/unit_tests/parse_results.py --framework pytest

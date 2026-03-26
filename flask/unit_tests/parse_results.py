@@ -3,19 +3,19 @@
 
 Supported frameworks:
   pytest, cargo, gotest, ctest, maven, gradle, jest, tap,
-  phptest, btest, gtest, meson, unittest, generic
+  phptest, btest, gtest, meson, unittest, autotools, generic
 """
 import argparse, json, re, sys
 
 
-# ── regex-based parsers (first-match on pos/neg patterns) ────────────────
+# -- regex-based parsers (first-match on pos/neg patterns) ----------------
 _REGEX_PARSERS = {
     "pytest":   (r"(\d+) passed",        r"(\d+) failed"),
     "cargo":    (r"(\d+) passed",        r"(\d+) failed"),
     "jest":     (r"(\d+) passed",        r"(\d+) failed"),
     "gtest":    (r"\[\s*PASSED\s*\]\s*(\d+) test", r"\[\s*FAILED\s*\]\s*(\d+) test"),
     "unittest": (r"Ran (\d+) test",      r"failures=(\d+)"),
-    # generic: same as pytest — works for anything that prints "N passed, M failed"
+    # generic: same as pytest -- works for anything that prints "N passed, M failed"
     "generic":  (r"(\d+) passed",        r"(\d+) failed"),
 }
 
@@ -38,7 +38,7 @@ def _parse_gotest(text: str) -> dict:
 
 
 def _parse_gradle(text: str) -> dict:
-    # "3 tests completed, 1 failed" — match only lines containing "completed"
+    # "3 tests completed, 1 failed" -- match only lines containing "completed"
     total = _sum(r"(\d+) tests? completed", text)
     # Match "N failed" only on lines that also contain "completed" or in Gradle summary
     failed = 0
@@ -89,6 +89,19 @@ def _parse_phptest(text: str) -> dict:
     return {"passed": passed, "failed": failed}
 
 
+def _parse_autotools(text: str) -> dict:
+    """Autotools make check: '# PASS:  42' / '# FAIL:   0' / '# TOTAL: 42'."""
+    passed = _sum(r"# PASS:\s*(\d+)", text)
+    failed = _sum(r"# FAIL:\s*(\d+)", text)
+    # Also handle "N of N tests passed" variant
+    if passed == 0 and failed == 0:
+        m = re.search(r"(\d+) of (\d+) tests? passed", text)
+        if m:
+            passed, total = int(m.group(1)), int(m.group(2))
+            failed = total - passed
+    return {"passed": passed, "failed": failed}
+
+
 def _parse_btest(text: str) -> dict:
     """Ruby btest: 'PASS all 2047 tests' or 'FAIL 3/2047 tests failed'."""
     m = re.search(r"PASS all (\d+) tests", text)
@@ -101,7 +114,7 @@ def _parse_btest(text: str) -> dict:
     return {"passed": 0, "failed": 0}
 
 
-# ── dispatch ─────────────────────────────────────────────────────────────
+# -- dispatch ----------------------------------------------------------------
 _SPECIAL_PARSERS = {
     "gotest":   _parse_gotest,
     "gradle":   _parse_gradle,
@@ -112,6 +125,7 @@ _SPECIAL_PARSERS = {
     "phptest":  _parse_phptest,
     "btest":    _parse_btest,
     "unittest": _parse_unittest,
+    "autotools": _parse_autotools,
 }
 
 
