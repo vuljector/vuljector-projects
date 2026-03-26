@@ -1,0 +1,10 @@
+{
+  "project": "fastify",
+  "main_repo_url": "https://github.com/fastify/fastify",
+  "target_dir": "fastify",
+  "secure_base_commit": "39f0f24233cf6da2fef48551f51be2f589f7d5d0",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

@@ -8,14 +8,14 @@ Supported frameworks:
 import argparse, json, re, sys
 
 
-# ── regex-based parsers (first-match on pos/neg patterns) ────────────────
+# -- regex-based parsers (first-match on pos/neg patterns) ----------------
 _REGEX_PARSERS = {
     "pytest":   (r"(\d+) passed",        r"(\d+) failed"),
     "cargo":    (r"(\d+) passed",        r"(\d+) failed"),
     "jest":     (r"(\d+) passed",        r"(\d+) failed"),
     "gtest":    (r"\[\s*PASSED\s*\]\s*(\d+) test", r"\[\s*FAILED\s*\]\s*(\d+) test"),
     "unittest": (r"Ran (\d+) test",      r"failures=(\d+)"),
-    # generic: same as pytest — works for anything that prints "N passed, M failed"
+    # generic: same as pytest -- works for anything that prints "N passed, M failed"
     "generic":  (r"(\d+) passed",        r"(\d+) failed"),
 }
 
@@ -38,7 +38,7 @@ def _parse_gotest(text: str) -> dict:
 
 
 def _parse_gradle(text: str) -> dict:
-    # "3 tests completed, 1 failed" — match only lines containing "completed"
+    # "3 tests completed, 1 failed" -- match only lines containing "completed"
     total = _sum(r"(\d+) tests? completed", text)
     # Match "N failed" only on lines that also contain "completed" or in Gradle summary
     failed = 0
@@ -114,7 +114,7 @@ def _parse_btest(text: str) -> dict:
     return {"passed": 0, "failed": 0}
 
 
-# ── dispatch ─────────────────────────────────────────────────────────────
+# -- dispatch ----------------------------------------------------------------
 _SPECIAL_PARSERS = {
     "gotest":   _parse_gotest,
     "gradle":   _parse_gradle,
@@ -139,12 +139,12 @@ def parse(text: str, framework: str) -> dict:
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--framework", default="pytest",
-                   choices=sorted(set(_SPECIAL_PARSERS) | set(_REGEX_PARSERS)),
-                   help="Test framework output format")
+    p.add_argument("--framework", default="generic",
+                   help="Test framework output format (unknown values fall back to generic)")
     args = p.parse_args()
+    framework = args.framework if args.framework in set(_SPECIAL_PARSERS) | set(_REGEX_PARSERS) else "generic"
     text = sys.stdin.read()
     sys.stdout.write(text)
     if text and not text.endswith("\n"):
         sys.stdout.write("\n")
-    print(json.dumps(parse(text, args.framework)))
+    print(json.dumps(parse(text, framework)))
