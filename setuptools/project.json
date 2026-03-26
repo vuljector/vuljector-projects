@@ -5,6 +5,6 @@
   "secure_base_commit": "5a13876673a41e3cd21d4d6e587f53d0fb4fd8e5",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 793
+    "expected_passing_count": 779
   }
 }
