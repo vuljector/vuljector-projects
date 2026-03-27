@@ -1,0 +1,47 @@
+# Enforces layout and project.json shape expected by Vuljector (see Vuljector/src:
+# vuljector/core.py, setup/setup_test_harness/layout.py). Validation logic lives in
+# .github/scripts/validate_layout.py.
+
+name: Validate project layout
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate changed projects (pull request)
+        if: github.event_name == 'pull_request'
+        run: |
+          set -euo pipefail
+          git fetch origin "${{ github.base_ref }}"
+          python3 "${GITHUB_WORKSPACE}/.github/scripts/validate_layout.py" \
+            --root "${GITHUB_WORKSPACE}" \
+            --git-range "origin/${{ github.base_ref }}...${{ github.event.pull_request.head.sha }}"
+
+      - name: Validate changed projects (push)
+        if: github.event_name == 'push' && github.event.before != '0000000000000000000000000000000000000000'
+        run: |
+          set -euo pipefail
+          python3 "${GITHUB_WORKSPACE}/.github/scripts/validate_layout.py" \
+            --root "${GITHUB_WORKSPACE}" \
+            --git-range "${{ github.event.before }}...${{ github.event.after }}"
+
+      - name: Validate full tree (first push or manual)
+        if: >-
+          github.event_name == 'workflow_dispatch' ||
+          (github.event_name == 'push' && github.event.before == '0000000000000000000000000000000000000000')
+        run: |
+          set -euo pipefail
+          python3 "${GITHUB_WORKSPACE}/.github/scripts/validate_layout.py" --root "${GITHUB_WORKSPACE}"
