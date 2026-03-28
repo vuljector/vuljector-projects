@@ -72,7 +72,9 @@ def _project_dirs_from_git_diff(root: Path, git_range: str) -> list[Path]:
 def _validate_project(project_dir: Path) -> list[str]:
     errors: list[str] = []
     name = project_dir.name
-    rel = lambda p: str(p.relative_to(project_dir.parent))
+
+    def rel(p: Path) -> str:
+        return str(p.relative_to(project_dir.parent))
 
     pj = project_dir / "project.json"
     if not pj.exists():
@@ -146,7 +148,7 @@ def _validate_project(project_dir: Path) -> list[str]:
                 errors.append(f"{name}: project.json unit_tests.enabled must be boolean")
             if "expected_passing_count" in ut_cfg:
                 n = ut_cfg["expected_passing_count"]
-                if not isinstance(n, int) or n < 0:
+                if isinstance(n, bool) or not isinstance(n, int) or n < 0:
                     errors.append(
                         f"{name}: project.json unit_tests.expected_passing_count "
                         f"must be a non-negative integer"
@@ -198,8 +200,8 @@ def main() -> int:
         return 1
 
     n = len(to_check)
-    scope = f"{n} touched project director{'y' if n == 1 else 'ies'}" if args.git_range else f"{n} project director{'y' if n == 1 else 'ies'}"
-    print(f"OK: validated {scope} under {root}")
+    kind = "touched " if args.git_range else ""
+    print(f"OK: validated {n} {kind}project director{'y' if n == 1 else 'ies'} under {root}")
     return 0
 
 
