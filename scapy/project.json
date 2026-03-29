@@ -1,0 +1,10 @@
+{
+  "project": "scapy",
+  "main_repo_url": "https://github.com/secdev/scapy",
+  "target_dir": "scapy",
+  "secure_base_commit": "b1add1f796b4f28f0ff29d6b81480a9cd0ac8b85",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

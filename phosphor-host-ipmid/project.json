@@ -1,0 +1,10 @@
+{
+  "project": "phosphor-host-ipmid",
+  "main_repo_url": "https://github.com/openbmc/phosphor-host-ipmid",
+  "target_dir": "phosphor-host-ipmid",
+  "secure_base_commit": "a9b33e07772ce06fd8f594824752a6ec2befdeae",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

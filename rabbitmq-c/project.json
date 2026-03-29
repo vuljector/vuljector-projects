@@ -1,0 +1,10 @@
+{
+  "project": "rabbitmq-c",
+  "main_repo_url": "https://github.com/alanxz/rabbitmq-c",
+  "target_dir": "librabbitmq",
+  "secure_base_commit": "8b7471eab8d09536b3c104dbb30a65699cf48104",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 5
+  }
+}

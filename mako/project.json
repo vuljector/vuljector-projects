@@ -1,0 +1,10 @@
+{
+  "project": "mako",
+  "main_repo_url": "https://github.com/sqlalchemy/mako",
+  "target_dir": "mako",
+  "secure_base_commit": "91232d80e4914fd82b42628bb2e2b061abb3dcfc",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2083
+  }
+}

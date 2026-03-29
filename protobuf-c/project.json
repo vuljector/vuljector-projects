@@ -1,0 +1,10 @@
+{
+  "project": "protobuf-c",
+  "main_repo_url": "https://github.com/protobuf-c/protobuf-c.git",
+  "target_dir": "protobuf-c",
+  "secure_base_commit": "4719fdd7760624388c2c5b9d6759eb6a47490626",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 11
+  }
+}

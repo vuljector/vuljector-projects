@@ -1,0 +1,10 @@
+{
+  "project": "closure-library",
+  "main_repo_url": "https://github.com/google/closure-library",
+  "target_dir": "closure-library",
+  "secure_base_commit": "b312823ec5f84239ff1db7526f4a75cba0420a33",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 92
+  }
+}

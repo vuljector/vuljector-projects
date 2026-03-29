@@ -1,0 +1,10 @@
+{
+  "project": "pyparsing",
+  "main_repo_url": "https://github.com/pyparsing/pyparsing",
+  "target_dir": "pyparsing",
+  "secure_base_commit": "8c7908349209f282b0092f53dbcf8fd1713876f0",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

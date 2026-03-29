@@ -1,0 +1,10 @@
+{
+  "project": "c-ares",
+  "main_repo_url": "https://github.com/c-ares/c-ares.git",
+  "target_dir": "c-ares",
+  "secure_base_commit": "bd85a3476baebc411dd046fbe779c1a094d7ae3d",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1152
+  }
+}

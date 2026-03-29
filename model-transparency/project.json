@@ -1,0 +1,10 @@
+{
+  "project": "model-transparency",
+  "main_repo_url": "https://github.com/sigstore/model-transparency",
+  "target_dir": "model-transparency",
+  "secure_base_commit": "b2b689bc0c9272b66ea2b997067a681e23081e65",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 194
+  }
+}

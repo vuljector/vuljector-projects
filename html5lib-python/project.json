@@ -1,0 +1,10 @@
+{
+  "project": "html5lib-python",
+  "main_repo_url": "https://github.com/html5lib/html5lib-python",
+  "target_dir": "html5lib-python",
+  "secure_base_commit": "fd4f032bc090d44fb11a84b352dad7cbee0a4745",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

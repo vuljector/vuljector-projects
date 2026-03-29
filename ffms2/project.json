@@ -1,0 +1,10 @@
+{
+  "project": "ffms2",
+  "main_repo_url": "https://github.com/FFMS/ffms2",
+  "target_dir": "ffms2",
+  "secure_base_commit": "adf56fb4c4ea751cd05d914959e9bee1a7776ac0",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

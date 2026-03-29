@@ -1,0 +1,10 @@
+{
+  "project": "psycopg2",
+  "main_repo_url": "https://github.com/psycopg/psycopg2",
+  "target_dir": "psycopg2",
+  "secure_base_commit": "eb905c124b75f2a5183d22177b85af20914b0f17",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 443
+  }
+}

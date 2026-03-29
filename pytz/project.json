@@ -1,0 +1,10 @@
+{
+  "project": "pytz",
+  "main_repo_url": "https://github.com/stub42/pytz",
+  "target_dir": "pytz",
+  "secure_base_commit": "02509d04e32b438351ada260bb0cc6d24d461ae9",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 234
+  }
+}

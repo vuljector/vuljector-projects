@@ -1,0 +1,10 @@
+{
+  "project": "pymysql",
+  "main_repo_url": "https://github.com/PyMySQL/PyMySQL",
+  "target_dir": "pymysql",
+  "secure_base_commit": "d7bb777e503d82bf2496113f07dd4ab249615efc",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

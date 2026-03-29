@@ -1,0 +1,10 @@
+{
+  "project": "wavpack",
+  "main_repo_url": "https://github.com/dbry/WavPack.git",
+  "target_dir": "wavpack",
+  "secure_base_commit": "bb4071629cdb791c8eeb61903e0c65a29e3dc52a",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

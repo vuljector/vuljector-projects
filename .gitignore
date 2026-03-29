@@ -11,6 +11,9 @@
 *.sln.docstates
 *.env
 
+z_analyze_projects/
+.venv/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

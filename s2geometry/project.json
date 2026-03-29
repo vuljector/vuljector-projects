@@ -1,0 +1,10 @@
+{
+  "project": "s2geometry",
+  "main_repo_url": "https://github.com/google/s2geometry",
+  "target_dir": "s2geometry",
+  "secure_base_commit": "fde443b85c018d2991b7459630932add72ef6f76",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1893
+  }
+}

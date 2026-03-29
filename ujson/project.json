@@ -1,0 +1,10 @@
+{
+  "project": "ujson",
+  "main_repo_url": "https://github.com/ultrajson/ultrajson",
+  "target_dir": "ultrajson",
+  "secure_base_commit": "4baeb950df780092bd3c89fc702a868e99a3a1d2",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 309
+  }
+}

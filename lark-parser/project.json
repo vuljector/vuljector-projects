@@ -1,0 +1,10 @@
+{
+  "project": "lark-parser",
+  "main_repo_url": "https://github.com/lark-parser/lark",
+  "target_dir": "lark",
+  "secure_base_commit": "ae22d4fba99d767b40dcfc9c711eebbf6e04b136",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1098
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "dulwich",
+  "main_repo_url": "https://github.com/jelmer/dulwich",
+  "target_dir": "dulwich",
+  "secure_base_commit": "ba79629cf37bf9da735ab4ed6213e4135b5a64c0",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 3359
+  }
+}

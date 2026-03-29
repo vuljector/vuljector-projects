@@ -1,0 +1,10 @@
+{
+  "project": "python-jose",
+  "main_repo_url": "https://github.com/mpdavis/python-jose",
+  "target_dir": "python-jose",
+  "secure_base_commit": "018b310ddb8b50dcfd09a0c152117835a21dd656",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 3705
+  }
+}

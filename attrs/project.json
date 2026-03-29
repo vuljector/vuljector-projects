@@ -1,0 +1,10 @@
+{
+  "project": "attrs",
+  "main_repo_url": "https://github.com/python-attrs/attrs.git",
+  "target_dir": "attrs",
+  "secure_base_commit": "25b74d6a4274d938b1ef15a4df658ad5d2c92310",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1376
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "websockets",
+  "main_repo_url": "https://github.com/aaugustin/websockets",
+  "target_dir": "websockets",
+  "secure_base_commit": "ea164d2fe0cb699dd52d28bfbe98165fb35cb13c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

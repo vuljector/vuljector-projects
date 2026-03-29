@@ -1,0 +1,10 @@
+{
+  "project": "njs",
+  "main_repo_url": "https://github.com/nginx/njs.git",
+  "target_dir": "njs",
+  "secure_base_commit": "8f42e991a2528ed64663599ffd76e66988b8f126",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 12054
+  }
+}

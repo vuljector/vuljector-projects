@@ -1,0 +1,10 @@
+{
+  "project": "rapidjson",
+  "main_repo_url": "https://github.com/Tencent/rapidjson.git",
+  "target_dir": "rapidjson",
+  "secure_base_commit": "24b5e7a8b27f42fa16b96fc70aade9106cf7102f",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1
+  }
+}

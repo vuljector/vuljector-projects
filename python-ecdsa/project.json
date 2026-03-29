@@ -1,0 +1,10 @@
+{
+  "project": "python-ecdsa",
+  "main_repo_url": "https://github.com/tlsfuzzer/python-ecdsa",
+  "target_dir": "python-ecdsa",
+  "secure_base_commit": "d547d92f4f9341ae53731ea7e5e9eb40889775d8",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2014
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "nbformat",
+  "main_repo_url": "https://github.com/jupyter/nbformat",
+  "target_dir": "nbformat",
+  "secure_base_commit": "ceaf199c008c06c5bb45b7c337e520c4f154d67f",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 187
+  }
+}

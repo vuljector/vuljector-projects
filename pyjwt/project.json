@@ -1,0 +1,10 @@
+{
+  "project": "pyjwt",
+  "main_repo_url": "https://github.com/jpadilla/pyjwt",
+  "target_dir": "pyjwt",
+  "secure_base_commit": "40e3147eb5f790d8d041772e5fc00728a176c812",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2256
+  }
+}

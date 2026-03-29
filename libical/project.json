@@ -1,0 +1,10 @@
+{
+  "project": "libical",
+  "main_repo_url": "https://github.com/libical/libical.git",
+  "target_dir": "libical",
+  "secure_base_commit": "fa6069ec13fc301d6734622c93f9eb119e9edddf",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 50
+  }
+}

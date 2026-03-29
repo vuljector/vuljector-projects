@@ -1,0 +1,10 @@
+{
+  "project": "flatbuffers",
+  "main_repo_url": "https://github.com/google/flatbuffers",
+  "target_dir": "flatbuffers",
+  "secure_base_commit": "4e582b0c1d60c55f9a0a90f9740d4a4c48f3b53b",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1
+  }
+}

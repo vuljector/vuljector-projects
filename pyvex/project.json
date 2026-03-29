@@ -1,0 +1,10 @@
+{
+  "project": "pyvex",
+  "main_repo_url": "https://github.com/angr/pyvex.git",
+  "target_dir": "pyvex",
+  "secure_base_commit": "7da1e785995f5b5a8c0871f08e6dcfa12dc82367",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 59
+  }
+}

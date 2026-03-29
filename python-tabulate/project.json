@@ -1,0 +1,10 @@
+{
+  "project": "python-tabulate",
+  "main_repo_url": "https://github.com/astanin/python-tabulate",
+  "target_dir": "python-tabulate",
+  "secure_base_commit": "268615a5c27dc40e5c22454c07b44d5c50410da0",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 328
+  }
+}

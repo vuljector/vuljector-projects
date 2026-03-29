@@ -1,0 +1,10 @@
+{
+  "project": "ijson",
+  "main_repo_url": "https://github.com/ICRAR/ijson",
+  "target_dir": "ijson",
+  "secure_base_commit": "83ea0c082ace97d3f6f1adf2c8deb62e255005d3",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 559
+  }
+}

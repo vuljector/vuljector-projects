@@ -1,0 +1,10 @@
+{
+  "project": "double-conversion",
+  "main_repo_url": "https://github.com/google/double-conversion.git",
+  "target_dir": "double-conversion",
+  "secure_base_commit": "3b30c09758cd21c7fae3173dbd62b11913c63a58",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 9
+  }
+}

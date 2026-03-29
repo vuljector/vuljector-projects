@@ -1,0 +1,10 @@
+{
+  "project": "ipykernel",
+  "main_repo_url": "https://github.com/ipython/ipykernel",
+  "target_dir": "ipykernel",
+  "secure_base_commit": "5acbca59769a4ac268df0cd8f851bee0ea3486b0",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

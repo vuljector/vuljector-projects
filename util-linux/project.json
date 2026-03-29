@@ -1,0 +1,10 @@
+{
+  "project": "util-linux",
+  "main_repo_url": "https://github.com/util-linux/util-linux",
+  "target_dir": "util-linux",
+  "secure_base_commit": "8ecb24ae653c1329b34746e9ac8415f428ba33cb",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

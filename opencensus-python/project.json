@@ -1,0 +1,10 @@
+{
+  "project": "opencensus-python",
+  "main_repo_url": "https://github.com/census-instrumentation/opencensus-python.git",
+  "target_dir": "opencensus-python",
+  "secure_base_commit": "85ca4bf2236f26b3cb43e14ef9c136c9c2b6cefb",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 16
+  }
+}

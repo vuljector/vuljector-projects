@@ -1,0 +1,10 @@
+{
+  "project": "aspell",
+  "main_repo_url": "https://github.com/gnuaspell/aspell.git",
+  "target_dir": "aspell",
+  "secure_base_commit": "608e4ae25165a21ada26246ee784e0cf4ddcddb6",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

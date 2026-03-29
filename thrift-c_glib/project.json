@@ -1,0 +1,10 @@
+{
+  "project": "thrift-c_glib",
+  "main_repo_url": "https://github.com/apache/thrift",
+  "target_dir": "thrift",
+  "secure_base_commit": "0de53c48a7d101382d17490d265ac2d023938d3a",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

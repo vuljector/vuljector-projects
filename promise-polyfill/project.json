@@ -1,0 +1,10 @@
+{
+  "project": "promise-polyfill",
+  "main_repo_url": "https://github.com/taylorhakes/promise-polyfill",
+  "target_dir": "promise-polyfill",
+  "secure_base_commit": "a0a8100b2b439f5fea9c6c08dd702558fe239eef",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 933
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "imageio",
+  "main_repo_url": "https://github.com/imageio/imageio",
+  "target_dir": "imageio",
+  "secure_base_commit": "9929abb19399080f0fe766f705823fe8d79dd980",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 689
+  }
+}

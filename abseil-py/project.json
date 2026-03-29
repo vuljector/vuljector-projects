@@ -1,0 +1,10 @@
+{
+  "project": "abseil-py",
+  "main_repo_url": "https://github.com/abseil/abseil-py",
+  "target_dir": "abseil-py",
+  "secure_base_commit": "94402cd22e4e5f814637a7bab68a270ee98486a3",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1
+  }
+}

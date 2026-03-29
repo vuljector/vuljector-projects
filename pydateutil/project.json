@@ -1,0 +1,10 @@
+{
+  "project": "pydateutil",
+  "main_repo_url": "https://github.com/dateutil/dateutil",
+  "target_dir": "dateutil",
+  "secure_base_commit": "c981f9c7aa91b83cc9bd33a09ecee9e751b06e8d",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "toolbelt",
+  "main_repo_url": "https://github.com/requests/toolbelt",
+  "target_dir": "toolbelt",
+  "secure_base_commit": "bcd5f7be229e14089052be7e3b527ebcea0ae7b8",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 164
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "libsndfile",
+  "main_repo_url": "https://github.com/libsndfile/libsndfile.git",
+  "target_dir": "libsndfile",
+  "secure_base_commit": "68f6c16fe1407eff4cdde158566694c3ed666c2f",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 143
+  }
+}

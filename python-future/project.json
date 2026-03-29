@@ -1,0 +1,10 @@
+{
+  "project": "python-future",
+  "main_repo_url": "https://github.com/PythonCharmers/python-future",
+  "target_dir": "python-future",
+  "secure_base_commit": "2d56f83adab5a0957cfc5abbe62db1e2d1912b61",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 36709
+  }
+}

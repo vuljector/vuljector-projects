@@ -1,0 +1,10 @@
+{
+  "project": "tcmalloc",
+  "main_repo_url": "https://github.com/google/tcmalloc",
+  "target_dir": "tcmalloc",
+  "secure_base_commit": "0d045a3db462910672953e7d5ce473219d9836fa",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2
+  }
+}

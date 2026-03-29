@@ -1,0 +1,10 @@
+{
+  "project": "icalendar",
+  "main_repo_url": "https://github.com/collective/icalendar.git",
+  "target_dir": "icalendar",
+  "secure_base_commit": "96b028f34587ee696d33c442cfa5e4c8de2c1d35",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 10561
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "connexion",
+  "main_repo_url": "https://github.com/spec-first/connexion",
+  "target_dir": "connexion",
+  "secure_base_commit": "df9960b9f8d5d438a6774309b866cc2153de2b18",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 415
+  }
+}

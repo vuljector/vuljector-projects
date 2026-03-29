@@ -1,0 +1,10 @@
+{
+  "project": "expat",
+  "main_repo_url": "https://github.com/libexpat/libexpat",
+  "target_dir": "expat",
+  "secure_base_commit": "13fecf27beabd8f5fc0975aea7f5e05e8b46c1d0",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2
+  }
+}

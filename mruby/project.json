@@ -1,0 +1,10 @@
+{
+  "project": "mruby",
+  "main_repo_url": "https://github.com/mruby/mruby",
+  "target_dir": "mruby",
+  "secure_base_commit": "04f998238ea5efacbeff6d5293c20255f0c57457",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

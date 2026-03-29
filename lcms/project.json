@@ -1,0 +1,10 @@
+{
+  "project": "lcms",
+  "main_repo_url": "https://github.com/mm2/Little-CMS",
+  "target_dir": "lcms",
+  "secure_base_commit": "a4c87ebbfdd3b1c493e5ecca5f36d991b137fc95",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1
+  }
+}

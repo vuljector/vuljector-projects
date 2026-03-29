@@ -1,0 +1,10 @@
+{
+  "project": "xlsxwriter",
+  "main_repo_url": "https://github.com/jmcnamara/XlsxWriter.git",
+  "target_dir": "XlsxWriter",
+  "secure_base_commit": "a252844600d3f202f10c77eae222f5cdba8ba3fd",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 7760
+  }
+}

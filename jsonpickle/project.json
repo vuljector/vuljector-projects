@@ -1,0 +1,10 @@
+{
+  "project": "jsonpickle",
+  "main_repo_url": "https://github.com/jsonpickle/jsonpickle",
+  "target_dir": "jsonpickle",
+  "secure_base_commit": "57eeec63e9f9636aa1322569ae99d29d79c369b2",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 822
+  }
+}

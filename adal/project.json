@@ -1,0 +1,10 @@
+{
+  "project": "adal",
+  "main_repo_url": "https://github.com/AzureAD/azure-activedirectory-library-for-python",
+  "target_dir": "adsl",
+  "secure_base_commit": "e546d35f2cc2e41d89ead7e37cfa3e59b7c3226b",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

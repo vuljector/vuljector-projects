@@ -1,0 +1,10 @@
+{
+  "project": "g-api-python-client",
+  "main_repo_url": "https://github.com/googleapis/google-api-python-client",
+  "target_dir": "google-api-python-client",
+  "secure_base_commit": "a82af07571da6c3c0ccfd2d9cf234785c3783e57",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 728
+  }
+}

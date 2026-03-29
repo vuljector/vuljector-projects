@@ -1,0 +1,10 @@
+{
+  "project": "ntlm-auth",
+  "main_repo_url": "https://github.com/jborean93/ntlm-auth",
+  "target_dir": "ntlm-auth",
+  "secure_base_commit": "417db8b6fb0f9b5f86f314e257b8a4893f74c057",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 104
+  }
+}

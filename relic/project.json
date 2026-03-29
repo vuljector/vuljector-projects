@@ -1,0 +1,10 @@
+{
+  "project": "relic",
+  "main_repo_url": "https://github.com/relic-toolkit/relic",
+  "target_dir": "relic",
+  "secure_base_commit": "d5810fdbc3e2a2260c5ae55fb35255b24198704c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 19
+  }
+}

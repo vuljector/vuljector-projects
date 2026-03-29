@@ -1,0 +1,10 @@
+{
+  "project": "idna",
+  "main_repo_url": "https://github.com/kjd/idna",
+  "target_dir": "idna",
+  "secure_base_commit": "dfe1beaa9363bb92328d32ee1c431ae974108c1d",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 21063816
+  }
+}

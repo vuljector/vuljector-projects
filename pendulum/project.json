@@ -1,0 +1,10 @@
+{
+  "project": "pendulum",
+  "main_repo_url": "https://github.com/sdispater/pendulum",
+  "target_dir": "pendulum",
+  "secure_base_commit": "ae4c4052dc1aaf2614aa68d7ab8a3ca4396ec6aa",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

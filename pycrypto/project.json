@@ -1,0 +1,10 @@
+{
+  "project": "pycrypto",
+  "main_repo_url": "https://github.com/pycrypto/pycrypto",
+  "target_dir": "pycrypto",
+  "secure_base_commit": "65b43bd4ffe2a48bdedae986b1a291f5a2cc7df7",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1821
+  }
+}

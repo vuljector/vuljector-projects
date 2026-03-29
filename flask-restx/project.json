@@ -1,0 +1,10 @@
+{
+  "project": "flask-restx",
+  "main_repo_url": "https://github.com/python-restx/flask-restx",
+  "target_dir": "flask-restx",
+  "secure_base_commit": "604fe94550efae3740b8280c9d2773b67f15eb01",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 3543
+  }
+}

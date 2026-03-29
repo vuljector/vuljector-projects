@@ -1,0 +1,10 @@
+{
+  "project": "kafka",
+  "main_repo_url": "https://github.com/confluentinc/confluent-kafka-python",
+  "target_dir": "kafka",
+  "secure_base_commit": "410a59c8ca81fdf06fbc38dc2b86947e15dcb8da",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

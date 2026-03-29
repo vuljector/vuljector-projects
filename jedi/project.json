@@ -1,0 +1,10 @@
+{
+  "project": "jedi",
+  "main_repo_url": "https://github.com/davidhalter/jedi",
+  "target_dir": "jedi",
+  "secure_base_commit": "76c1e03f07b351c07b54609df12615dfb9379a9a",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 4417
+  }
+}

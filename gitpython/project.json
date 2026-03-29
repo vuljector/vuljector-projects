@@ -1,0 +1,10 @@
+{
+  "project": "gitpython",
+  "main_repo_url": "https://github.com/gitpython-developers/gitpython",
+  "target_dir": "gitpython",
+  "secure_base_commit": "becccc8f3f58a03a3386b24fc4f073803add5f7b",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 5645
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "aniso8601",
+  "main_repo_url": "https://bitbucket.org/nielsenb/aniso8601",
+  "target_dir": "aniso8601",
+  "secure_base_commit": "6cd795835c71d46b0771c02a82fca664cf3d1dad",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 144
+  }
+}

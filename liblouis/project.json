@@ -1,0 +1,10 @@
+{
+  "project": "liblouis",
+  "main_repo_url": "https://github.com/liblouis/liblouis",
+  "target_dir": "liblouis",
+  "secure_base_commit": "040cc859f32f43ed506fd0f81b287302137b00ec",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 18
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "espeak-ng",
+  "main_repo_url": "https://github.com/espeak-ng/espeak-ng",
+  "target_dir": "espeak-ng",
+  "secure_base_commit": "80f7d5d5869584913b03760db302b6ca0dda9f55",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 19
+  }
+}

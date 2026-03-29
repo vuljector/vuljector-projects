@@ -1,0 +1,10 @@
+{
+  "project": "tinyxml2",
+  "main_repo_url": "https://github.com/leethomason/tinyxml2",
+  "target_dir": "tinyxml2",
+  "secure_base_commit": "3dcad8e3c38e7091ae3771bf63020027f91715ce",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "cjson",
+  "main_repo_url": "https://github.com/DaveGamble/cJSON.git",
+  "target_dir": "cjson",
+  "secure_base_commit": "b2890c8d76bbb64e710585ebc0a917196b9c67e7",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 19
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "json-c",
+  "main_repo_url": "https://github.com/json-c/json-c.git",
+  "target_dir": "json-c",
+  "secure_base_commit": "52ddfb35f1cc7e337edb6b1939a043140b42cf5a",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 26
+  }
+}

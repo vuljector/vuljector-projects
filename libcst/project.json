@@ -1,0 +1,10 @@
+{
+  "project": "libcst",
+  "main_repo_url": "https://github.com/instagram/libcst",
+  "target_dir": "libcst",
+  "secure_base_commit": "2dc435f7cf263e98dea9de3e65594e4fc7f2894f",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 7
+  }
+}

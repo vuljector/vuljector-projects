@@ -1,0 +1,10 @@
+{
+  "project": "exprtk",
+  "main_repo_url": "https://github.com/ArashPartow/exprtk.git",
+  "target_dir": "exprtk",
+  "secure_base_commit": "cebb3698b1639769e2ae0829d61531770c974809",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

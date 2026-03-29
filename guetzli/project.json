@@ -1,0 +1,10 @@
+{
+  "project": "guetzli",
+  "main_repo_url": "https://github.com/google/guetzli",
+  "target_dir": "guetzli",
+  "secure_base_commit": "214f2bb42abf5a577c079d00add5d6cc470620d3",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

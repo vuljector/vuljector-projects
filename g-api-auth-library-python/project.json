@@ -1,0 +1,10 @@
+{
+  "project": "g-api-auth-library-python",
+  "main_repo_url": "https://github.com/googleapis/google-auth-library-python",
+  "target_dir": "google-auth-library-python",
+  "secure_base_commit": "2ea24b03436765fa3cf279ce148482ff6332136b",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

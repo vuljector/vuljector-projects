@@ -1,0 +1,10 @@
+{
+  "project": "pupnp",
+  "main_repo_url": "https://github.com/pupnp/pupnp",
+  "target_dir": "pupnp",
+  "secure_base_commit": "fb0e6889e738af69a95413da0f28c991d38558c9",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 14
+  }
+}

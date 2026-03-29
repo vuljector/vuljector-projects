@@ -1,0 +1,10 @@
+{
+  "project": "botocore",
+  "main_repo_url": "https://github.com/boto/botocore",
+  "target_dir": "botocore",
+  "secure_base_commit": "6de5cea495cc53461a182a336936a16d04603878",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 11
+  }
+}

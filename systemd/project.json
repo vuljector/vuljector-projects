@@ -1,0 +1,10 @@
+{
+  "project": "systemd",
+  "main_repo_url": "https://github.com/systemd/systemd",
+  "target_dir": "systemd",
+  "secure_base_commit": "b3c3a40b35e94806c590116e50e9c49929b20efc",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 15
+  }
+}

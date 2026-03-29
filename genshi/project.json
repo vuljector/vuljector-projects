@@ -1,0 +1,10 @@
+{
+  "project": "genshi",
+  "main_repo_url": "https://github.com/edgewall/genshi",
+  "target_dir": "genshi",
+  "secure_base_commit": "a31979dcc8d1b974ddff36301472b348664414a3",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "jsonnet",
+  "main_repo_url": "https://github.com/google/jsonnet.git",
+  "target_dir": "jsonnet",
+  "secure_base_commit": "5aec27e03a61dae06461becb95089b15fe217233",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 59
+  }
+}

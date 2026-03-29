@@ -1,0 +1,10 @@
+{
+  "project": "g-py-bigquery",
+  "main_repo_url": "https://github.com/googleapis/python-bigquery",
+  "target_dir": "python-bigquery",
+  "secure_base_commit": "ca965f25fa3df5915d8763d277bb014a3de124cd",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

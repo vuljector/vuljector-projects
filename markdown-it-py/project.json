@@ -1,0 +1,10 @@
+{
+  "project": "markdown-it-py",
+  "main_repo_url": "https://github.com/executablebooks/markdown-it-py",
+  "target_dir": "markdown-it-py",
+  "secure_base_commit": "89331476e44c150bc32e2597a5fae4cd15391167",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 914
+  }
+}

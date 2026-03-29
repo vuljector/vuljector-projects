@@ -1,0 +1,10 @@
+{
+  "project": "uwebsockets",
+  "main_repo_url": "https://github.com/uNetworking/uWebSockets.git",
+  "target_dir": "uWebSockets",
+  "secure_base_commit": "e42d69ff338269a5b74d014046e3699e2f27734e",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 7
+  }
+}

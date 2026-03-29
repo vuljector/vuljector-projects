@@ -1,0 +1,10 @@
+{
+  "project": "dask",
+  "main_repo_url": "https://github.com/dask/dask",
+  "target_dir": "dask",
+  "secure_base_commit": "b1025f7192f746c77d07a13945223887a3780f16",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 15
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "pytables",
+  "main_repo_url": "https://github.com/pytables/pytables",
+  "target_dir": "pytables",
+  "secure_base_commit": "fdae463ad1e10828ee44d8937b54ab47bcb0d994",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

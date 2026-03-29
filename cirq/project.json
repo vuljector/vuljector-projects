@@ -1,0 +1,10 @@
+{
+  "project": "cirq",
+  "main_repo_url": "https://github.com/quantumlib/Cirq.git",
+  "target_dir": "Cirq",
+  "secure_base_commit": "9888067c5c36b4505917de57f0528c53882ec240",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 5
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "project": "libfido2",
+  "main_repo_url": "https://github.com/Yubico/libfido2",
+  "target_dir": "libfido2",
+  "secure_base_commit": "813826cddd4d3a549ee79a462961ca1c7876361c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 6
+  }
+}

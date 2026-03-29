@@ -1,0 +1,10 @@
+{
+  "project": "js-yaml",
+  "main_repo_url": "https://github.com/nodeca/js-yaml",
+  "target_dir": "js-yaml",
+  "secure_base_commit": "f8e56bd049ac09f53a012c8d4e86ccb51d4bc92b",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 285
+  }
+}

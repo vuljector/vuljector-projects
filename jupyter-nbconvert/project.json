@@ -1,0 +1,10 @@
+{
+  "project": "jupyter-nbconvert",
+  "main_repo_url": "https://github.com/jupyter/nbconvert",
+  "target_dir": "nbconvert",
+  "secure_base_commit": "2dffdccb943683882f8d24a65562f294b59af7cc",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 284
+  }
+}

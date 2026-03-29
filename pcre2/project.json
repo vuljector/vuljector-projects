@@ -1,0 +1,10 @@
+{
+  "project": "pcre2",
+  "main_repo_url": "https://github.com/PCRE2Project/pcre2",
+  "target_dir": "pcre2",
+  "secure_base_commit": "123424f8a2267aa12ef819c64744b9cea934e414",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 3
+  }
+}

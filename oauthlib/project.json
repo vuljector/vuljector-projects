@@ -1,0 +1,10 @@
+{
+  "project": "oauthlib",
+  "main_repo_url": "https://github.com/oauthlib/oauthlib",
+  "target_dir": "oauthlib",
+  "secure_base_commit": "a4689bedd616597f7fc4d5b0a7070f64a0d5feff",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 3758
+  }
+}

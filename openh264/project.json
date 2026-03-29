@@ -1,0 +1,10 @@
+{
+  "project": "openh264",
+  "main_repo_url": "https://github.com/cisco/openh264.git",
+  "target_dir": "openh264",
+  "secure_base_commit": "cf568c83f71a18778f9a16e344effaf40c11b752",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

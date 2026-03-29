@@ -1,0 +1,10 @@
+{
+  "project": "pyzmq",
+  "main_repo_url": "https://github.com/zeromq/pyzmq",
+  "target_dir": "pyzmq",
+  "secure_base_commit": "aa0d411e8de1468bdb05958c48786380402f8248",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 280
+  }
+}

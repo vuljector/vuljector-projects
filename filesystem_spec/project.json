@@ -1,0 +1,10 @@
+{
+  "project": "filesystem_spec",
+  "main_repo_url": "https://github.com/fsspec/filesystem_spec",
+  "target_dir": "filesystem_spec",
+  "secure_base_commit": "49e6189b2cd8ee95b9357bff6a5671ea3b32c2ca",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 4359
+  }
+}

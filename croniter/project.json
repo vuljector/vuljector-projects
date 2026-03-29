@@ -1,0 +1,10 @@
+{
+  "project": "croniter",
+  "main_repo_url": "https://github.com/kiorky/croniter",
+  "target_dir": "croniter",
+  "secure_base_commit": "c3f41f5ea509d05fdd6144aad67b0dfdd80bf25c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

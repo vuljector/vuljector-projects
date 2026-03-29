@@ -1,0 +1,10 @@
+{
+  "project": "django",
+  "main_repo_url": "https://github.com/django/django.git",
+  "target_dir": "django",
+  "secure_base_commit": "8b7ea2bcdd7297941ca6beb72d93b9568e187349",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 12
+  }
+}

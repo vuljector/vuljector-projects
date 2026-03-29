@@ -1,0 +1,10 @@
+{
+  "project": "nbclassic",
+  "main_repo_url": "https://github.com/jupyter/nbclassic",
+  "target_dir": "nbclassic",
+  "secure_base_commit": "98b20380d732b4db162f97bbc43a12c9222b75cd",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 13
+  }
+}

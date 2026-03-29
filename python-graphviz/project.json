@@ -1,0 +1,10 @@
+{
+  "project": "python-graphviz",
+  "main_repo_url": "https://github.com/xflr6/graphviz",
+  "target_dir": "graphviz",
+  "secure_base_commit": "b4bd3fd4eb5ca86a94b9782b6596b429fb39101d",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

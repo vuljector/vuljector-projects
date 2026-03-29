@@ -1,0 +1,10 @@
+{
+  "project": "pyasn1",
+  "main_repo_url": "https://github.com/etingof/pyasn1",
+  "target_dir": "pyasn1",
+  "secure_base_commit": "db8f1a7930c6b5826357646746337dafc983f953",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1521
+  }
+}

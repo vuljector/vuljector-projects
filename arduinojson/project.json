@@ -1,0 +1,10 @@
+{
+  "project": "arduinojson",
+  "main_repo_url": "https://github.com/bblanchon/ArduinoJson.git",
+  "target_dir": "arduinojson",
+  "secure_base_commit": "d4e745ab5490c977b3a64651891c3bba522f807d",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 30
+  }
+}

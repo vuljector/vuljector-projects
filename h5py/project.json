@@ -1,0 +1,10 @@
+{
+  "project": "h5py",
+  "main_repo_url": "https://github.com/h5py/h5py",
+  "target_dir": "h5py",
+  "secure_base_commit": "bc1b388e2a563db4366c429e3984391f5e3faa31",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

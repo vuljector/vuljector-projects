@@ -1,0 +1,10 @@
+{
+  "project": "yajl-ruby",
+  "main_repo_url": "https://github.com/brianmario/yajl-ruby",
+  "target_dir": "yajl-ruby",
+  "secure_base_commit": "6501652d113557d976676134056aa983e7863020",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

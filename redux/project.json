@@ -1,0 +1,10 @@
+{
+  "project": "redux",
+  "main_repo_url": "https://github.com/reduxjs/redux",
+  "target_dir": "redux",
+  "secure_base_commit": "a28b432828c2b565d26c23b688760c5ff92e5c35",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 137
+  }
+}

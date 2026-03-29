@@ -1,0 +1,10 @@
+{
+  "project": "zydis",
+  "main_repo_url": "https://github.com/zyantific/zydis.git",
+  "target_dir": "zydis",
+  "secure_base_commit": "9bfadd6a55fc92dbd37fa3ba089bf8b36622df4f",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2
+  }
+}

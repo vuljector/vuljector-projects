@@ -1,0 +1,10 @@
+{
+  "project": "fio",
+  "main_repo_url": "https://github.com/axboe/fio.git",
+  "target_dir": "fio",
+  "secure_base_commit": "698fa8f0682b809b3f85f50c593067e90108f92e",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

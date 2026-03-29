@@ -1,0 +1,10 @@
+{
+  "project": "dateparser",
+  "main_repo_url": "https://github.com/scrapinghub/dateparser.git",
+  "target_dir": "dateparser",
+  "secure_base_commit": "60b8a75b1a7e84d875e491e6c730a844646ae91b",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 49
+  }
+}

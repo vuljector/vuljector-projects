@@ -1,0 +1,10 @@
+{
+  "project": "charset_normalizer",
+  "main_repo_url": "https://github.com/jawah/charset_normalizer",
+  "target_dir": "charset_normalizer",
+  "secure_base_commit": "386539dd9e40e9b3937e37cf28b5c9d4fe844723",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2937
+  }
+}

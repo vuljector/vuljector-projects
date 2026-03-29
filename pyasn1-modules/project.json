@@ -1,0 +1,10 @@
+{
+  "project": "pyasn1-modules",
+  "main_repo_url": "https://github.com/pyasn1/pyasn1-modules",
+  "target_dir": "pyasn1-modules",
+  "secure_base_commit": "02f9c577bcd0ad9fedfb0fd5dc598d323f7984bf",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 282
+  }
+}

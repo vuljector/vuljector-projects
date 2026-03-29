@@ -1,0 +1,10 @@
+{
+  "project": "h3",
+  "main_repo_url": "https://github.com/uber/h3",
+  "target_dir": "h3",
+  "secure_base_commit": "006ba2c73a944691777e6bbf08e3754bf5cc9212",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 315
+  }
+}

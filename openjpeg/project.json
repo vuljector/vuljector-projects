@@ -1,0 +1,10 @@
+{
+  "project": "openjpeg",
+  "main_repo_url": "https://github.com/uclouvain/openjpeg",
+  "target_dir": "openjpeg",
+  "secure_base_commit": "d33cbecc148d3affcdf403211fddc2cc5d442379",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 117
+  }
+}

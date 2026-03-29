@@ -1,0 +1,10 @@
+{
+  "project": "gcp-python-cloud-storage",
+  "main_repo_url": "https://github.com/googleapis/python-storage",
+  "target_dir": "python-storage",
+  "secure_base_commit": "b221c8e715a25eaaed437042af6568b176aa28b8",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 0
+  }
+}

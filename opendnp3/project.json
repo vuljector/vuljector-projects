@@ -1,0 +1,10 @@
+{
+  "project": "opendnp3",
+  "main_repo_url": "https://github.com/dnp3/opendnp3.git",
+  "target_dir": "opendnp3",
+  "secure_base_commit": "c1dc7165a79cc08edbf4b55d2ff4162efb176f92",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 3
+  }
+}

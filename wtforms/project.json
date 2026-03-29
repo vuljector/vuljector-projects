@@ -1,0 +1,10 @@
+{
+  "project": "wtforms",
+  "main_repo_url": "https://github.com/wtforms/wtforms",
+  "target_dir": "wtforms",
+  "secure_base_commit": "e6b503c62e754092df5b147c8aa8c5a1aca50780",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 351
+  }
+}

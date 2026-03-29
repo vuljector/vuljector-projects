@@ -1,0 +1,10 @@
+{
+  "project": "soupsieve",
+  "main_repo_url": "https://github.com/facelessuser/soupsieve",
+  "target_dir": "soupsieve",
+  "secure_base_commit": "3a661b23b20e92b49b4683f0227c26c9d765267f",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 374
+  }
+}
