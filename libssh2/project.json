@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 5
-  }
+  },
+  "dockerhub_image": "vuljector/libssh2:setup"
 }

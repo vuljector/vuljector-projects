@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 2
-  }
+  },
+  "dockerhub_image": "vuljector/expat:setup"
 }

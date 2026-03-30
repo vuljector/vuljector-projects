@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 315
-  }
+  },
+  "dockerhub_image": "vuljector/h3:setup"
 }

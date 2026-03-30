@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 1687
-  }
+  },
+  "dockerhub_image": "vuljector/protobuf-js:setup"
 }

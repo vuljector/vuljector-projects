@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 2256
-  }
+  },
+  "dockerhub_image": "vuljector/pyjwt:setup"
 }

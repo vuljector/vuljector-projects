@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 10001000000000077491
-  }
+  },
+  "dockerhub_image": "vuljector/orjson:setup"
 }

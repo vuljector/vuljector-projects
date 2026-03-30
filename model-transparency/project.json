@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 194
-  }
+  },
+  "dockerhub_image": "vuljector/model-transparency:setup"
 }

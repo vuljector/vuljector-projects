@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 2804
-  }
+  },
+  "dockerhub_image": "vuljector/hdf5:setup"
 }

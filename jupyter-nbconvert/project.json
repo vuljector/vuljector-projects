@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 284
-  }
+  },
+  "dockerhub_image": "vuljector/jupyter-nbconvert:setup"
 }

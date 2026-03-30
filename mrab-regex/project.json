@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 9779326
-  }
+  },
+  "dockerhub_image": "vuljector/mrab-regex:setup"
 }

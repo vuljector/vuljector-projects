@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 164
-  }
+  },
+  "dockerhub_image": "vuljector/toolbelt:setup"
 }

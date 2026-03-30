@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 0
-  }
+  },
+  "dockerhub_image": "vuljector/dill:setup"
 }

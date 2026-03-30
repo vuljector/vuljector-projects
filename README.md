@@ -40,6 +40,7 @@ vuljector-projects/
   "main_repo_url": "https://github.com/pallets/flask",
   "target_dir": "flask",
   "secure_base_commit": "<sha>",
+  "dockerhub_image": "vuljector/flask:setup",
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 489
@@ -53,6 +54,7 @@ vuljector-projects/
 | `main_repo_url` | Upstream GitHub repository URL |
 | `target_dir` | Directory name inside container (`/src/<target_dir>`) |
 | `secure_base_commit` | Commit SHA of the secure baseline |
+| `dockerhub_image` | Optional prebuilt setup image reference to reuse for setup |
 | `unit_tests.enabled` | Whether unit tests are configured for this project |
 | `unit_tests.expected_passing_count` | Baseline passing-test count |
 
@@ -63,20 +65,19 @@ the Docker container, piping output through `parse_results.py` to produce a JSON
 summary as the last line:
 
 ```bash
-<test_command> 2>&1 | python3 /src/unit_tests/parse_results.py --framework <framework>
+<test_command> 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework <framework>
 # Output: {"passed": 489, "failed": 0}
 ```
 
 Supported frameworks: `pytest`, `cargo`, `gotest`, `ctest`, `maven`, `gradle`,
 `jest`, `tap`, `phptest`, `btest`, `gtest`, `meson`, `unittest`, `generic`.
 
-A project is considered **PASS** if `passed == expected_passing_count` and `passed >= 4`.
+A project is considered **PASS** if `passed == expected_passing_count`.
 
 ## `vulnerability_metadata.json`
 
 | Field | Description |
 |-------|-------------|
-| `schema_version` | Schema version (`v2`) |
 | `id` | Vulnerability identifier (e.g. `vulnerability_0`) |
 | `project` | Project name |
 | `cwe_group` | CWE group selected for injection |
@@ -84,10 +85,10 @@ A project is considered **PASS** if `passed == expected_passing_count` and `pass
 | `selection_run_id` | Run id of selection phase |
 | `injection_run_id` | Run id of injection phase |
 | `snapshot_manifest` | Relative path to `snapshot/manifest.json` |
-| `snapshot_links` | Mapping from `repo_path` to `snapshot_path` |
+| `snapshot_links` | List of `{repo_path, snapshot_path}` mappings |
 | `exploit_dir` | Relative path to `exploit_files/` |
 | `secure_base_commit` | Secure baseline commit |
-| `complexity` | Optional complexity value |
+| `complexity` | Optional complexity value (currently written as `null`) |
 
 ## Snapshot format
 

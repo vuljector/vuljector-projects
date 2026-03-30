@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 282
-  }
+  },
+  "dockerhub_image": "vuljector/pyasn1-modules:setup"
 }

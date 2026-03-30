@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 38212
-  }
+  },
+  "dockerhub_image": "vuljector/pynacl:setup"
 }

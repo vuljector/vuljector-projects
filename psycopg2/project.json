@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 443
-  }
+  },
+  "dockerhub_image": "vuljector/psycopg2:setup"
 }

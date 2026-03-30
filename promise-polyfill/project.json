@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 933
-  }
+  },
+  "dockerhub_image": "vuljector/promise-polyfill:setup"
 }

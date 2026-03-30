@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 305
-  }
+  },
+  "dockerhub_image": "vuljector/fast-xml-parser:setup"
 }
