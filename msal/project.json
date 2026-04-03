@@ -1,5 +1,6 @@
 {
   "project": "msal",
+  "language": "python",
   "main_repo_url": "https://github.com/AzureAD/microsoft-authentication-library-for-python",
   "target_dir": "msal",
   "secure_base_commit": "e4e692c5acaa798bd3f24f8178b042fd9a98ab0d",

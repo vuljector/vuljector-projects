@@ -1,5 +1,6 @@
 {
   "project": "simplejson",
+  "language": "python",
   "main_repo_url": "https://github.com/simplejson/simplejson",
   "target_dir": "simplejson",
   "secure_base_commit": "f7122a4f60659431b39acbf0b7ad96775642ee02",

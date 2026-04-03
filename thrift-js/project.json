@@ -1,5 +1,6 @@
 {
   "project": "thrift-js",
+  "language": "javascript",
   "main_repo_url": "https://github.com/apache/thrift",
   "target_dir": "thrift",
   "secure_base_commit": "98034d1f5f9d7a3daea90010689dc73dc6a01cd0",

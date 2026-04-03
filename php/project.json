@@ -1,5 +1,6 @@
 {
   "project": "php",
+  "language": "c++",
   "main_repo_url": "https://github.com/php/php-src",
   "target_dir": "php-src",
   "secure_base_commit": "f40b356ad9ff35d2716e4b0afb69090112c7edbe",

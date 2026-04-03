@@ -1,5 +1,6 @@
 {
   "project": "espeak-ng",
+  "language": "c++",
   "main_repo_url": "https://github.com/espeak-ng/espeak-ng",
   "target_dir": "espeak-ng",
   "secure_base_commit": "80f7d5d5869584913b03760db302b6ca0dda9f55",

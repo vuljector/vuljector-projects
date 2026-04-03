@@ -1,5 +1,6 @@
 {
   "project": "python-email-validator",
+  "language": "python",
   "main_repo_url": "https://github.com/JoshData/python-email-validator",
   "target_dir": "python-email-validator",
   "secure_base_commit": "934541aac96b62d0665bba93f7a2353958b9e53b",

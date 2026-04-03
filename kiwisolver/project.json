@@ -1,5 +1,6 @@
 {
   "project": "kiwisolver",
+  "language": "python",
   "main_repo_url": "https://github.com/nucleic/kiwi",
   "target_dir": "kiwi",
   "secure_base_commit": "a7331ee62de562183d47d3a2c3ac6727627af203",

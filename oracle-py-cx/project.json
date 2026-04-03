@@ -1,5 +1,6 @@
 {
   "project": "oracle-py-cx",
+  "language": "python",
   "main_repo_url": "https://github.com/oracle/python-cx_Oracle",
   "target_dir": "oracle-py-cx",
   "secure_base_commit": "93f1e00941373522a54e4fa21ddbd0d944dba9f4",

@@ -1,5 +1,6 @@
 {
   "project": "ipykernel",
+  "language": "python",
   "main_repo_url": "https://github.com/ipython/ipykernel",
   "target_dir": "ipykernel",
   "secure_base_commit": "5acbca59769a4ac268df0cd8f851bee0ea3486b0",

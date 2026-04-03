@@ -1,5 +1,6 @@
 {
   "project": "coveragepy",
+  "language": "python",
   "main_repo_url": "https://github.com/nedbat/coveragepy",
   "target_dir": "coveragepy",
   "secure_base_commit": "51a866a3075e5d9678345aa6483909b12c3b5de7",

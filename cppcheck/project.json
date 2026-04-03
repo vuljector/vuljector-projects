@@ -1,5 +1,6 @@
 {
   "project": "cppcheck",
+  "language": "c++",
   "main_repo_url": "https://github.com/danmar/cppcheck",
   "target_dir": "cppcheck",
   "secure_base_commit": "7108f9fda4398c5a53319b3bb78c750c17614380",

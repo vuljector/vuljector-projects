@@ -1,5 +1,6 @@
 {
   "project": "flask-jwt-extended",
+  "language": "python",
   "main_repo_url": "https://github.com/vimalloc/flask-jwt-extended",
   "target_dir": "flask-jwt-extended",
   "secure_base_commit": "1910726f152016c3e48d61792983eebe11f54ac2",

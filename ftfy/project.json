@@ -1,5 +1,6 @@
 {
   "project": "ftfy",
+  "language": "python",
   "main_repo_url": "https://github.com/rspeer/python-ftfy",
   "target_dir": "ftfy",
   "secure_base_commit": "74dd0452b48286a3770013b3a02755313bd5575e",

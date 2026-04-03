@@ -1,5 +1,6 @@
 {
   "project": "harfbuzz",
+  "language": "c++",
   "main_repo_url": "https://github.com/harfbuzz/harfbuzz.git",
   "target_dir": "harfbuzz",
   "secure_base_commit": "2763ae13d34360d959b906a9c4bd955087d1ce60",

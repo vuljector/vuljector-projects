@@ -1,5 +1,6 @@
 {
   "project": "jsoncpp",
+  "language": "c++",
   "main_repo_url": "https://github.com/open-source-parsers/jsoncpp",
   "target_dir": "jsoncpp",
   "secure_base_commit": "cdc84831f1861c4372cc2ced8284f0b5d0bcec5a",

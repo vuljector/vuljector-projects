@@ -1,5 +1,6 @@
 {
   "project": "python-prompt-toolkit",
+  "language": "python",
   "main_repo_url": "https://github.com/prompt-toolkit/python-prompt-toolkit",
   "target_dir": "python-prompt-toolkit",
   "secure_base_commit": "940af53fa443073d9fdca26d5da6cfe6780f6ac9",

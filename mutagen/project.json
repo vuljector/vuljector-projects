@@ -1,5 +1,6 @@
 {
   "project": "mutagen",
+  "language": "python",
   "main_repo_url": "https://github.com/quodlibet/mutagen",
   "target_dir": "mutagen",
   "secure_base_commit": "a161810a072ec7f709114fc8a4cac7958693f780",

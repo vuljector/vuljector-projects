@@ -1,5 +1,6 @@
 {
   "project": "distlib",
+  "language": "python",
   "main_repo_url": "https://github.com/pypa/distlib",
   "target_dir": "distlib",
   "secure_base_commit": "6286442857de9f734686d08f0e59ca8048ee357a",

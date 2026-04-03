@@ -1,5 +1,6 @@
 {
   "project": "pdoc",
+  "language": "python",
   "main_repo_url": "https://github.com/pdoc3/pdoc",
   "target_dir": "pdoc",
   "secure_base_commit": "af49da6151d6e5c2b575c105693e61af87808bda",

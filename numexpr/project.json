@@ -1,5 +1,6 @@
 {
   "project": "numexpr",
+  "language": "python",
   "main_repo_url": "https://github.com/pydata/numexpr",
   "target_dir": "numexpr",
   "secure_base_commit": "96655c0b804fc121a5fd61659ae6d31ba43bbe62",

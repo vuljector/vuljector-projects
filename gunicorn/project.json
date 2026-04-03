@@ -1,5 +1,6 @@
 {
   "project": "gunicorn",
+  "language": "python",
   "main_repo_url": "https://github.com/benoitc/gunicorn",
   "target_dir": "gunicorn",
   "secure_base_commit": "3667a1047805023a9c5fc3e56742fc53f464793f",

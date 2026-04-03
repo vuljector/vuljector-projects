@@ -1,5 +1,6 @@
 {
   "project": "pytest-py",
+  "language": "python",
   "main_repo_url": "https://github.com/pytest-dev/py",
   "target_dir": "py",
   "secure_base_commit": "6b219734fcd8d2f6489c2f50585a435b34c029c2",

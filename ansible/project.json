@@ -1,5 +1,6 @@
 {
   "project": "ansible",
+  "language": "python",
   "main_repo_url": "https://github.com/ansible/ansible",
   "target_dir": "ansible",
   "secure_base_commit": "02a65ab2923b9a4ec30ad82024ec4fa547080b6a",

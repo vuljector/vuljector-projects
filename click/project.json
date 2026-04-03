@@ -1,5 +1,6 @@
 {
   "project": "click",
+  "language": "python",
   "main_repo_url": "https://github.com/pallets/click",
   "target_dir": "click",
   "secure_base_commit": "cdab890e57a30a9f437b88ce9652f7bfce980c1f",

@@ -1,5 +1,6 @@
 {
   "project": "protobuf-js",
+  "language": "javascript",
   "main_repo_url": "https://github.com/protobufjs/protobuf.js",
   "target_dir": "protobuf.js",
   "secure_base_commit": "6559b3df799abe061a8e3f0313972d60ad9e24a4",

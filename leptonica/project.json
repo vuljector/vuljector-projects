@@ -1,5 +1,6 @@
 {
   "project": "leptonica",
+  "language": "c++",
   "main_repo_url": "https://github.com/DanBloomberg/leptonica.git",
   "target_dir": "leptonica",
   "secure_base_commit": "dc88c9538092d6d39359a67d3535fc60af1c1f29",

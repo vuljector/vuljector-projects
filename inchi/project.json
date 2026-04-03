@@ -1,5 +1,6 @@
 {
   "project": "inchi",
+  "language": "c",
   "main_repo_url": "https://github.com/IUPAC-InChI/InChI",
   "target_dir": "inchi",
   "secure_base_commit": "3a730b50365b2d70a00bda66178cc8bd9043ecd4",

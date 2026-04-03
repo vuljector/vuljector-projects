@@ -1,5 +1,6 @@
 {
   "project": "python-fastjsonschema",
+  "language": "python",
   "main_repo_url": "https://github.com/horejsek/python-fastjsonschema",
   "target_dir": "python-fastjsonschema",
   "secure_base_commit": "8e39084b0d7b4dbb98046ba106bc162784ed9fab",

@@ -1,5 +1,6 @@
 {
   "project": "xz",
+  "language": "c++",
   "main_repo_url": "https://github.com/tukaani-project/xz",
   "target_dir": "xz",
   "secure_base_commit": "bfc5f12a84a2a9df774ed16cd6eb58fd5ab24646",

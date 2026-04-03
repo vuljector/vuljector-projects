@@ -1,5 +1,6 @@
 {
   "project": "libyang",
+  "language": "c",
   "main_repo_url": "https://github.com/CESNET/libyang",
   "target_dir": "libyang",
   "secure_base_commit": "3d07c3a71534a580c3960907da17568eff7e5c64",

@@ -1,5 +1,6 @@
 {
   "project": "libsrtp",
+  "language": "c++",
   "main_repo_url": "https://github.com/cisco/libsrtp",
   "target_dir": "libsrtp",
   "secure_base_commit": "9073dfe9eea29ebd75ea747278e997924f3988bd",

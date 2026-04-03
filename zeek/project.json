@@ -1,5 +1,6 @@
 {
   "project": "zeek",
+  "language": "c++",
   "main_repo_url": "https://github.com/zeek/zeek",
   "target_dir": "zeek",
   "secure_base_commit": "ffde4c95de4255fb6500bbb608b707b590b98a2f",

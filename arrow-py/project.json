@@ -1,5 +1,6 @@
 {
   "project": "arrow-py",
+  "language": "python",
   "main_repo_url": "https://github.com/arrow-py/arrow",
   "target_dir": "arrow",
   "secure_base_commit": "b423717da81aaf8117313b4b377efaa6413a9639",

@@ -1,5 +1,6 @@
 {
   "project": "sqlalchemy",
+  "language": "python",
   "main_repo_url": "https://github.com/sqlalchemy/sqlalchemy",
   "target_dir": "sqlalchemy",
   "secure_base_commit": "70d896117253de6ae9a321bf7bbc22bf2e89cb25",

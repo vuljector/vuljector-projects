@@ -1,5 +1,6 @@
 {
   "project": "lodash",
+  "language": "javascript",
   "main_repo_url": "https://github.com/lodash/lodash",
   "target_dir": "lodash",
   "secure_base_commit": "b8190803d48d60b8c80ad45d39125f32fa618cb2",

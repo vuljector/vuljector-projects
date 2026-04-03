@@ -1,5 +1,6 @@
 {
   "project": "toolz",
+  "language": "python",
   "main_repo_url": "https://github.com/pytoolz/toolz",
   "target_dir": "toolz",
   "secure_base_commit": "568c2b8393973cd172a466546c9d95779c452438",

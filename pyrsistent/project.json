@@ -1,5 +1,6 @@
 {
   "project": "pyrsistent",
+  "language": "python",
   "main_repo_url": "https://github.com/tobgu/pyrsistent",
   "target_dir": "pyrsistent",
   "secure_base_commit": "0c0b7aec8cd25b1d2d8ba07b10acdefd0f38f2c7",

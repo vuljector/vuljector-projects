@@ -1,5 +1,6 @@
 {
   "project": "libyaml",
+  "language": "c++",
   "main_repo_url": "https://github.com/yaml/libyaml",
   "target_dir": "libyaml",
   "secure_base_commit": "840b65c40675e2d06bf40405ad3f12dec7f35923",

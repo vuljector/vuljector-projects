@@ -1,5 +1,6 @@
 {
   "project": "croaring",
+  "language": "c",
   "main_repo_url": "https://github.com/RoaringBitmap/CRoaring",
   "target_dir": "croaring",
   "secure_base_commit": "598077e1bfeb033b8d78e8918fca28a5f230e387",

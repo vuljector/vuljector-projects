@@ -1,5 +1,6 @@
 {
   "project": "autopep8",
+  "language": "python",
   "main_repo_url": "https://github.com/hhatto/autopep8",
   "target_dir": "autopep8",
   "secure_base_commit": "4e68ef3855c969558a34120dc7802265e5a88043",

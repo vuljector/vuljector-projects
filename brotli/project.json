@@ -1,5 +1,6 @@
 {
   "project": "brotli",
+  "language": "c++",
   "main_repo_url": "https://github.com/google/brotli",
   "target_dir": "brotli",
   "secure_base_commit": "a413517b9419b68e2e3aff328dc967ed7c1e1712",

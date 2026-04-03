@@ -1,5 +1,6 @@
 {
   "project": "more-itertools",
+  "language": "python",
   "main_repo_url": "https://github.com/more-itertools/more-itertools",
   "target_dir": "more-itertools",
   "secure_base_commit": "3bbe636e23bdfa359d80e6851e0c37abbc860d4c",

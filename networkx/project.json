@@ -1,5 +1,6 @@
 {
   "project": "networkx",
+  "language": "python",
   "main_repo_url": "https://github.com/networkx/networkx",
   "target_dir": "networkx",
   "secure_base_commit": "ee541721917014eec25f0aa19eed3b66f3d7f532",

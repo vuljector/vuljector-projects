@@ -1,5 +1,6 @@
 {
   "project": "jansson",
+  "language": "c++",
   "main_repo_url": "https://github.com/akheron/jansson.git",
   "target_dir": "jansson",
   "secure_base_commit": "1eb7a8129766153b5214153a00b1ae0e14e27a41",

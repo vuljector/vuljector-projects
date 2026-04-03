@@ -1,5 +1,6 @@
 {
   "project": "orjson",
+  "language": "python",
   "main_repo_url": "https://github.com/ijl/orjson",
   "target_dir": "orjson",
   "secure_base_commit": "ec2b066cae79ae4a90ed126ac5723335dd99e408",

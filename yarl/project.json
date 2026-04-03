@@ -1,5 +1,6 @@
 {
   "project": "yarl",
+  "language": "python",
   "main_repo_url": "https://github.com/aio-libs/yarl",
   "target_dir": "yarl",
   "secure_base_commit": "a5d306e906e5f2d2546b1f03a3c3644b9dafc0fd",

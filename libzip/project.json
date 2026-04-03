@@ -1,5 +1,6 @@
 {
   "project": "libzip",
+  "language": "c++",
   "main_repo_url": "https://github.com/nih-at/libzip.git",
   "target_dir": "libzip",
   "secure_base_commit": "e04cda2b035ad49f4a9c3b12fc791411bd7f1e65",

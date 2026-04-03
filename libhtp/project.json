@@ -1,5 +1,6 @@
 {
   "project": "libhtp",
+  "language": "c",
   "main_repo_url": "https://github.com/OISF/libhtp.git",
   "target_dir": "libhtp",
   "secure_base_commit": "16e23594c61f7719f8cb1cd19ca69bbafb37a0eb",

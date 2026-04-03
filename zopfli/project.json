@@ -1,5 +1,6 @@
 {
   "project": "zopfli",
+  "language": "c++",
   "main_repo_url": "https://github.com/google/zopfli",
   "target_dir": "zopfli",
   "secure_base_commit": "ccf9f0588d4a4509cb1040310ec122243e670ee6",

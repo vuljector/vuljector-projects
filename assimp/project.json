@@ -1,5 +1,6 @@
 {
   "project": "assimp",
+  "language": "c++",
   "main_repo_url": "https://github.com/assimp/assimp",
   "target_dir": "assimp",
   "secure_base_commit": "fcb1702162c044976d01e74162cb4fadb3f335de",

@@ -1,5 +1,6 @@
 {
   "project": "wasmedge",
+  "language": "c++",
   "main_repo_url": "https://github.com/WasmEdge/WasmEdge.git",
   "target_dir": "WasmEdge",
   "secure_base_commit": "8f05f85b674cb66bd1a7f12be042ac2ee82ee82a",

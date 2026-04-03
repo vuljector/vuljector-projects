@@ -1,5 +1,6 @@
 {
   "project": "avahi",
+  "language": "c++",
   "main_repo_url": "https://github.com/avahi/avahi",
   "target_dir": "avahi",
   "secure_base_commit": "5ba22ca9a9848f286ebefcd3bae514641b681d94",

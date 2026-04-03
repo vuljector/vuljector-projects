@@ -1,5 +1,6 @@
 {
   "project": "python-pathspec",
+  "language": "python",
   "main_repo_url": "https://github.com/cpburnz/python-pathspec",
   "target_dir": "python-pathspec",
   "secure_base_commit": "0d7c7deb138050c8586000682134d820a176bc10",

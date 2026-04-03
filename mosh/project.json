@@ -1,5 +1,6 @@
 {
   "project": "mosh",
+  "language": "c++",
   "main_repo_url": "https://github.com/mobile-shell/mosh.git",
   "target_dir": "mosh",
   "secure_base_commit": "decd9b705eb81626f694335b8d5940538beb06da",

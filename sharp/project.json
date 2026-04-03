@@ -1,5 +1,6 @@
 {
   "project": "sharp",
+  "language": "javascript",
   "main_repo_url": "https://github.com/lovell/sharp",
   "target_dir": "sharp",
   "secure_base_commit": "7b4c4762432b14c62676e860c8034b5cd326f464",

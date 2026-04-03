@@ -1,5 +1,6 @@
 {
   "project": "zlib-ng",
+  "language": "c++",
   "main_repo_url": "https://github.com/zlib-ng/zlib-ng.git",
   "target_dir": "zlib-ng",
   "secure_base_commit": "c2712b8a345191f6ed79558c089777df94590087",

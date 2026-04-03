@@ -1,5 +1,6 @@
 {
   "project": "isodate",
+  "language": "python",
   "main_repo_url": "https://github.com/gweis/isodate",
   "target_dir": "isodate",
   "secure_base_commit": "17cb25eb7bc3556a68f3f7b241313e9bb8b23760",

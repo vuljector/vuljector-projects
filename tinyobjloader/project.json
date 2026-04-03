@@ -1,5 +1,6 @@
 {
   "project": "tinyobjloader",
+  "language": "c++",
   "main_repo_url": "https://github.com/tinyobjloader/tinyobjloader",
   "target_dir": "tinyobjloader",
   "secure_base_commit": "966edceaf8cdca7996c4e9a1c5ced2938de63366",

@@ -1,5 +1,6 @@
 {
   "project": "django",
+  "language": "python",
   "main_repo_url": "https://github.com/django/django.git",
   "target_dir": "django",
   "secure_base_commit": "8b7ea2bcdd7297941ca6beb72d93b9568e187349",

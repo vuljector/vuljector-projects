@@ -1,5 +1,6 @@
 {
   "project": "tslib",
+  "language": "javascript",
   "main_repo_url": "https://github.com/microsoft/tslib",
   "target_dir": "tslib",
   "secure_base_commit": "12bd8a74b320e3acfaba36b0ecb0e14964a9165b",

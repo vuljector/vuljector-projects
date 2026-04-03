@@ -1,5 +1,6 @@
 {
   "project": "netcdf",
+  "language": "c++",
   "main_repo_url": "https://github.com/Unidata/netcdf-c",
   "target_dir": "netcdf-c",
   "secure_base_commit": "6fd0cd8b14c96f19f8e0e845916395c1f90780f7",

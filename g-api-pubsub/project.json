@@ -1,5 +1,6 @@
 {
   "project": "g-api-pubsub",
+  "language": "python",
   "main_repo_url": "https://github.com/googleapis/python-pubsub",
   "target_dir": "python-pubsub",
   "secure_base_commit": "f26371dd0e5e3af6e4b90e6c98b26267a17821f9",

@@ -1,5 +1,6 @@
 {
   "project": "openbabel",
+  "language": "c++",
   "main_repo_url": "https://github.com/openbabel/openbabel.git",
   "target_dir": "openbabel",
   "secure_base_commit": "889c350feb179b43aa43985799910149d4eaa2bc",

@@ -1,5 +1,6 @@
 {
   "project": "bottleneck",
+  "language": "python",
   "main_repo_url": "https://github.com/pydata/bottleneck",
   "target_dir": "bottleneck",
   "secure_base_commit": "55ac4aad909d88eabeec37f779792431b8e35d3c",

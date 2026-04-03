@@ -1,5 +1,6 @@
 {
   "project": "fmt",
+  "language": "c++",
   "main_repo_url": "https://github.com/fmtlib/fmt",
   "target_dir": "fmt",
   "secure_base_commit": "ea85b81ccdb28dda636351e80a1888b1d279f325",

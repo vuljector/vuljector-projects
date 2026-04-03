@@ -1,5 +1,6 @@
 {
   "project": "ujson",
+  "language": "python",
   "main_repo_url": "https://github.com/ultrajson/ultrajson",
   "target_dir": "ultrajson",
   "secure_base_commit": "4baeb950df780092bd3c89fc702a868e99a3a1d2",

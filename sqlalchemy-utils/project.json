@@ -1,5 +1,6 @@
 {
   "project": "sqlalchemy-utils",
+  "language": "python",
   "main_repo_url": "https://github.com/kvesteri/sqlalchemy-utils",
   "target_dir": "sqlalchemy-utils",
   "secure_base_commit": "5b544439e4c01f2c517db5343f9d7c57a4d72c5c",

@@ -1,5 +1,6 @@
 {
   "project": "dill",
+  "language": "python",
   "main_repo_url": "https://github.com/uqfoundation/dill",
   "target_dir": "dill",
   "secure_base_commit": "d16e482b7a0e6c1a8359f13130d7e71092049d21",

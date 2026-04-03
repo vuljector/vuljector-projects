@@ -1,5 +1,6 @@
 {
   "project": "sigstore-python",
+  "language": "python",
   "main_repo_url": "https://github.com/sigstore/sigstore-python",
   "target_dir": "sigstore-python",
   "secure_base_commit": "1353f8aced2cc579485bfed6d536a4fd6053f444",

@@ -1,5 +1,6 @@
 {
   "project": "pygments",
+  "language": "python",
   "main_repo_url": "https://github.com/pygments/pygments",
   "target_dir": "pygments",
   "secure_base_commit": "75cbbe6d5a31324dca4b74aa5ffa73e279093ecf",

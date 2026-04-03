@@ -1,5 +1,6 @@
 {
   "project": "python3-openid",
+  "language": "python",
   "main_repo_url": "https://github.com/necaris/python3-openid",
   "target_dir": "python3-openid",
   "secure_base_commit": "fbc7f6a2dc5159b890119a044215a6aee4cefc8d",

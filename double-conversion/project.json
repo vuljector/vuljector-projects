@@ -1,5 +1,6 @@
 {
   "project": "double-conversion",
+  "language": "c++",
   "main_repo_url": "https://github.com/google/double-conversion.git",
   "target_dir": "double-conversion",
   "secure_base_commit": "3b30c09758cd21c7fae3173dbd62b11913c63a58",

@@ -1,5 +1,6 @@
 {
   "project": "openvswitch",
+  "language": "c++",
   "main_repo_url": "https://github.com/openvswitch/ovs.git",
   "target_dir": "openvswitch",
   "secure_base_commit": "f38fdcacc3e47589964e32224c9f018304b0340c",

@@ -1,5 +1,6 @@
 {
   "project": "parso",
+  "language": "python",
   "main_repo_url": "https://github.com/davidhalter/parso",
   "target_dir": "parso",
   "secure_base_commit": "28005a5cf68cdbd721c4ca11fc82f912b3e11aa3",

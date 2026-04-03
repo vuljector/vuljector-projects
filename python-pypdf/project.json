@@ -1,5 +1,6 @@
 {
   "project": "python-pypdf",
+  "language": "python",
   "main_repo_url": "https://github.com/py-pdf/pypdf.git",
   "target_dir": "pypdf",
   "secure_base_commit": "018a52e7cd55095dd8f0c84b6e46f11918eec9af",

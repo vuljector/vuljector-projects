@@ -1,5 +1,6 @@
 {
   "project": "node-xml2js",
+  "language": "javascript",
   "main_repo_url": "https://github.com/Leonidas-from-XIV/node-xml2js",
   "target_dir": "node-xml2js",
   "secure_base_commit": "cf3e061e22e98152b88068c2345bc02581f4d6c7",

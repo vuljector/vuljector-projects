@@ -1,5 +1,6 @@
 {
   "project": "pynacl",
+  "language": "python",
   "main_repo_url": "https://github.com/pyca/pynacl",
   "target_dir": "pynacl",
   "secure_base_commit": "4a44c452800df4691b2ffe4d219102ce15f3676f",

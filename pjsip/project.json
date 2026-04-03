@@ -1,5 +1,6 @@
 {
   "project": "pjsip",
+  "language": "c",
   "main_repo_url": "https://github.com/pjsip/pjproject",
   "target_dir": "pjsip",
   "secure_base_commit": "b8e9d8aad37aaddc9dd60ebaff9b2e4d32f83c1e",

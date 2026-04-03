@@ -1,5 +1,6 @@
 {
   "project": "fast-xml-parser",
+  "language": "javascript",
   "main_repo_url": "https://github.com/NaturalIntelligence/fast-xml-parser",
   "target_dir": "fast-xml-parser",
   "secure_base_commit": "a8934f903054c582b8ae6a12937fd4b22c380613",

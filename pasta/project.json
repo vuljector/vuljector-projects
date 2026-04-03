@@ -1,5 +1,6 @@
 {
   "project": "pasta",
+  "language": "python",
   "main_repo_url": "https://github.com/google/pasta",
   "target_dir": "pasta",
   "secure_base_commit": "f007c5394db77e8606a3feaafd1e09c724376550",

@@ -1,5 +1,6 @@
 {
   "project": "httpx",
+  "language": "python",
   "main_repo_url": "https://github.com/encode/httpx",
   "target_dir": "httpx",
   "secure_base_commit": "b5addb64f0161ff6bfe94c124ef76f6a1fba5254",

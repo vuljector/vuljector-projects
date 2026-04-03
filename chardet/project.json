@@ -1,5 +1,6 @@
 {
   "project": "chardet",
+  "language": "python",
   "main_repo_url": "https://github.com/erikrose/chardet",
   "target_dir": "chardet",
   "secure_base_commit": "95ea8a7fcabff433cc737e55d2fee6b483aa5afd",

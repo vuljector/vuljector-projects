@@ -1,5 +1,6 @@
 {
   "project": "dbus-broker",
+  "language": "c",
   "main_repo_url": "https://github.com/bus1/dbus-broker",
   "target_dir": "dbus-broker",
   "secure_base_commit": "404f092d3742c57b58fba5169e64c2999f00f794",

@@ -1,5 +1,6 @@
 {
   "project": "pdfplumber",
+  "language": "python",
   "main_repo_url": "https://github.com/jsvine/pdfplumber.git",
   "target_dir": "pdfplumber",
   "secure_base_commit": "98041536932ce85d18a1fba80d9db0686b831d9d",

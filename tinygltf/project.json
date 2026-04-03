@@ -1,5 +1,6 @@
 {
   "project": "tinygltf",
+  "language": "c++",
   "main_repo_url": "https://github.com/syoyo/tinygltf.git",
   "target_dir": "tinygltf",
   "secure_base_commit": "9422613562011c27a70da187a1071026e33ecb05",

@@ -1,5 +1,6 @@
 {
   "project": "xlrd",
+  "language": "python",
   "main_repo_url": "https://github.com/python-excel/xlrd",
   "target_dir": "xlrd",
   "secure_base_commit": "3a19d22014d7b3f3041b7188d21a653c18c709bf",

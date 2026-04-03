@@ -1,5 +1,6 @@
 {
   "project": "quickjs",
+  "language": "c",
   "main_repo_url": "https://github.com/bellard/quickjs",
   "target_dir": "quickjs",
   "secure_base_commit": "f1139494d18a2053630c5ed3384a42bb70db3c53",

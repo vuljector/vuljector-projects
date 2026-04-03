@@ -1,5 +1,6 @@
 {
   "project": "netaddr-py",
+  "language": "python",
   "main_repo_url": "https://github.com/netaddr/netaddr",
   "target_dir": "netaddr",
   "secure_base_commit": "d340feab548d948c5dc92cedcb05c69f57f9386e",

@@ -1,5 +1,6 @@
 {
   "project": "jinja2",
+  "language": "python",
   "main_repo_url": "https://github.com/pallets/jinja",
   "target_dir": "jinja",
   "secure_base_commit": "5ef70112a1ff19c05324ff889dd30405b1002044",

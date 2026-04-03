@@ -1,5 +1,6 @@
 {
   "project": "sentencepiece",
+  "language": "c++",
   "main_repo_url": "https://github.com/google/sentencepiece.git",
   "target_dir": "sentencepiece",
   "secure_base_commit": "439fec3ade0a9f8a1e6bc3903597582587ec0f9b",

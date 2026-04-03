@@ -1,5 +1,6 @@
 {
   "project": "typing_extensions",
+  "language": "python",
   "main_repo_url": "https://github.com/python/typing_extensions",
   "target_dir": "typing_extensions",
   "secure_base_commit": "58ad6e347e313773cd3dc4ba02d1d2563db775f0",

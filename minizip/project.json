@@ -1,5 +1,6 @@
 {
   "project": "minizip",
+  "language": "c++",
   "main_repo_url": "https://github.com/zlib-ng/minizip-ng",
   "target_dir": "minizip-ng",
   "secure_base_commit": "27cdb50b66ad8bb6295eb9c16514079de4884433",

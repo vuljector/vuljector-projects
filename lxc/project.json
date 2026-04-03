@@ -1,5 +1,6 @@
 {
   "project": "lxc",
+  "language": "c",
   "main_repo_url": "https://github.com/lxc/lxc",
   "target_dir": "lxc",
   "secure_base_commit": "a6c80ffcece8a8ad0c726bac6d4e940b635707c8",

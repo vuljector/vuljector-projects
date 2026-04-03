@@ -1,5 +1,6 @@
 {
   "project": "pdfminersix",
+  "language": "python",
   "main_repo_url": "https://github.com/pdfminer/pdfminer.six",
   "target_dir": "pdfminer.six",
   "secure_base_commit": "a18de2a9c479b4c847538500017b449ddaec177e",

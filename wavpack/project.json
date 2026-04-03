@@ -1,5 +1,6 @@
 {
   "project": "wavpack",
+  "language": "c++",
   "main_repo_url": "https://github.com/dbry/WavPack.git",
   "target_dir": "wavpack",
   "secure_base_commit": "bb4071629cdb791c8eeb61903e0c65a29e3dc52a",

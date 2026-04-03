@@ -1,5 +1,6 @@
 {
   "project": "tqdm",
+  "language": "python",
   "main_repo_url": "https://github.com/tqdm/tqdm",
   "target_dir": "tqdm",
   "secure_base_commit": "75bdb6c379bcfc6c592b6342dc791a092b5d6ae0",

@@ -1,5 +1,6 @@
 {
   "project": "spirv-cross",
+  "language": "c++",
   "main_repo_url": "https://github.com/KhronosGroup/SPIRV-Cross.git",
   "target_dir": "spirv-cross",
   "secure_base_commit": "4d4b79bd7b69b07fabdeb06f849334ba79ea7cee",

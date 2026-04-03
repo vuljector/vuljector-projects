@@ -1,5 +1,6 @@
 {
   "project": "pyyaml",
+  "language": "python",
   "main_repo_url": "https://github.com/yaml/pyyaml",
   "target_dir": "pyyaml",
   "secure_base_commit": "d51d8a138f7230834fc6e95635ff09ebd329185f",

@@ -1,5 +1,6 @@
 {
   "project": "pako",
+  "language": "javascript",
   "main_repo_url": "https://github.com/nodeca/pako",
   "target_dir": "pako",
   "secure_base_commit": "62cb729e7813176ce2d2694b89c8724680fca383",

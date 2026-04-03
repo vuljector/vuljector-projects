@@ -1,5 +1,6 @@
 {
   "project": "ninja",
+  "language": "c++",
   "main_repo_url": "https://github.com/ninja-build/ninja",
   "target_dir": "ninja",
   "secure_base_commit": "b90f3587711b2171d2dafa8179fe013475558e8d",

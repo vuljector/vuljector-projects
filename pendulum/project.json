@@ -1,5 +1,6 @@
 {
   "project": "pendulum",
+  "language": "python",
   "main_repo_url": "https://github.com/sdispater/pendulum",
   "target_dir": "pendulum",
   "secure_base_commit": "ae4c4052dc1aaf2614aa68d7ab8a3ca4396ec6aa",

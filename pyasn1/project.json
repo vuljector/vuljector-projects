@@ -1,5 +1,6 @@
 {
   "project": "pyasn1",
+  "language": "python",
   "main_repo_url": "https://github.com/etingof/pyasn1",
   "target_dir": "pyasn1",
   "secure_base_commit": "db8f1a7930c6b5826357646746337dafc983f953",

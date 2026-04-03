@@ -1,5 +1,6 @@
 {
   "project": "genshi",
+  "language": "python",
   "main_repo_url": "https://github.com/edgewall/genshi",
   "target_dir": "genshi",
   "secure_base_commit": "a31979dcc8d1b974ddff36301472b348664414a3",

@@ -1,5 +1,6 @@
 {
   "project": "oauth2",
+  "language": "python",
   "main_repo_url": "https://github.com/googleapis/oauth2client",
   "target_dir": "oauth2",
   "secure_base_commit": "50d20532a748f18e53f7d24ccbe6647132c979a9",

@@ -1,5 +1,6 @@
 {
   "project": "jupyter-nbconvert",
+  "language": "python",
   "main_repo_url": "https://github.com/jupyter/nbconvert",
   "target_dir": "nbconvert",
   "secure_base_commit": "2dffdccb943683882f8d24a65562f294b59af7cc",

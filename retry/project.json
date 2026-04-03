@@ -1,5 +1,6 @@
 {
   "project": "retry",
+  "language": "python",
   "main_repo_url": "https://github.com/invl/retry",
   "target_dir": "retry",
   "secure_base_commit": "c3f386aa279b130b37a4a4e91e758c7f02ec898c",

@@ -1,5 +1,6 @@
 {
   "project": "mdurl",
+  "language": "python",
   "main_repo_url": "https://github.com/executablebooks/mdurl",
   "target_dir": "mdurl",
   "secure_base_commit": "524d2edbbcb8bb48301ba716c7482827bcabb281",

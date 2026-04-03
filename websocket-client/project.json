@@ -1,5 +1,6 @@
 {
   "project": "websocket-client",
+  "language": "python",
   "main_repo_url": "https://github.com/websocket-client/websocket-client",
   "target_dir": "websocket-client",
   "secure_base_commit": "10d9159af9ba1ecb76e0ebb6a04edfd990eacbbb",

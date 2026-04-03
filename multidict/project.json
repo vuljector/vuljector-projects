@@ -1,5 +1,6 @@
 {
   "project": "multidict",
+  "language": "python",
   "main_repo_url": "https://github.com/aio-libs/multidict",
   "target_dir": "multidict",
   "secure_base_commit": "6892ed1a9893e93006c3ecf605bc3c75e7bca544",

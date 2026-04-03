@@ -1,5 +1,6 @@
 {
   "project": "behaviortreecpp",
+  "language": "c++",
   "main_repo_url": "https://github.com/BehaviorTree/BehaviorTree.CPP",
   "target_dir": "behaviortreecpp",
   "secure_base_commit": "3ff6a32ba0497a08519c77a1436e3b81eff1bcd6",

@@ -1,5 +1,6 @@
 {
   "project": "libssh2",
+  "language": "c++",
   "main_repo_url": "https://github.com/libssh2/libssh2",
   "target_dir": "libssh2",
   "secure_base_commit": "83072b0e1d43332a4287947a230abfb5ca10ccf5",

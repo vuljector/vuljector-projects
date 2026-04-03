@@ -1,5 +1,6 @@
 {
   "project": "oscrypto",
+  "language": "python",
   "main_repo_url": "https://github.com/wbond/oscrypto",
   "target_dir": "oscrypto",
   "secure_base_commit": "1547f535001ba568b239b8797465536759c742a3",

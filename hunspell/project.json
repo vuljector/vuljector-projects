@@ -1,5 +1,6 @@
 {
   "project": "hunspell",
+  "language": "c++",
   "main_repo_url": "https://github.com/hunspell/hunspell.git",
   "target_dir": "hunspell",
   "secure_base_commit": "9fb84c230f845ddcdc71ba59e5c9626639565ae9",

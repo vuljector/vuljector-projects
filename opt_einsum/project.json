@@ -1,5 +1,6 @@
 {
   "project": "opt_einsum",
+  "language": "python",
   "main_repo_url": "https://github.com/dgasmith/opt_einsum",
   "target_dir": "opt_einsum",
   "secure_base_commit": "2ebc7b809cf0e1f584fe70bc90d2c0e6b5b7c521",

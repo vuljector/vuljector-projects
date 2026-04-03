@@ -1,5 +1,6 @@
 {
   "project": "qpid-proton",
+  "language": "c++",
   "main_repo_url": "https://github.com/apache/qpid-proton.git",
   "target_dir": "qpid-proton",
   "secure_base_commit": "d90c70637fed77c18e62fb12b84613d6ffc865df",

@@ -1,5 +1,6 @@
 {
   "project": "astroid",
+  "language": "python",
   "main_repo_url": "https://github.com/pylint-dev/astroid",
   "target_dir": "astroid",
   "secure_base_commit": "c5d140d41e114832879f45c44ad9409cd9dc9b5a",

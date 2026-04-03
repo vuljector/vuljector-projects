@@ -1,5 +1,6 @@
 {
   "project": "flex",
+  "language": "c",
   "main_repo_url": "https://github.com/westes/flex",
   "target_dir": "flex",
   "secure_base_commit": "9fcb2a4d093ee059717c18c85263f2f768dd3fa5",

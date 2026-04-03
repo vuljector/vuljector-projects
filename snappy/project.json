@@ -1,5 +1,6 @@
 {
   "project": "snappy",
+  "language": "c++",
   "main_repo_url": "https://github.com/google/snappy",
   "target_dir": "snappy",
   "secure_base_commit": "6281a07b7e08629884ec93a89fea6e05c62e599c",

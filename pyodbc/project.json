@@ -1,5 +1,6 @@
 {
   "project": "pyodbc",
+  "language": "python",
   "main_repo_url": "https://github.com/mkleehammer/pyodbc",
   "target_dir": "pyodbc",
   "secure_base_commit": "cfe0575cf069a180ea499556ca98cd774ed7ff7d",

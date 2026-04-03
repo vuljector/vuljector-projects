@@ -1,5 +1,6 @@
 {
   "project": "scikit-learn",
+  "language": "python",
   "main_repo_url": "https://github.com/scikit-learn/scikit-learn",
   "target_dir": "scikit-learn",
   "secure_base_commit": "dd53c1d466c7c23f7bb757d26ddb0f1c9a58fbde",

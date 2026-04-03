@@ -1,5 +1,6 @@
 {
   "project": "packaging",
+  "language": "python",
   "main_repo_url": "https://github.com/pypa/packaging",
   "target_dir": "packaging",
   "secure_base_commit": "c901ded1a6b97acee3b6b1eb17526228129c4645",

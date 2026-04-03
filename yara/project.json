@@ -1,5 +1,6 @@
 {
   "project": "yara",
+  "language": "c++",
   "main_repo_url": "https://github.com/VirusTotal/yara.git",
   "target_dir": "yara",
   "secure_base_commit": "323356eede76abb87d7b14526cb2970883b87a27",

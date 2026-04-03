@@ -1,5 +1,6 @@
 {
   "project": "simdutf",
+  "language": "c++",
   "main_repo_url": "https://github.com/simdutf/simdutf",
   "target_dir": "simdutf",
   "secure_base_commit": "04a9b596de943ea9e4d4c833e39740edf3c11e88",

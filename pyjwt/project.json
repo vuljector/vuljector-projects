@@ -1,5 +1,6 @@
 {
   "project": "pyjwt",
+  "language": "python",
   "main_repo_url": "https://github.com/jpadilla/pyjwt",
   "target_dir": "pyjwt",
   "secure_base_commit": "40e3147eb5f790d8d041772e5fc00728a176c812",

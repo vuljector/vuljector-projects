@@ -1,5 +1,6 @@
 {
   "project": "frr",
+  "language": "c++",
   "main_repo_url": "https://github.com/FRRouting/frr",
   "target_dir": "frr",
   "secure_base_commit": "9b52e04d95ef6c326e2181d41042c16cc2afb87a",

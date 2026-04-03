@@ -1,5 +1,6 @@
 {
   "project": "openjph",
+  "language": "c++",
   "main_repo_url": "https://github.com/aous72/OpenJPH",
   "target_dir": "OpenJPH",
   "secure_base_commit": "4617a8fe34ca8e43a3611d3e0218d7b5dcaebb26",

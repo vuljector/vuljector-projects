@@ -1,5 +1,6 @@
 {
   "project": "pycups",
+  "language": "python",
   "main_repo_url": "https://github.com/OpenPrinting/pycups",
   "target_dir": "pycups",
   "secure_base_commit": "e5acbd887ea8379bb0a8424559428b62b0e8e6c8",

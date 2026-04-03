@@ -1,5 +1,6 @@
 {
   "project": "c-blosc",
+  "language": "c++",
   "main_repo_url": "https://github.com/Blosc/c-blosc.git",
   "target_dir": "c-blosc",
   "secure_base_commit": "c8072c21dcce8daf6dd19a0bbae8c53458ad68cc",

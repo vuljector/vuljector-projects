@@ -1,5 +1,6 @@
 {
   "project": "wamr",
+  "language": "c",
   "main_repo_url": "https://github.com/bytecodealliance/wasm-micro-runtime",
   "target_dir": "wamr",
   "secure_base_commit": "fcec30e93387cadcaa0a7eff3d3a6ec84e91f9fd",

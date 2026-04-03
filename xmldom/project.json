@@ -1,5 +1,6 @@
 {
   "project": "xmldom",
+  "language": "javascript",
   "main_repo_url": "https://github.com/xmldom/xmldom",
   "target_dir": "xmldom",
   "secure_base_commit": "2d73ddd1515f8d8bcf1e96cf8434384271bf9587",

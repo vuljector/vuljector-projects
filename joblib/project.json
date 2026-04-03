@@ -1,5 +1,6 @@
 {
   "project": "joblib",
+  "language": "python",
   "main_repo_url": "https://github.com/joblib/joblib",
   "target_dir": "joblib",
   "secure_base_commit": "5d1653a529af271083d2622ed760351e8348492f",

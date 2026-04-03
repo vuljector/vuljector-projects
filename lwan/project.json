@@ -1,5 +1,6 @@
 {
   "project": "lwan",
+  "language": "c++",
   "main_repo_url": "https://github.com/lpereira/lwan.git",
   "target_dir": "lwan",
   "secure_base_commit": "ebb2254b1c96e34f8a1f9f7532160656069038a3",

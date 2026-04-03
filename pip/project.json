@@ -1,5 +1,6 @@
 {
   "project": "pip",
+  "language": "python",
   "main_repo_url": "https://github.com/pypa/pip",
   "target_dir": "pip",
   "secure_base_commit": "f82e37d6352e2bc7b5f9e1982a4f7de6aec03956",

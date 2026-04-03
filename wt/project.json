@@ -1,5 +1,6 @@
 {
   "project": "wt",
+  "language": "c++",
   "main_repo_url": "https://github.com/emweb/wt",
   "target_dir": "wt",
   "secure_base_commit": "4d158458b06554192c63389e098ad03e5e35a713",

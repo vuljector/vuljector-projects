@@ -1,5 +1,6 @@
 {
   "project": "unicorn",
+  "language": "c++",
   "main_repo_url": "https://github.com/unicorn-engine/unicorn.git",
   "target_dir": "unicorn",
   "secure_base_commit": "0f8f72d1a186fb83814aa807c808169d5037abd7",

@@ -1,5 +1,6 @@
 {
   "project": "httpcore",
+  "language": "python",
   "main_repo_url": "https://github.com/encode/httpcore",
   "target_dir": "httpcore",
   "secure_base_commit": "10a658221deb38a4c5b16db55ab554b0bf731707",

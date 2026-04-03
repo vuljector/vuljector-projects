@@ -1,5 +1,6 @@
 {
   "project": "ply",
+  "language": "python",
   "main_repo_url": "https://github.com/dabeaz/ply",
   "target_dir": "ply",
   "secure_base_commit": "9d7c40099e23ff78f9d86ef69a26c1e8a83e706a",

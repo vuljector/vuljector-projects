@@ -1,5 +1,6 @@
 {
   "project": "jpeg-js",
+  "language": "javascript",
   "main_repo_url": "https://github.com/jpeg-js/jpeg-js",
   "target_dir": "jpeg-js",
   "secure_base_commit": "1031ccd7a63c641c16afb2430279d1598530a85c",

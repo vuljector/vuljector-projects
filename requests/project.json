@@ -1,5 +1,6 @@
 {
   "project": "requests",
+  "language": "python",
   "main_repo_url": "https://github.com/psf/requests.git",
   "target_dir": "requests",
   "secure_base_commit": "bc04dfd6dad4cb02cd92f5daa81eb562d280a761",

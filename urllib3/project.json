@@ -1,5 +1,6 @@
 {
   "project": "urllib3",
+  "language": "python",
   "main_repo_url": "https://github.com/urllib3/urllib3",
   "target_dir": "urllib3",
   "secure_base_commit": "6d2e3a5b7b361b44604609a2aba35ba9cef26544",

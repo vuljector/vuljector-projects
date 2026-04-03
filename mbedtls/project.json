@@ -1,5 +1,6 @@
 {
   "project": "mbedtls",
+  "language": "c++",
   "main_repo_url": "https://github.com/Mbed-TLS/mbedtls",
   "target_dir": "mbedtls",
   "secure_base_commit": "d5e35a376bee23fad0b17f2e3e94a32ce4017c64",

@@ -1,5 +1,6 @@
 {
   "project": "cryptography",
+  "language": "python",
   "main_repo_url": "https://github.com/pyca/cryptography",
   "target_dir": "cryptography",
   "secure_base_commit": "ce4ac8e48d41a9b5e26f2741df2c9d5904280800",

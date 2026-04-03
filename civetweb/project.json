@@ -1,5 +1,6 @@
 {
   "project": "civetweb",
+  "language": "c",
   "main_repo_url": "https://github.com/civetweb/civetweb",
   "target_dir": "civetweb",
   "secure_base_commit": "4a4f0c95cd3bd7572cd23fd89ca6eef380d41b99",

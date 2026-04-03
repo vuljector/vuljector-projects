@@ -1,5 +1,6 @@
 {
   "project": "utf8proc",
+  "language": "c",
   "main_repo_url": "https://github.com/JuliaStrings/utf8proc",
   "target_dir": "utf8proc",
   "secure_base_commit": "e46d2dba26a06f2ec3c57d944c8b679c6d8fea44",
