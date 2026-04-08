@@ -6,7 +6,6 @@
   "secure_base_commit": "524d2edbbcb8bb48301ba716c7482827bcabb281",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 197
-  },
-  "dockerhub_image": "vuljector/mdurl:setup"
+    "expected_passing_count": 189
+  }
 }

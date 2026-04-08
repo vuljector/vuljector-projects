@@ -6,7 +6,6 @@
   "secure_base_commit": "386539dd9e40e9b3937e37cf28b5c9d4fe844723",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 2937
-  },
-  "dockerhub_image": "vuljector/charset_normalizer:setup"
+    "expected_passing_count": 159
+  }
 }

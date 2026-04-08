@@ -15,15 +15,21 @@
 ################################################################################
 
 FROM gcr.io/oss-fuzz-base/base-builder-python
+RUN apt-get update && apt-get install -y ghostscript
+RUN pip3 install pytest
 RUN pip3 install --upgrade pip
+RUN pip3 install \
+    pdfminer.six==20260107 \
+    Pillow>=9.1 \
+    pypdfium2>=4.18.0 \
+    pandas>=2.2.2
 RUN mkdir $SRC/corpus
 
 # Upstream wants fuzzers hosted elsewhere, so pull them from fork (https://github.com/jsvine/pdfplumber/pull/1245#issuecomment-2581682100)
-RUN git clone --depth 1 https://github.com/ennamarie19/pdfplumber.git pdfplumber_fuzzer
+RUN git clone https://github.com/ennamarie19/pdfplumber.git pdfplumber_fuzzer
 
-RUN git clone --depth 1 --branch develop https://github.com/jsvine/pdfplumber.git pdfplumber \
+RUN git clone --branch develop https://github.com/jsvine/pdfplumber.git pdfplumber \
         && rm -rf pdfplumber/fuzz  # Remove the directory, if it exists
 RUN cp -r pdfplumber_fuzzer/fuzz pdfplumber \
         && cp pdfplumber/fuzz/build.sh $SRC/
 WORKDIR $SRC/pdfplumber
-

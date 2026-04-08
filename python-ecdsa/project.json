@@ -7,6 +7,5 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 2014
-  },
-  "dockerhub_image": "vuljector/python-ecdsa:setup"
+  }
 }

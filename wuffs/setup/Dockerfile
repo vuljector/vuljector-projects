@@ -16,10 +16,14 @@
 
 FROM gcr.io/oss-fuzz-base/base-builder
 RUN apt-get update && apt-get install -y wget
+RUN wget -q https://go.dev/dl/go1.24.2.linux-amd64.tar.gz -O /tmp/go.tgz && \
+    rm -rf /usr/local/go && \
+    tar -C /usr/local -xzf /tmp/go.tgz && \
+    rm /tmp/go.tgz
 
 # Get Wuffs' first-party code.
 
-RUN git clone --depth 1 https://github.com/google/wuffs.git
+RUN git clone https://github.com/google/wuffs.git
 
 # Get third-party test corpora.
 

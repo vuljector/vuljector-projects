@@ -15,6 +15,12 @@
 ################################################################################
 
 FROM gcr.io/oss-fuzz-base/base-builder-python
-RUN git clone --depth 1 https://github.com/agronholm/cbor2.git
+RUN apt-get update && apt-get install -y curl build-essential
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --default-toolchain stable
+RUN mkdir -p /rust/bin \
+    && ln -sf /root/.cargo/bin/cargo /rust/bin/cargo \
+    && ln -sf /root/.cargo/bin/rustc /rust/bin/rustc
+RUN pip3 install pytest hypothesis setuptools-rust 'setuptools_scm[toml]'
+RUN git clone https://github.com/agronholm/cbor2.git
 WORKDIR cbor2
 COPY build.sh $SRC/

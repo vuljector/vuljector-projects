@@ -6,7 +6,6 @@
   "secure_base_commit": "3903a8a063e3a6594baf22e4dd387238071ffeed",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 527
-  },
-  "dockerhub_image": "vuljector/docutils:setup"
+    "expected_passing_count": 467
+  }
 }

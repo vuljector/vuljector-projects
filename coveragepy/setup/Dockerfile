@@ -15,7 +15,8 @@
 ################################################################################
 
 FROM gcr.io/oss-fuzz-base/base-builder-python
+RUN pip3 install pytest hypothesis
 RUN apt-get update && apt-get install -y make autoconf automake libtool
-RUN git clone --depth 1 https://github.com/nedbat/coveragepy
+RUN git clone https://github.com/nedbat/coveragepy
 WORKDIR coveragepy
 COPY build.sh *.py $SRC/

@@ -16,5 +16,6 @@
 
 FROM gcr.io/oss-fuzz-base/base-builder-python
 RUN git clone --depth 1 --branch rel_1_3 https://github.com/sqlalchemy/sqlalchemy
+RUN pip3 install 'pytest<7' 'pytest-xdist<3' mock
 WORKDIR $SRC/sqlalchemy
 COPY build.sh sqlalchemy_fuzzer.py $SRC/

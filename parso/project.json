@@ -6,7 +6,6 @@
   "secure_base_commit": "28005a5cf68cdbd721c4ca11fc82f912b3e11aa3",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 1825
-  },
-  "dockerhub_image": "vuljector/parso:setup"
+    "expected_passing_count": 1809
+  }
 }

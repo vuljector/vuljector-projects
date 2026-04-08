@@ -2,8 +2,10 @@
 set -euo pipefail
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE
 export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
+export CBOR2_BUILD_C_EXTENSION=1
+export PATH="/usr/bin:/root/.cargo/bin:$PATH"
 cd /src/cbor2
-source /root/.cargo/env >/dev/null 2>&1 || true
-python3 -m pip install -U pip >/tmp/test_harness_pip.log 2>&1 || true
-python3 -m pip install pytest hypothesis >/tmp/test_harness_pip.log 2>&1 || true
-pytest tests -q 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework pytest
+sed -i 's/^license = "MIT"$/license = {text = "MIT"}/' pyproject.toml
+python3 -m pip install --no-build-isolation . >/tmp/test_harness_pip.log 2>&1
+cd /tmp
+python3 -m pytest /src/cbor2/tests -q 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework pytest

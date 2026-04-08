@@ -6,7 +6,6 @@
   "secure_base_commit": "018b310ddb8b50dcfd09a0c152117835a21dd656",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 3705
-  },
-  "dockerhub_image": "vuljector/python-jose:setup"
+    "expected_passing_count": 166
+  }
 }

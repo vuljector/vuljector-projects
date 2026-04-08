@@ -1,12 +1,12 @@
 {
   "project": "flask",
   "language": "python",
+  "dockerhub_image": "vuljector/flask:setup",
   "main_repo_url": "https://github.com/pallets/flask",
   "target_dir": "flask",
   "secure_base_commit": "7ef2946fb5151b745df30201b8c27790cac53875",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 480
-  },
-  "dockerhub_image": "vuljector/flask:setup"
+    "expected_passing_count": 494
+  }
 }

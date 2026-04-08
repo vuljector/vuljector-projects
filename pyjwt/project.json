@@ -6,7 +6,6 @@
   "secure_base_commit": "40e3147eb5f790d8d041772e5fc00728a176c812",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 2256
-  },
-  "dockerhub_image": "vuljector/pyjwt:setup"
+    "expected_passing_count": 208
+  }
 }

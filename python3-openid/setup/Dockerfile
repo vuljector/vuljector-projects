@@ -14,6 +14,8 @@
 # limitations under the License.
 FROM gcr.io/oss-fuzz-base/base-builder-python
 RUN pip3 install --upgrade pip
+RUN apt-get update && apt-get install -y libpq-dev
+RUN pip3 install defusedxml psycopg2cffi
 RUN git clone https://github.com/necaris/python3-openid python3-openid
 COPY *.sh *py $SRC/
 WORKDIR $SRC/python3-openid

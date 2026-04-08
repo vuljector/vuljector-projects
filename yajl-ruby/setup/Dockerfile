@@ -15,6 +15,9 @@
 ################################################################################
 
 FROM gcr.io/oss-fuzz-base/base-builder
+RUN apt-get update && apt-get install -y ruby ruby-dev
+RUN gem install bundler -v 2.4.22 && \
+    gem install rspec rake-compiler json
 RUN git clone --depth 1 https://github.com/brianmario/yajl-ruby
 WORKDIR yajl-ruby
 COPY json_fuzzer.c $SRC/yajl-ruby/fuzz/

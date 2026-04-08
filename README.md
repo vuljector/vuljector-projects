@@ -38,6 +38,7 @@ vuljector-projects/
 ```json
 {
   "project": "flask",
+  "language": "python",
   "main_repo_url": "https://github.com/pallets/flask",
   "target_dir": "flask",
   "secure_base_commit": "<sha>",
@@ -52,6 +53,7 @@ vuljector-projects/
 | Field | Description |
 |-------|-------------|
 | `project` | OSS-Fuzz project name |
+| `language` | Primary project language from `Vuljector/scripts/oss_fuzz_full.csv` |
 | `main_repo_url` | Upstream GitHub repository URL |
 | `target_dir` | Directory name inside container (`/src/<target_dir>`) |
 | `secure_base_commit` | Commit SHA of the secure baseline |

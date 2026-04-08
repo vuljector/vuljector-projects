@@ -7,6 +7,5 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 148
-  },
-  "dockerhub_image": "vuljector/wamr:setup"
+  }
 }

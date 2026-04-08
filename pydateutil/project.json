@@ -6,7 +6,6 @@
   "secure_base_commit": "c981f9c7aa91b83cc9bd33a09ecee9e751b06e8d",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 0
-  },
-  "dockerhub_image": "vuljector/pydateutil:setup"
+    "expected_passing_count": 190
+  }
 }

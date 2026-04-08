@@ -15,7 +15,8 @@
 ################################################################################
 
 FROM gcr.io/oss-fuzz-base/base-builder-python
-RUN pip3 install --upgrade pip && pip install google-api-core google-cloud-core
+RUN pip3 install pytest
+RUN pip3 install --upgrade pip && pip install google-api-core google-cloud-core mock flaky pytest-asyncio
 RUN git clone https://github.com/googleapis/python-pubsub
 COPY build.sh *.py $SRC/
 WORKDIR python-pubsub

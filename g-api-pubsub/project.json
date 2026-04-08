@@ -6,7 +6,6 @@
   "secure_base_commit": "f26371dd0e5e3af6e4b90e6c98b26267a17821f9",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 0
-  },
-  "dockerhub_image": "vuljector/g-api-pubsub:setup"
+    "expected_passing_count": 1772
+  }
 }

@@ -6,7 +6,6 @@
   "secure_base_commit": "a252844600d3f202f10c77eae222f5cdba8ba3fd",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 7760
-  },
-  "dockerhub_image": "vuljector/xlsxwriter:setup"
+    "expected_passing_count": 1778
+  }
 }

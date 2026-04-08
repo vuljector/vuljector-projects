@@ -6,7 +6,6 @@
   "secure_base_commit": "ec2b066cae79ae4a90ed126ac5723335dd99e408",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 10001000000000077491
-  },
-  "dockerhub_image": "vuljector/orjson:setup"
+    "expected_passing_count": 1490
+  }
 }

@@ -7,6 +7,5 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 70
-  },
-  "dockerhub_image": "vuljector/zlib-ng:setup"
+  }
 }

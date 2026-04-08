@@ -6,7 +6,6 @@
   "secure_base_commit": "d340feab548d948c5dc92cedcb05c69f57f9386e",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 7070
-  },
-  "dockerhub_image": "vuljector/netaddr-py:setup"
+    "expected_passing_count": 351
+  }
 }

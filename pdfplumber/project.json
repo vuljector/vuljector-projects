@@ -6,7 +6,6 @@
   "secure_base_commit": "98041536932ce85d18a1fba80d9db0686b831d9d",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 0
-  },
-  "dockerhub_image": "vuljector/pdfplumber:setup"
+    "expected_passing_count": 171
+  }
 }

@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 FROM gcr.io/oss-fuzz-base/base-builder-python
+RUN pip3 install 'pytest<9' webencodings pytest-expect u-msgpack-python
 RUN git clone https://github.com/html5lib/html5lib-python html5lib-python
 COPY *.sh *py $SRC/
 WORKDIR $SRC/html5lib-python

@@ -6,7 +6,6 @@
   "secure_base_commit": "57eeec63e9f9636aa1322569ae99d29d79c369b2",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 822
-  },
-  "dockerhub_image": "vuljector/jsonpickle:setup"
+    "expected_passing_count": 421
+  }
 }

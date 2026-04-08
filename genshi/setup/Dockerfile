@@ -14,6 +14,7 @@
 #
 ##########################################################################
 FROM gcr.io/oss-fuzz-base/base-builder-python
+RUN pip3 install pytest
 RUN pip3 install --upgrade pip
 RUN git clone https://github.com/edgewall/genshi genshi
 COPY *.sh *py $SRC/

@@ -15,7 +15,9 @@
 ################################################################################
 
 FROM gcr.io/oss-fuzz-base/base-builder-python
+RUN pip3 install pytest
 RUN pip3 install hypothesis
+RUN pip3 install --upgrade six
 RUN git clone --depth 1 https://github.com/dateutil/dateutil
 WORKDIR $SRC
 COPY build.sh fuzz_*.py $SRC/

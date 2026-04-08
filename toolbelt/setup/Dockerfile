@@ -14,6 +14,12 @@
 # limitations under the License.
 FROM gcr.io/oss-fuzz-base/base-builder-python
 RUN pip3 install --upgrade pip && pip3 install mock requests
-RUN git clone https://github.com/requests/toolbelt toolbelt
+RUN git config --global http.version HTTP/1.1 && \
+    for attempt in 1 2 3; do \
+      git clone --depth 1 https://github.com/requests/toolbelt toolbelt && break; \
+      rm -rf toolbelt; \
+      sleep 10; \
+    done && \
+    test -d toolbelt/.git
 COPY *.sh *py $SRC/
 WORKDIR $SRC/toolbelt

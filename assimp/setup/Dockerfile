@@ -16,7 +16,12 @@
 
 FROM gcr.io/oss-fuzz-base/base-builder
 RUN apt-get update && apt-get install -y cmake ninja-build zip
-RUN git clone --depth 1 --recursive https://github.com/assimp/assimp.git
+RUN git config --global http.version HTTP/1.1 && \
+    for attempt in 1 2 3; do \
+      git clone --depth 1 --recursive --shallow-submodules https://github.com/assimp/assimp.git && break; \
+      rm -rf assimp; \
+      sleep 10; \
+    done && \
+    test -d assimp/.git
 WORKDIR assimp
 COPY build.sh run_tests.sh $SRC/
-

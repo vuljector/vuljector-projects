@@ -6,7 +6,6 @@
   "secure_base_commit": "a7331ee62de562183d47d3a2c3ac6727627af203",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 52
-  },
-  "dockerhub_image": "vuljector/kiwisolver:setup"
+    "expected_passing_count": 50
+  }
 }

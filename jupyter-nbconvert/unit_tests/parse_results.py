@@ -3,14 +3,15 @@
 
 Supported frameworks:
   pytest, cargo, gotest, ctest, maven, gradle, jest, tap, mocha, jasmine,
-  phptest, btest, gtest, meson, unittest, autotools, generic
+  phptest, btest, gtest, meson, unittest, autotools, rspec, boost, exprtk,
+  utscapy,
+  generic
 """
 import argparse, json, re, sys
 
 
 # -- regex-based parsers (first-match on pos/neg patterns) ----------------
 _REGEX_PARSERS = {
-    "pytest":   (r"(\d+) passed",        r"(\d+) failed"),
     "cargo":    (r"(\d+) passed",        r"(\d+) failed"),
     "jest":     (r"(\d+) passed",        r"(\d+) failed"),
     "gtest":    (r"\[\s*PASSED\s*\]\s*(\d+) test", r"\[\s*FAILED\s*\]\s*(\d+) test"),
@@ -31,6 +32,21 @@ def _parse_unittest(text: str) -> dict:
     errors = _sum(r"errors=(\d+)", text)
     failed = failures + errors
     return {"passed": max(total - failed, 0), "failed": failed}
+
+
+def _parse_pytest(text: str) -> dict:
+    """Pytest summary: '2 failed, 1904 passed, 84 skipped'."""
+    passed = failed = 0
+    for line in reversed(text.splitlines()):
+        if "passed" not in line and "failed" not in line:
+            continue
+        passed_match = re.search(r"(\d+)\s+passed", line)
+        failed_match = re.search(r"(\d+)\s+failed", line)
+        if passed_match or failed_match:
+            passed = int(passed_match.group(1)) if passed_match else 0
+            failed = int(failed_match.group(1)) if failed_match else 0
+            return {"passed": passed, "failed": failed}
+    return {"passed": 0, "failed": 0}
 
 
 def _parse_gotest(text: str) -> dict:
@@ -65,6 +81,15 @@ def _parse_mocha(text: str) -> dict:
     passed = _sum(r"(\d+) passing", text)
     failed = _sum(r"(\d+) failing", text)
     return {"passed": passed, "failed": failed}
+
+
+def _parse_rspec(text: str) -> dict:
+    """RSpec summary: '123 examples, 0 failures'."""
+    m = re.search(r"(\d+) examples?,\s*(\d+) failures?", text, re.IGNORECASE)
+    if m:
+        total, failed = int(m.group(1)), int(m.group(2))
+        return {"passed": max(total - failed, 0), "failed": failed}
+    return {"passed": 0, "failed": 0}
 
 
 def _parse_jasmine(text: str) -> dict:
@@ -122,6 +147,10 @@ def _parse_autotools(text: str) -> dict:
         if m:
             passed, total = int(m.group(1)), int(m.group(2))
             failed = total - passed
+    if passed == 0 and failed == 0:
+        m = re.search(r"All\s+(\d+)\s+tests?\s+PASSED", text, re.IGNORECASE)
+        if m:
+            passed = int(m.group(1))
     return {"passed": passed, "failed": failed}
 
 
@@ -137,18 +166,72 @@ def _parse_btest(text: str) -> dict:
     return {"passed": 0, "failed": 0}
 
 
+def _parse_boost(text: str) -> dict:
+    """Boost.Test summary: 'Running 17 test cases...' + final error summary."""
+    total = _sum(r"Running\s+(\d+)\s+test cases?", text)
+    failed = _sum(r"\*\*\*\s+(\d+)\s+failures? detected", text)
+    if re.search(r"\*\*\*\s+No errors detected", text):
+        failed = 0
+    if total == 0 and re.search(r"\*\*\*\s+No errors detected", text):
+        total = 1
+    return {"passed": max(total - failed, 0), "failed": failed}
+
+
+def _parse_exprtk(text: str) -> dict:
+    """ExprTk test summary.
+
+    This test binary uses custom reporting, so support a few known summary forms
+    and fall back to the generic parser shapes when possible.
+    """
+    patterns = (
+        r"All\s+(\d+)\s+tests?\s+passed",
+        r"(\d+)\s+tests?\s+passed",
+        r"total\s+tests?\s*:\s*(\d+)",
+    )
+    failed_patterns = (
+        r"(\d+)\s+tests?\s+failed",
+        r"fail(?:ed|ures?)\s*:\s*(\d+)",
+        r"errors?\s*:\s*(\d+)",
+    )
+    passed = 0
+    failed = 0
+    for pattern in patterns:
+        passed = _sum(pattern, text)
+        if passed:
+            break
+    for pattern in failed_patterns:
+        failed += _sum(pattern, text)
+    if passed == 0 and failed == 0:
+        return _parse_mocha(text)
+    if failed and passed and passed < failed:
+        passed = 0
+    return {"passed": max(passed - failed, 0) if "total" in text.lower() else passed, "failed": failed}
+
+
+def _parse_utscapy(text: str) -> dict:
+    """UTScapy campaign summary: 'PASSED=N FAILED=M' per loaded test file."""
+    passed = _sum(r"PASSED=(\d+)", text)
+    failed = _sum(r"FAILED=(\d+)", text)
+    return {"passed": passed, "failed": failed}
+
+
 # -- dispatch ----------------------------------------------------------------
 _SPECIAL_PARSERS = {
     "gotest":   _parse_gotest,
+    "pytest":   _parse_pytest,
     "gradle":   _parse_gradle,
     "tap":      _parse_tap,
     "mocha":    _parse_mocha,
+    "rspec":    _parse_rspec,
     "jasmine":  _parse_jasmine,
     "ctest":    _parse_ctest,
     "meson":    _parse_meson,
     "maven":    _parse_maven,
     "phptest":  _parse_phptest,
     "btest":    _parse_btest,
+    "boost":    _parse_boost,
+    "exprtk":   _parse_exprtk,
+    "utscapy":  _parse_utscapy,
     "unittest": _parse_unittest,
     "autotools": _parse_autotools,
 }

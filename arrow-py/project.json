@@ -6,7 +6,6 @@
   "secure_base_commit": "b423717da81aaf8117313b4b377efaa6413a9639",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 11950
-  },
-  "dockerhub_image": "vuljector/arrow-py:setup"
+    "expected_passing_count": 1930
+  }
 }

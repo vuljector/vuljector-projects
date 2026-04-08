@@ -6,7 +6,6 @@
   "secure_base_commit": "268615a5c27dc40e5c22454c07b44d5c50410da0",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 328
-  },
-  "dockerhub_image": "vuljector/python-tabulate:setup"
+    "expected_passing_count": 323
+  }
 }

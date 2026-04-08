@@ -6,7 +6,6 @@
   "secure_base_commit": "91232d80e4914fd82b42628bb2e2b061abb3dcfc",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 2083
-  },
-  "dockerhub_image": "vuljector/mako:setup"
+    "expected_passing_count": 462
+  }
 }

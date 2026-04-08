@@ -6,7 +6,6 @@
   "secure_base_commit": "8e39084b0d7b4dbb98046ba106bc162784ed9fab",
   "unit_tests": {
     "enabled": true,
-    "expected_passing_count": 566
-  },
-  "dockerhub_image": "vuljector/python-fastjsonschema:setup"
+    "expected_passing_count": 452
+  }
 }
