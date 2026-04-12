@@ -7,5 +7,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 20
-  }
+  },
+  "dockerhub_image": "vuljector/coveragepy:setup"
 }

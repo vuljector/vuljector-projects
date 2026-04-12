@@ -7,5 +7,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 5206
-  }
+  },
+  "dockerhub_image": "vuljector/pygments:setup"
 }

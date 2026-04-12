@@ -7,5 +7,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 1332
-  }
+  },
+  "dockerhub_image": "vuljector/python3-openid:setup"
 }

@@ -7,5 +7,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 1930
-  }
+  },
+  "dockerhub_image": "vuljector/arrow-py:setup"
 }

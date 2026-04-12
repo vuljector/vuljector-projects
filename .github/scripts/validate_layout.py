@@ -115,7 +115,7 @@ def _validate_project(project_dir: Path) -> list[str]:
         )
 
     setup = project_dir / "setup"
-    for fname in ("Dockerfile", "build.sh", "project.yaml"):
+    for fname in ("Dockerfile", "project.yaml"):
         fpath = setup / fname
         if not fpath.is_file():
             errors.append(f"{name}: missing {rel(fpath)}")

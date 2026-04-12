@@ -7,5 +7,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 1499
-  }
+  },
+  "dockerhub_image": "vuljector/filesystem_spec:setup"
 }

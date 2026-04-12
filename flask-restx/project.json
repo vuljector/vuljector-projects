@@ -7,5 +7,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 1237
-  }
+  },
+  "dockerhub_image": "vuljector/flask-restx:setup"
 }

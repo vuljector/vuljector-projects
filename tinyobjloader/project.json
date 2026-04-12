@@ -6,5 +6,6 @@
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 106
-  }
+  },
+  "dockerhub_image": "vuljector/tinyobjloader:setup"
 }
