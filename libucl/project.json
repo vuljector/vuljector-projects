@@ -1,0 +1,12 @@
+{
+  "project": "libucl",
+  "main_repo_url": "https://github.com/vstakhov/libucl",
+  "target_dir": "libucl",
+  "secure_base_commit": "d3a3c5da43508f9f085b3470d061337cd35a728f",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 8
+  },
+  "dockerhub_image": "vuljector/libucl:setup"
+}

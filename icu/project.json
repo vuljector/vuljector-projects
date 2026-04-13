@@ -1,0 +1,12 @@
+{
+  "project": "icu",
+  "main_repo_url": "https://github.com/unicode-org/icu.git",
+  "target_dir": "icu",
+  "secure_base_commit": "ab879e410131bf9558dca60fad5edda0ff8dc785",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 21
+  },
+  "dockerhub_image": "vuljector/icu:setup"
+}

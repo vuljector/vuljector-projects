@@ -1,0 +1,12 @@
+{
+  "project": "envoy",
+  "main_repo_url": "https://github.com/envoyproxy/envoy.git",
+  "target_dir": "envoy",
+  "secure_base_commit": "ccb42a3545bd77cd01883074c9a9247b2dbbd0d3",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 8
+  },
+  "dockerhub_image": "vuljector/envoy:setup"
+}

@@ -1,0 +1,12 @@
+{
+  "project": "arrow",
+  "main_repo_url": "https://github.com/apache/arrow.git",
+  "target_dir": "arrow",
+  "secure_base_commit": "c16a8b22d144d6685ef97c3ef676091dd9c86f1f",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 11
+  },
+  "dockerhub_image": "vuljector/arrow:setup"
+}

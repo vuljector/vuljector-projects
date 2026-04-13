@@ -7,5 +7,6 @@
     "enabled": true,
     "expected_passing_count": 13
   },
-  "dockerhub_image": "vuljector/behaviortreecpp:setup"
+  "dockerhub_image": "vuljector/behaviortreecpp:setup",
+  "language": "c++"
 }

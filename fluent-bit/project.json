@@ -1,0 +1,12 @@
+{
+  "project": "fluent-bit",
+  "main_repo_url": "https://github.com/fluent/fluent-bit/",
+  "target_dir": "fluent-bit",
+  "secure_base_commit": "e8adc6d6957d9a83117a376819ce310d1464af77",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 63
+  },
+  "dockerhub_image": "vuljector/fluent-bit:setup"
+}

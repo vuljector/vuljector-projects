@@ -1,0 +1,12 @@
+{
+  "project": "wireshark",
+  "main_repo_url": "https://gitlab.com/wireshark/wireshark",
+  "target_dir": "wireshark",
+  "secure_base_commit": "450c9f457dbebfc375ea302ac8ab600d5fed93e4",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 9
+  },
+  "dockerhub_image": "vuljector/wireshark:setup"
+}

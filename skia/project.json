@@ -1,0 +1,12 @@
+{
+  "project": "skia",
+  "main_repo_url": "https://skia.googlesource.com/skia.git",
+  "target_dir": "skia",
+  "secure_base_commit": "c84e8a86b13b47ef828c80bf79e3c7f32e9d36ff",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 8
+  },
+  "dockerhub_image": "vuljector/skia:setup"
+}

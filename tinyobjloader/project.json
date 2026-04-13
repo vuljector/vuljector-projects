@@ -7,5 +7,6 @@
     "enabled": true,
     "expected_passing_count": 106
   },
-  "dockerhub_image": "vuljector/tinyobjloader:setup"
+  "dockerhub_image": "vuljector/tinyobjloader:setup",
+  "language": "c++"
 }

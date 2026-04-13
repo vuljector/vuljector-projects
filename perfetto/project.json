@@ -1,0 +1,12 @@
+{
+  "project": "perfetto",
+  "main_repo_url": "https://android.googlesource.com/platform/external/perfetto/",
+  "target_dir": "perfetto",
+  "secure_base_commit": "40b529923598b739b2892a536a7692eedbed5685",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 649
+  },
+  "dockerhub_image": "vuljector/perfetto:setup"
+}

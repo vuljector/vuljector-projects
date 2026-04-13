@@ -7,5 +7,6 @@
     "enabled": true,
     "expected_passing_count": 23
   },
-  "dockerhub_image": "vuljector/exprtk:setup"
+  "dockerhub_image": "vuljector/exprtk:setup",
+  "language": "c++"
 }
