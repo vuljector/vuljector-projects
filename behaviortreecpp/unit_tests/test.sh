@@ -5,9 +5,21 @@ unset SANITIZER_FLAGS LIB_FUZZING_ENGINE
 export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
 python3 - <<'PY'
 from pathlib import Path
+
 p = Path('/src/behaviortreecpp/tests/CMakeLists.txt')
 s = p.read_text()
 s = s.replace('  gtest_loggers.cpp\n', '  $<$<BOOL:${BTCPP_SQLITE_LOGGING}>:gtest_loggers.cpp>\n')
+p.write_text(s)
+
+# GCC 9 does not support floating-point std::from_chars; replace with strtod
+p = Path('/src/behaviortreecpp/src/xml_parsing.cpp')
+s = p.read_text()
+s = s.replace(
+    'auto [ptr, ec] = std::from_chars(begin, end, dbl_val);',
+    'char* _p = nullptr; dbl_val = std::strtod(begin, &_p); '
+    'const char* ptr = _p; '
+    'std::errc ec = (ptr != begin) ? std::errc{} : std::errc::invalid_argument;'
+)
 p.write_text(s)
 PY
 rm -rf /tmp/btcpp-build

@@ -21,6 +21,14 @@ RUN apt-get -y install python curl
 
 RUN git clone --depth=1 https://android.googlesource.com/platform/external/perfetto/ $SRC/perfetto
 
+# Initialize git submodules to get buildtools dependencies
+RUN cd $SRC/perfetto && git submodule update --init --recursive --depth=1 2>/dev/null || true
+
+# Manually clone sqlglot if not already present
+RUN if [ ! -d "$SRC/perfetto/buildtools/sqlglot" ]; then \
+  git clone --depth=1 https://github.com/tobymao/sqlglot.git $SRC/perfetto/buildtools/sqlglot; \
+fi
+
 RUN $SRC/perfetto/infra/oss-fuzz/init_container
 
 WORKDIR $SRC/perfetto

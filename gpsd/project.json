@@ -1,0 +1,11 @@
+{
+  "project": "gpsd",
+  "main_repo_url": "https://gitlab.com/gpsd/gpsd",
+  "target_dir": "gpsd",
+  "secure_base_commit": "1f8984c08c63823e76ebbb3d2eaa64064ee93a4b",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 3
+  }
+}

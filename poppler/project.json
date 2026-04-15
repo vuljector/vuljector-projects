@@ -1,0 +1,11 @@
+{
+  "project": "poppler",
+  "main_repo_url": "https://anongit.freedesktop.org/git/poppler/poppler.git",
+  "target_dir": "poppler",
+  "secure_base_commit": "e092d116f12928a617d95354adfc049afa38b41d",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 15
+  }
+}

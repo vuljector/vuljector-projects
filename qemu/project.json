@@ -1,0 +1,11 @@
+{
+  "project": "qemu",
+  "main_repo_url": "https://git.qemu.org/git/qemu.git",
+  "target_dir": "qemu",
+  "secure_base_commit": "becd22fdc2a071783d9e04421526633772b3b98c",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 213
+  }
+}

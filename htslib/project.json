@@ -1,0 +1,11 @@
+{
+  "project": "htslib",
+  "main_repo_url": "https://github.com/samtools/htslib.git",
+  "target_dir": "htslib",
+  "secure_base_commit": "bf93316d3575eb623a72d84ec67cc5b8ce2d1448",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 353
+  }
+}

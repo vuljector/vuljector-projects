@@ -1,0 +1,11 @@
+{
+  "project": "kamailio",
+  "main_repo_url": "https://github.com/kamailio/kamailio",
+  "target_dir": "kamailio",
+  "secure_base_commit": "74015a784fdbd1e4b30ef5895127ee40282bacd4",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 45
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "project": "opencv",
+  "main_repo_url": "https://github.com/opencv/opencv.git",
+  "target_dir": "opencv",
+  "secure_base_commit": "723670c33d748f481ebead9d7f12a6a83382b043",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 135
+  }
+}

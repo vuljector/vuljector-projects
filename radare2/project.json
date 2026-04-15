@@ -1,0 +1,11 @@
+{
+  "project": "radare2",
+  "main_repo_url": "https://github.com/radareorg/radare2",
+  "target_dir": "radare2",
+  "secure_base_commit": "4661541e40947fbc269b0c2686d1cd52ad69c1dc",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 576
+  }
+}

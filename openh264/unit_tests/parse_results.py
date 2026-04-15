@@ -14,7 +14,7 @@ import argparse, json, re, sys
 _REGEX_PARSERS = {
     "cargo":    (r"(\d+) passed",        r"(\d+) failed"),
     "jest":     (r"(\d+) passed",        r"(\d+) failed"),
-    "gtest":    (r"\[\s*PASSED\s*\]\s*(\d+) test", r"\[\s*FAILED\s*\]\s*(\d+) test"),
+    "gtest":    (r"\[\s*PASSED\s*\]\s*(\d+) tests?", r"\[\s*FAILED\s*\]\s*(\d+) tests?"),
     "unittest": (r"Ran (\d+) test",      r"failures=(\d+)"),
     # generic: same as pytest -- works for anything that prints "N passed, M failed"
     "generic":  (r"(\d+) passed",        r"(\d+) failed"),

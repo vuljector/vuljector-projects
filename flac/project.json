@@ -1,0 +1,11 @@
+{
+  "project": "flac",
+  "main_repo_url": "https://github.com/xiph/flac.git",
+  "target_dir": "flac",
+  "secure_base_commit": "343f3481562213cdc4f196af87da0d26bf2530ad",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 26
+  }
+}

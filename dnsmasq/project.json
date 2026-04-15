@@ -1,0 +1,11 @@
+{
+  "project": "dnsmasq",
+  "main_repo_url": "git://thekelleys.org.uk/dnsmasq.git",
+  "target_dir": "dnsmasq",
+  "secure_base_commit": "2d0e0c7a54f73d10d7afa15691c08cf5ec1e4ee2",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1
+  }
+}

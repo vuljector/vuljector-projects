@@ -1,0 +1,11 @@
+{
+  "project": "serenity",
+  "main_repo_url": "https://github.com/SerenityOS/serenity",
+  "target_dir": "serenity",
+  "secure_base_commit": "6075be9543bcdaf8a1fff80fcd27f7042c9a1251",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2
+  }
+}

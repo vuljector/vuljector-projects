@@ -1,0 +1,11 @@
+{
+  "project": "libvips",
+  "main_repo_url": "https://github.com/libvips/libvips",
+  "target_dir": "libvips",
+  "secure_base_commit": "d2c3ed235823eab37bb34a726c3b940d28560557",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 7
+  }
+}

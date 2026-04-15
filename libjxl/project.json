@@ -1,0 +1,11 @@
+{
+  "project": "libjxl",
+  "main_repo_url": "https://github.com/libjxl/libjxl.git",
+  "target_dir": "libjxl",
+  "secure_base_commit": "fea2365a03d62597b869786bf7ba1083a9675d88",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 13
+  }
+}

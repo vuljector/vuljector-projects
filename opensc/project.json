@@ -1,0 +1,11 @@
+{
+  "project": "opensc",
+  "main_repo_url": "https://github.com/OpenSC/OpenSC",
+  "target_dir": "opensc",
+  "secure_base_commit": "96e39e7e0631f1b52c938a32b6d0d4d703e49c89",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 3
+  }
+}

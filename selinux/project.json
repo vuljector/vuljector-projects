@@ -1,0 +1,11 @@
+{
+  "project": "selinux",
+  "main_repo_url": "https://github.com/SELinuxProject/selinux",
+  "target_dir": "selinux",
+  "secure_base_commit": "6be1ec3792c11040fd7a3ecb1135e54418eb0d57",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 53
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "project": "pcapplusplus",
+  "main_repo_url": "https://github.com/seladb/PcapPlusPlus",
+  "target_dir": "PcapPlusPlus",
+  "secure_base_commit": "c3cc787829b794b84c6a63734d324c1c487cb696",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 305
+  }
+}

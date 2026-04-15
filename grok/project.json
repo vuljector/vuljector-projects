@@ -1,0 +1,11 @@
+{
+  "project": "grok",
+  "main_repo_url": "https://github.com/GrokImageCompression/grok.git",
+  "target_dir": "grok",
+  "secure_base_commit": "83542971330889744c0cb1d9c34b87978a066540",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 177
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "project": "llvm",
+  "main_repo_url": "https://github.com/llvm/llvm-project.git",
+  "target_dir": "llvm-project",
+  "secure_base_commit": "121f5a96ff38ec0c5d5f7274b1b0ca0df26a1cee",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 10
+  }
+}
