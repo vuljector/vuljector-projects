@@ -1,0 +1,11 @@
+{
+  "project": "freetype2",
+  "main_repo_url": "https://github.com/freetype/freetype2-testing.git",
+  "target_dir": "freetype2-testing",
+  "secure_base_commit": "db8ae87fead2ede5487e242dd9f5a129ca5e9fd2",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2
+  }
+}

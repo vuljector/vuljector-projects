@@ -1,0 +1,11 @@
+{
+  "project": "ghostscript",
+  "main_repo_url": "git://git.ghostscript.com/ghostpdl.git",
+  "target_dir": "ghostpdl",
+  "secure_base_commit": "f8770d35036d54b3cd70d1129f91e030c1049212",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 3
+  }
+}

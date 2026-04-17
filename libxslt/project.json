@@ -1,0 +1,11 @@
+{
+  "project": "libxslt",
+  "main_repo_url": "https://gitlab.gnome.org/GNOME/libxslt.git",
+  "target_dir": "libxslt",
+  "secure_base_commit": "35323d6a15f6e63c9919ddbc0abe64c90a0dd88a",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 10
+  }
+}

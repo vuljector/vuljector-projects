@@ -1,0 +1,11 @@
+{
+  "project": "kimageformats",
+  "main_repo_url": "https://invent.kde.org/frameworks/kimageformats.git",
+  "target_dir": "kimageformats",
+  "secure_base_commit": "742b5097f6a6ccd9aed3e255c1e001c266a8ed13",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 45
+  }
+}

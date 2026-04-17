@@ -1,0 +1,11 @@
+{
+  "project": "cryptofuzz",
+  "main_repo_url": "https://github.com/MozillaSecurity/cryptofuzz",
+  "target_dir": "cryptofuzz",
+  "secure_base_commit": "75e52bea13eefd6fee276468a92ae7e47f1f209a",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 5
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "project": "libavc",
+  "main_repo_url": "https://github.com/ittiam-systems/libavc.git",
+  "target_dir": "libavc",
+  "secure_base_commit": "5f071f27c2f7b0471dfc291f71616b48117e4d52",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2
+  }
+}

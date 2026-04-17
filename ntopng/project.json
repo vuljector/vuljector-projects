@@ -1,0 +1,11 @@
+{
+  "project": "ntopng",
+  "main_repo_url": "https://github.com/ntop/ntopng.git",
+  "target_dir": "ntopng",
+  "secure_base_commit": "a26247eccabd89620d413770090671bf1422973d",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1
+  }
+}

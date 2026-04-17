@@ -1,0 +1,11 @@
+{
+  "project": "lwan",
+  "main_repo_url": "https://github.com/lpereira/lwan.git",
+  "target_dir": "lwan",
+  "secure_base_commit": "bcf68f006b526444016da2c17484748a43e59e3c",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 1
+  }
+}

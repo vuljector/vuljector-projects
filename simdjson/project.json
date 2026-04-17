@@ -1,0 +1,11 @@
+{
+  "project": "simdjson",
+  "main_repo_url": "https://github.com/simdjson/simdjson.git",
+  "target_dir": "simdjson",
+  "secure_base_commit": "4ec44e88c99a851131035cc11e387debfb18e950",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 119
+  }
+}
