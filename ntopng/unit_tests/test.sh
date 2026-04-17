@@ -18,20 +18,5 @@ PY
 # Install lightweight deps
 pip3 install --no-cache-dir requests -q || true
 
-# Create a small unittest that verifies constructing Ntopng with an unreachable URL raises ValueError
-cat > /tmp/ntopng_unittest.py <<'PY'
-import unittest
-from ntopng.ntopng import Ntopng
-
-class TestNtopng(unittest.TestCase):
-    def test_invalid_url_raises(self):
-        # Use a port that is very unlikely to be open to force a connection error
-        with self.assertRaises(ValueError):
-            Ntopng('admin','admin', None, 'http://127.0.0.1:59999')
-
-if __name__ == '__main__':
-    unittest.main()
-PY
-
-# Run the unittest and pipe through the parser (must be the last line)
-python3 /tmp/ntopng_unittest.py 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework unittest
+python3 /workspace/run/unit_tests/test_ntopng_api.py 2>&1 \
+  | python3 /workspace/run/unit_tests/parse_results.py --framework unittest

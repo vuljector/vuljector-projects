@@ -8,8 +8,11 @@ export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
 # Configure and build a small Lagom host test subset.
 mkdir -p /tmp/lagom_build
 cmake -GNinja -S /src/serenity/Meta/Lagom -B /tmp/lagom_build -DBUILD_LAGOM=ON
-ninja -C /tmp/lagom_build -j$(nproc) TestLibCoreArgsParser TestLibCoreDateTime
+ninja -C /tmp/lagom_build -j$(nproc) \
+    TestLibCoreArgsParser TestLibCoreDateTime \
+    TestLibCoreFileWatcher TestLibCorePromise \
+    Regex test-invalid-unicode-js test-value-js
 
 # Run the selected tests via CTest and pipe through the provided parser
 cd /tmp/lagom_build
-ctest --output-on-failure -R "^(TestLibCoreArgsParser|TestLibCoreDateTime)$" 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework ctest
+ctest --output-on-failure -R "TestLibCore|Regex|test-invalid-unicode-js|test-value-js" 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework ctest

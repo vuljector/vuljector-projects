@@ -7,7 +7,7 @@ unset SANITIZER_FLAGS LIB_FUZZING_ENGINE && export CFLAGS="" CXXFLAGS="" LDFLAGS
 # Install build deps for Python extension
 export DEBIAN_FRONTEND=noninteractive
 apt-get update -y >/dev/null
-apt-get install -y --no-install-recommends swig python3-dev build-essential >/dev/null || true
+apt-get install -y --no-install-recommends swig python3-dev build-essential selinux-policy-dev >/dev/null || true
 
 # Build the libselinux python extension (will produce build/lib.*)
 cd /src/selinux/libselinux/src
@@ -36,8 +36,13 @@ if [ -n "$BUILD_LIB_DIR" ]; then
   BUILD_LIB_DIR=$(cd "$BUILD_LIB_DIR" && pwd)
 fi
 
-# Ensure PYTHONPATH includes the built extension and package sources
-export PYTHONPATH="/src/selinux/python:${BUILD_LIB_DIR}:/src/selinux/python/sepolgen/src"
+# Ensure PYTHONPATH includes the built extension and package sources.
+# The in-place build puts .so files into /src/selinux/libselinux/src/selinux/, so
+# include that parent dir so Python finds the selinux package with __init__.py.
+LIBLESELINUX_SRC="/src/selinux/libselinux/src"
+export PYTHONPATH="/src/selinux/python:${LIBLESELINUX_SRC}:${BUILD_LIB_DIR}:/src/selinux/python/sepolgen/src"
+# Use the locally built libselinux (newer than system 3.0) so _selinux.so loads correctly
+export LD_LIBRARY_PATH="${LIBLESELINUX_SRC}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 
 # Run sepolgen tests which exercise the selinux python bindings
 cd /src/selinux/python/sepolgen/tests

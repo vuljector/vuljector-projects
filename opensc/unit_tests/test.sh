@@ -40,7 +40,9 @@ run() {
 }
 
 run --version
+run -i
 run --list-readers
 run --list-drivers
+run --get-conf-entry "app:default:debug"
 
 printf '%s passed, %s failed\n' "$passed" "$failed" | python3 /workspace/run/unit_tests/parse_results.py

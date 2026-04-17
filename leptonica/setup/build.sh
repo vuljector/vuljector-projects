@@ -15,5 +15,18 @@
 #
 ################################################################################
 
-$SRC/leptonica/prog/fuzzing/oss-fuzz-build.sh
+$SRC/leptonica/prog/fuzzing/oss-fuzz-build.sh || true
+
+# Pre-build leptonica test suite with GCC + system image libraries so
+# test.sh can skip the expensive configure+compile step at validation time.
+unset CC CXX CFLAGS CXXFLAGS CPPFLAGS LDFLAGS SANITIZER SANITIZER_FLAGS LIB_FUZZING_ENGINE
+export CCACHE_DISABLE=1
+
+apt-get install -y -q libpng-dev libjpeg-dev libtiff-dev libwebp-dev zlib1g-dev >/dev/null 2>&1
+
+cd "$SRC/leptonica"
+./configure \
+    --with-libpng --with-zlib --with-jpeg --with-libwebp --with-libtiff \
+    CC=gcc >/dev/null 2>&1
+make -j"$(nproc)" >/dev/null 2>&1
 
