@@ -4,6 +4,7 @@
   "main_repo_url": "https://github.com/Exiv2/exiv2",
   "target_dir": "exiv2",
   "secure_base_commit": "f9efd0edea46f11867e7e4331503ea90d3af2217",
+  "codeql_build_command": "(apt-get install -y --no-install-recommends libfmt-dev libexpat1-dev libbrotli-dev libpng-dev zlib1g-dev libgtest-dev 2>/dev/null) || true; cd /src/exiv2 && unset CC CXX CFLAGS CXXFLAGS LDFLAGS && mkdir -p build && cd build && (cmake -DEXIV2_ENABLE_PNG=ON -DEXIV2_ENABLE_WEBREADY=ON -DEXIV2_ENABLE_CURL=OFF -DEXIV2_ENABLE_BMFF=ON -DEXIV2_TEAM_WARNINGS_AS_ERRORS=OFF -DBUILD_SHARED_LIBS=OFF -DEXIV2_BUILD_FUZZ_TESTS=OFF -DEXIV2_TEAM_OSS_FUZZ=OFF -DEXIV2_ENABLE_INIH=OFF -DCMAKE_CXX_STANDARD=20 .. && make -j$(nproc) -k) || true",
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 6

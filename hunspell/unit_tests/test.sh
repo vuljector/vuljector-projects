@@ -1,7 +1,11 @@
 #!/bin/bash
+set -euo pipefail
 cd /src/hunspell
 # Clear OSS-Fuzz sanitizer/fuzzer flags that break normal builds
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE
 export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
-if [ ! -f configure ]; then autoreconf -fi 2>&1 | tail -1; fi && ./configure 2>&1 | tail -1 && make -j$(nproc) 2>&1 | tail -1
+make distclean >/dev/null 2>&1 || true
+autoreconf -fi >/dev/null 2>&1
+./configure >/dev/null 2>&1
+make -j4 >/dev/null
 make check 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework autotools

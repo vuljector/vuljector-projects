@@ -1,20 +1,13 @@
 #!/bin/bash
 set -euo pipefail
-# Build test binaries first
 cd /src/htslib || exit 1
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true
 export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
-autoconf 2>/dev/null || true
-autoheader 2>/dev/null || true
-./configure LIBS="-lz -lm -lbz2 -llzma -lcurl -lcrypto -lpthread" >/dev/null 2>&1 || true
-make -j$(nproc) libhts.a bgzip htsfile tabix annot-tsv >/dev/null 2>&1 || true
-make -j$(nproc) test/hts_endian test/fieldarith test/hfile test/pileup test/pileup_mod \
-    test/sam test/test_bgzf test/test_expr test/test_faidx test/test_kfunc \
-    test/test_khash test/test_kstring test/test_mod test/test_nibbles test/test_realn \
-    test/test-regidx test/test_str2int test/test_time_funcs test/test_view \
-    test/test_index test/test-vcf-api test/test-vcf-sweep test/test-bcf-sr \
-    test/test-bcf-translate test/test-parse-reg test/test_introspection \
-    test/test-bcf_set_variant_type >/dev/null 2>&1 || true
+make clean >/dev/null 2>&1 || true
+autoheader >/dev/null 2>&1 || true
+autoconf >/dev/null 2>&1 || true
+./configure LIBS="-lz -lm -lbz2 -llzma -lcurl -lcrypto -lpthread" >/dev/null 2>&1
+make -j4 >/dev/null
 
 # Run from the test directory to avoid relative-path issues in test scripts
 cd /src/htslib/test || exit 1
@@ -31,7 +24,7 @@ new = old + '        next if $sam eq "ce#large_seq.sam" || $sam eq "xx#large_aux
 p.write_text(text.replace(old, new, 1))
 PY
 
-./test.pl >"$tmp_output" 2>&1 || true
+./test.pl >"$tmp_output" 2>&1
 cat "$tmp_output"
 
 python3 - "$tmp_output" <<'PY' | python3 /workspace/run/unit_tests/parse_results.py --framework custom

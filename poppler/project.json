@@ -4,6 +4,7 @@
   "target_dir": "poppler",
   "secure_base_commit": "e092d116f12928a617d95354adfc049afa38b41d",
   "language": "c++",
+  "codeql_build_command": "(cd /src/freetype && make install prefix=/usr/local 2>/dev/null) || true; cd /src/poppler && unset CC CXX CFLAGS CXXFLAGS LDFLAGS && mkdir -p build && cd build && (cmake -DCMAKE_C_COMPILER=/usr/local/bin/clang -DCMAKE_CXX_COMPILER=/usr/local/bin/clang++ -DCMAKE_CXX_FLAGS=-stdlib=libc++ -DCMAKE_EXE_LINKER_FLAGS=-stdlib=libc++ -DFreetype_ROOT=/usr/local -DFontconfig_ROOT=/work/prefix -DCMAKE_PREFIX_PATH='/work/prefix;/usr/local' -DENABLE_UNSTABLE_API_ABI_HEADERS=ON -DBUILD_GTK_TESTS=OFF -DBUILD_QT5_TESTS=OFF -DBUILD_QT6_TESTS=OFF -DBUILD_CPP_TESTS=OFF -DENABLE_UTILS=OFF -DENABLE_BOOST=OFF -DBUILD_SHARED_LIBS=OFF -DENABLE_GPGME=OFF -DENABLE_LIBTIFF=OFF -DENABLE_NSS3=OFF -DENABLE_LCMS=OFF -DENABLE_LIBOPENJPEG=none -DENABLE_DCTDECODER=none -DENABLE_QT5=OFF -DENABLE_QT6=OFF -DENABLE_LIBCURL=OFF .. && make -j$(nproc) -k) || true",
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 15

@@ -4,6 +4,7 @@
   "main_repo_url": "https://github.com/systemd/systemd",
   "target_dir": "systemd",
   "secure_base_commit": "b3c3a40b35e94806c590116e50e9c49929b20efc",
+  "codeql_build_command": "(pip3 install jinja2 -q --root-user-action=ignore 2>/dev/null) || true; (apt-get install -y --no-install-recommends gperf 2>/dev/null) || true; cd /src/systemd && unset CC CXX CFLAGS CXXFLAGS LDFLAGS && (CC=gcc CXX=g++ meson setup build --buildtype=plain -Dfuzz-tests=false -Dtests=false -Dman=false -Dhtml=false -Dnss-systemd=false -Db_sanitize=none -Db_lto=false -Dlz4=disabled -Dxz=disabled -Dzstd=disabled -Dbzip2=disabled -Dlibcryptsetup=disabled -Dlibcurl=disabled -Dgnutls=disabled -Dgcrypt=disabled -Dpam=disabled -Dseccomp=disabled -Dapparmor=disabled -Dselinux=disabled -Daudit=disabled -Dpolkit=disabled -Defi=false -Dxkbcommon=disabled -Dglib=disabled -Dlibidn2=disabled -Dlibiptc=disabled -Dqrencode=disabled -Dpcre2=disabled -Dlibfido2=disabled -Dtpm2=disabled -Delfutils=disabled -Dlibarchive=disabled -Dp11kit=disabled && ninja -C build -j$(nproc) -k 0) || true",
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 15

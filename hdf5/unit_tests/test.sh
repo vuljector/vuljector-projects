@@ -24,7 +24,7 @@ fi
 log=$(mktemp)
 trap 'rm -f "$log"' EXIT
 set +e
-( cd "$BUILD_DIR" && ctest --output-on-failure ) >"$log" 2>&1
+( cd "$BUILD_DIR" && ctest -j16 --output-on-failure ) >"$log" 2>&1
 rc=$?
 set -e
 cat "$log"

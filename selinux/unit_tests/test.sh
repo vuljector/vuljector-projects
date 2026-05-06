@@ -7,7 +7,11 @@ unset SANITIZER_FLAGS LIB_FUZZING_ENGINE && export CFLAGS="" CXXFLAGS="" LDFLAGS
 # Install build deps for Python extension
 export DEBIAN_FRONTEND=noninteractive
 apt-get update -y >/dev/null
-apt-get install -y --no-install-recommends swig python3-dev build-essential selinux-policy-dev >/dev/null || true
+apt-get install -y --no-install-recommends swig python3-dev build-essential selinux-policy-dev libpcre3-dev >/dev/null || true
+
+# Build a native libselinux shared library that matches the Python extension.
+make -C /src/selinux/libselinux/src clean >/dev/null 2>&1 || true
+make -C /src/selinux/libselinux/src PCRE_LDLIBS=-lpcre -j4 >/dev/null
 
 # Build the libselinux python extension (will produce build/lib.*)
 cd /src/selinux/libselinux/src

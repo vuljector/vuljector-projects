@@ -19,12 +19,13 @@ UNIT_TEST_BIN=/tmp/dnsmasq_unit_tests
     echo "1 failed"
   fi
 
-  # ── tests 2-N: C unit tests against libdnsmasq.a ───────────────────────────
+# ── tests 2-N: C unit tests against util.c with tiny link stubs ────────────
   if gcc "$UNIT_TEST_SRC" \
+         /workspace/run/unit_tests/dnsmasq_stubs.c \
+         /src/dnsmasq/src/util.c \
          -I/src/dnsmasq/src \
-         /src/dnsmasq/src/libdnsmasq.a \
          -lm -lpthread \
-         -o "$UNIT_TEST_BIN" 2>/dev/null; then
+         -o "$UNIT_TEST_BIN"; then
     "$UNIT_TEST_BIN" || true
   else
     echo "FAIL: could not compile C unit tests"

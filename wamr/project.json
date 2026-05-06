@@ -4,6 +4,7 @@
   "main_repo_url": "https://github.com/bytecodealliance/wasm-micro-runtime",
   "target_dir": "wamr",
   "secure_base_commit": "fcec30e93387cadcaa0a7eff3d3a6ec84e91f9fd",
+  "codeql_build_command": "cd /src/wamr/product-mini/platforms/linux && unset CC CXX CFLAGS CXXFLAGS LDFLAGS && mkdir -p build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DWAMR_BUILD_INTERP=1 -DWAMR_BUILD_FAST_INTERP=1 -DWAMR_BUILD_AOT=1 -DWAMR_BUILD_JIT=0 -DWAMR_BUILD_LIBC_BUILTIN=1 -DWAMR_BUILD_LIBC_WASI=1 -DWAMR_BUILD_MULTI_MODULE=1 -DWAMR_BUILD_REF_TYPES=1 -DWAMR_BUILD_BULK_MEMORY=1 -DWAMR_BUILD_SIMD=1 -DLLVM_DIR=/opt/llvm-18.1.8/lib/cmake/llvm .. && make -j$(nproc) -k; true",
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 148

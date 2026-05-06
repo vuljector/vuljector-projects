@@ -4,6 +4,7 @@
   "target_dir": "ghostpdl",
   "secure_base_commit": "f8770d35036d54b3cd70d1129f91e030c1049212",
   "language": "c++",
+  "codeql_build_command": "(test -d /src/freetype && mv /src/freetype /src/ghostpdl/freetype) || true; cd /src/ghostpdl && unset CC CXX CFLAGS CXXFLAGS CPPFLAGS LDFLAGS && ./autogen.sh --with-drivers=pdfwrite,ps2write,png16m,psdcmyk,eps2write,bmpmono,xpswrite,pxlmono,pxlcolor,ljet4 && make -j$(nproc) -k libgpdl libgs; true",
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 6

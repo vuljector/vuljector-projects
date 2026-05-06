@@ -4,6 +4,8 @@
   "target_dir": "arrow",
   "secure_base_commit": "c16a8b22d144d6685ef97c3ef676091dd9c86f1f",
   "language": "c++",
+  "codeql_source_subdir": "cpp",
+  "codeql_build_command": "cd /src/arrow/cpp && mkdir -p /tmp/arrow-codeql-build && cmake -B /tmp/arrow-codeql-build -S . -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DARROW_BUILD_TESTS=OFF -DARROW_COMPUTE=ON -DARROW_CSV=ON -DARROW_DATASET=ON -DARROW_FILESYSTEM=ON -DARROW_PARQUET=ON -DARROW_IPC=ON -DARROW_JSON=ON -DARROW_JEMALLOC=OFF -DARROW_WITH_SNAPPY=OFF -DARROW_WITH_LZ4=OFF -DARROW_WITH_ZSTD=OFF -DARROW_WITH_BROTLI=OFF -DARROW_WITH_OPENSSL=ON -DPARQUET_REQUIRE_ENCRYPTION=ON -DARROW_DEPENDENCY_SOURCE=BUNDLED 2>&1 | tail -5 && cmake --build /tmp/arrow-codeql-build --target arrow_static parquet_static -j$(nproc) || true",
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 11

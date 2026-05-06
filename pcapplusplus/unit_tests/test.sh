@@ -12,19 +12,24 @@ if [ -x "$PREBUILD_DIR/Tests/Packet++Test/Packet++Test" ] && [ -x "$PREBUILD_DIR
 else
     LIBPCAP_COPY=/tmp/libpcap-gcc-copy
     cp -r "$LIBPCAP_PATH" "$LIBPCAP_COPY"
-    (cd "$LIBPCAP_COPY" && CC=gcc CFLAGS='-no-pie' ./configure --disable-shared >/dev/null 2>&1 && make -j"$(nproc)" >/dev/null 2>&1)
+    (
+        cd "$LIBPCAP_COPY" &&
+        make distclean >/dev/null 2>&1 || true &&
+        CC=gcc CFLAGS='-no-pie' ./configure --disable-shared >/dev/null 2>&1 &&
+        make -j4 >/dev/null 2>&1
+    )
     BUILD=/tmp/pcap-native
     rm -rf "$BUILD"
     cd /src/PcapPlusPlus
     cmake -S . -B "$BUILD" \
         -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ \
-        -DCMAKE_C_FLAGS='-no-pie' -DCMAKE_CXX_FLAGS='-no-pie' \
+        -DCMAKE_C_FLAGS='-no-pie' -DCMAKE_CXX_FLAGS='-no-pie -Wno-error=unused-function' \
         -DCMAKE_EXE_LINKER_FLAGS='-no-pie' \
         -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 \
         -DPCAPPP_BUILD_FUZZERS=OFF -DPCAPPP_BUILD_TESTS=ON -DPCAPPP_BUILD_EXAMPLES=OFF \
         -DPCAP_INCLUDE_DIR="${LIBPCAP_COPY}/" \
         -DPCAP_LIBRARY="${LIBPCAP_COPY}/libpcap.a" >/dev/null 2>&1
-    cmake --build "$BUILD" -j"$(nproc)" >/dev/null 2>&1
+    cmake --build "$BUILD" -j4 >/dev/null 2>&1
 fi
 
 cd /src/PcapPlusPlus
