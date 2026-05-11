@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eu
+set -uo pipefail
 
 cd /src/opensc
 

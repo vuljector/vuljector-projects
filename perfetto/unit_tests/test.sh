@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 # Run sqlglot python unit tests from its package root so relative fixture paths resolve
 cd /src/perfetto/buildtools/sqlglot
 # Clear sanitizer flags that break native builds

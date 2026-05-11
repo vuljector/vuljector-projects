@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/behaviortreecpp
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE
 export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
@@ -24,7 +24,20 @@ p.write_text(s)
 PY
 rm -rf /tmp/btcpp-build
 mkdir -p /tmp/btcpp-build
-cd /tmp/btcpp-build
-cmake /src/behaviortreecpp -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DBTCPP_SQLITE_LOGGING=OFF -DBTCPP_GROOT_INTERFACE=OFF -DBTCPP_EXAMPLES=OFF
-cmake --build . -j"$(nproc)"
+cd /tmp/btcpp-build || { echo "cd /tmp/btcpp-build failed"; printf '{"passed": 0, "failed": -1}\n'; exit 0; }
+
+cmake /src/behaviortreecpp -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DBTCPP_SQLITE_LOGGING=OFF -DBTCPP_GROOT_INTERFACE=OFF -DBTCPP_EXAMPLES=OFF >/tmp/btcpp_cmake_configure.log 2>&1 || {
+    echo "=== cmake configure failed ==="
+    tail -50 /tmp/btcpp_cmake_configure.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
+
+cmake --build . -j"$(nproc)" >/tmp/btcpp_cmake_build.log 2>&1 || {
+    echo "=== cmake --build failed ==="
+    tail -80 /tmp/btcpp_cmake_build.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
+
 ./tests/behaviortree_cpp_test --gtest_filter='Any.*:BasicTypes.ToStr_*:BasicTypes.ConvertFromString_Int:BasicTypes.ConvertFromString_Int64:BasicTypes.ConvertFromString_UInt64:BasicTypes.ConvertFromString_Bool' 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework gtest

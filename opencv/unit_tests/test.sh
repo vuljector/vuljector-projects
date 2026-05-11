@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/opencv
 # Clear sanitizer flags which break native builds in OSS-Fuzz environment
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true
@@ -13,7 +13,8 @@ python3 -m pip install numpy pytest || true
 BUILD_DIR=/tmp/opencv_build
 INSTALL_DIR=/tmp/opencv_install
 rm -rf "$BUILD_DIR" "$INSTALL_DIR"
-mkdir -p "$BUILD_DIR" && cd "$BUILD_DIR"
+mkdir -p "$BUILD_DIR"
+cd "$BUILD_DIR" || { echo "cd $BUILD_DIR failed"; printf '{"passed": 0, "failed": -1}\n'; exit 0; }
 
 # Determine python site-packages path
 PY_SP=$(python3 -c 'import site,sys; p=site.getsitepackages()[0] if hasattr(site,"getsitepackages") else site.getusersitepackages(); print(p)')
@@ -35,11 +36,27 @@ cmake /src/opencv \
   -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} \
   -DPYTHON3_EXECUTABLE=$(which python3) \
   -DPYTHON3_PACKAGES_PATH=${PY_SP} \
-  -DBUILD_LIST=core,python3,ml,highgui,imgproc,imgcodecs,video,videoio,photo,calib3d,features2d,flann,objdetect
+  -DBUILD_LIST=core,python3,ml,highgui,imgproc,imgcodecs,video,videoio,photo,calib3d,features2d,flann,objdetect >/tmp/opencv_cmake_configure.log 2>&1 || {
+    echo "=== cmake configure failed ==="
+    tail -50 /tmp/opencv_cmake_configure.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
 
 # Build and install
-cmake --build . -j$(nproc)
-cmake --build . --target install -j$(nproc)
+cmake --build . -j$(nproc) >/tmp/opencv_cmake_build.log 2>&1 || {
+    echo "=== cmake --build failed ==="
+    tail -80 /tmp/opencv_cmake_build.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
+
+cmake --build . --target install -j$(nproc) >/tmp/opencv_cmake_install.log 2>&1 || {
+    echo "=== cmake --build install failed ==="
+    tail -80 /tmp/opencv_cmake_install.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
 
 # Load OpenCV's generated environment so the Python bindings resolve correctly.
 OPENCV_QUIET=1

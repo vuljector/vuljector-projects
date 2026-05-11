@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE
 export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
 pip3 install -e /src/zeek/auxil/zeek-client >/tmp/test_harness_install.log 2>&1 || true

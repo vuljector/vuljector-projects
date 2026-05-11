@@ -1,0 +1,12 @@
+{
+  "project": "haproxy",
+  "main_repo_url": "https://github.com/haproxy/haproxy",
+  "target_dir": "haproxy",
+  "secure_base_commit": "731fc033dd56196761e42efe0d39b3d4b4ef8203",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 4
+  },
+  "dockerhub_image": "vuljector/haproxy:setup"
+}

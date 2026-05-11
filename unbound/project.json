@@ -1,0 +1,12 @@
+{
+  "project": "unbound",
+  "main_repo_url": "https://github.com/NLnetLabs/unbound",
+  "target_dir": "unbound",
+  "secure_base_commit": "8ada1bd88d2bc406c7a674d0e949ef5c63d648bd",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 88
+  },
+  "dockerhub_image": "vuljector/unbound:setup"
+}

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/poppler
 rm -rf /src/test
 ln -s /src/poppler-test /src/test
@@ -8,7 +8,7 @@ unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true
 export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
 
 # Install build deps if missing (best-effort, non-fatal)
-apt-get update -y >/dev/null
+apt-get update -y >/dev/null 2>&1 || true
 apt-get install -y --no-install-recommends libfreetype-dev libfontconfig1-dev libcairo2-dev libglib2.0-dev libjpeg-dev libopenjp2-7-dev libpng-dev libtiff-dev pkg-config cmake build-essential python3-pip libc++-dev libc++abi-dev >/dev/null || true
 
 # Workaround: relax freetype version requirement in-source to use system freetype
@@ -18,7 +18,7 @@ fi
 
 BUILD_DIR=/tmp/poppler-build
 mkdir -p "$BUILD_DIR"
-cd "$BUILD_DIR"
+cd "$BUILD_DIR" || { echo "cd $BUILD_DIR failed"; printf '{"passed": 0, "failed": -1}\n'; exit 0; }
 
 # Use clang++ if available and prefer libc++ for modern C++ headers
 if [ -x /usr/local/bin/clang++ ]; then
@@ -51,9 +51,19 @@ if [ ! -f CMakeCache.txt ]; then
     -DBUILD_CPP_TESTS=ON \
     -DFONT_CONFIGURATION=generic \
     -DCMAKE_CXX_FLAGS="$CXX_FLAGS" \
-    -DCMAKE_EXE_LINKER_FLAGS="$LINK_FLAGS -ldl"
+    -DCMAKE_EXE_LINKER_FLAGS="$LINK_FLAGS -ldl" >/tmp/poppler_cmake_configure.log 2>&1 || {
+      echo "=== cmake configure failed ==="
+      tail -50 /tmp/poppler_cmake_configure.log
+      printf '{"passed": 0, "failed": -1}\n'
+      exit 0
+  }
 fi
 
-cmake --build . --target image-embedding -j"$(nproc)"
+cmake --build . --target image-embedding -j"$(nproc)" >/tmp/poppler_cmake_build.log 2>&1 || {
+    echo "=== cmake --build failed ==="
+    tail -80 /tmp/poppler_cmake_build.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
 ln -sf "$PWD/test/image-embedding" /image-embedding
 ctest --output-on-failure -R '^embed-' -j1 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework ctest

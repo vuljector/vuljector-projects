@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/unicorn
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true
 export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""

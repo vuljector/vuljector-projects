@@ -1,0 +1,12 @@
+{
+  "project": "lighttpd",
+  "main_repo_url": "https://github.com/lighttpd/lighttpd1.4",
+  "target_dir": "lighttpd1.4",
+  "secure_base_commit": "3651e9be9ee7d9afd04f9e7c956a40f3633656e1",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 232
+  },
+  "dockerhub_image": "vuljector/lighttpd:setup"
+}

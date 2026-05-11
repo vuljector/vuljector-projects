@@ -1,0 +1,12 @@
+{
+  "project": "njs",
+  "main_repo_url": "https://github.com/nginx/njs.git",
+  "target_dir": "njs",
+  "secure_base_commit": "0ffc96df7f341f6c5f6f70cb6207030b6afe0de3",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 6024
+  },
+  "dockerhub_image": "vuljector/njs:setup"
+}

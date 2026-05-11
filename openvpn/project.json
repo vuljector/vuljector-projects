@@ -1,0 +1,12 @@
+{
+  "project": "openvpn",
+  "main_repo_url": "https://github.com/OpenVPN/openvpn",
+  "target_dir": "openvpn",
+  "secure_base_commit": "fcc34b135222edf3d53976f406f8db19c19294c0",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 17
+  },
+  "dockerhub_image": "vuljector/openvpn:setup"
+}

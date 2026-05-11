@@ -1,0 +1,12 @@
+{
+  "project": "h2o",
+  "main_repo_url": "https://github.com/h2o/h2o",
+  "target_dir": "h2o",
+  "secure_base_commit": "8cb324bd2d5efb1926d0b8408b1d367687e50cfa",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 37
+  },
+  "dockerhub_image": "vuljector/h2o:setup"
+}

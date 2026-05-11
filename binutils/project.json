@@ -1,0 +1,11 @@
+{
+  "project": "binutils",
+  "main_repo_url": "https://github.com/bminor/binutils-gdb",
+  "target_dir": "binutils-gdb",
+  "secure_base_commit": "fec15ed2473ffdcf2392634307b403848616a0ae",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 222
+  }
+}

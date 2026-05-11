@@ -1,6 +1,6 @@
 #!/bin/bash
 # Test harness for llvm unit/integration tests (non-fuzz)
-set -euo pipefail
+set -uo pipefail
 cd /src/llvm-project
 # Clear sanitizer/build flags that break native builds
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true

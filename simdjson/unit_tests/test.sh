@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 
 cd /src/simdjson
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true
@@ -11,7 +11,12 @@ export ASAN_OPTIONS=detect_leaks=0
 # CMake tree under /tmp misses generator steps and breaks <ranges> with the
 # image toolchain; the fuzz tree also may not have every test binary until
 # `all_tests` is built (e.g. amalgamate_demo).
-ninja -C /src/simdjson/build -j"$(nproc)" all_tests
+ninja -C /src/simdjson/build -j"$(nproc)" all_tests >/tmp/simdjson_ninja_build.log 2>&1 || {
+    echo "=== ninja all_tests failed ==="
+    tail -80 /tmp/simdjson_ninja_build.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
 
 log=$(mktemp)
 trap 'rm -f "$log"' EXIT
@@ -19,10 +24,8 @@ trap 'rm -f "$log"' EXIT
 # Same exclusions as oss-fuzz/projects/simdjson/run_tests.sh
 EXCL='minify_tests|prettify_tests|ondemand_tostring_tests|ondemand_cacheline|builder_string_builder_tests'
 
-set +e
 ctest --test-dir /src/simdjson/build -j"$(nproc)" -E "$EXCL" >"$log" 2>&1
 rc=$?
-set -e
 
 cat "$log"
 python3 /workspace/run/unit_tests/parse_results.py --framework ctest <"$log"

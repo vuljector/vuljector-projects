@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/openthread
 # Clear sanitizer flags so native builds/tests aren't broken
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true

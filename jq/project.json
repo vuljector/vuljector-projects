@@ -1,0 +1,12 @@
+{
+  "project": "jq",
+  "main_repo_url": "https://github.com/jqlang/jq",
+  "target_dir": "jq",
+  "secure_base_commit": "9d223f153c3632a207fa071caaa6292da33ae361",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 9
+  },
+  "dockerhub_image": "vuljector/jq:setup"
+}

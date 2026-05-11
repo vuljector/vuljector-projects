@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/open62541
 # Clear sanitizer flags (OSS-Fuzz quirk)
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true

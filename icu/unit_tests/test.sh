@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/icu
 # Clear sanitizer flags which break native builds in OSS-Fuzz environment
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true

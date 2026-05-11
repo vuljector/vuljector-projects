@@ -1,0 +1,12 @@
+{
+  "project": "bluez",
+  "main_repo_url": "https://github.com/bluez/bluez",
+  "target_dir": "bluez",
+  "secure_base_commit": "7cd27f4f66aa88194fbc1565bc13f24405acacd8",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 37
+  },
+  "dockerhub_image": "vuljector/bluez:setup"
+}

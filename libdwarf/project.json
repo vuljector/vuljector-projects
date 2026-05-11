@@ -1,0 +1,12 @@
+{
+  "project": "libdwarf",
+  "main_repo_url": "https://github.com/davea42/libdwarf-code",
+  "target_dir": "libdwarf",
+  "secure_base_commit": "4219b9d3c386f75ca5f47ade03def1a157057e49",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 22
+  },
+  "dockerhub_image": "vuljector/libdwarf:setup"
+}

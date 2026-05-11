@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/radare2
 
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true
@@ -12,7 +12,12 @@ if [ ! -d r2-static ]; then
   export HOST_CC=$CC
   export NOLTO=1
   sed 's/gcc-ar/llvm-ar/g' -i sys/static.sh
-  sys/static.sh >/dev/null 2>&1 || true
+  sys/static.sh >/tmp/radare2-static-build.log 2>&1 || {
+    echo "=== sys/static.sh failed ==="
+    tail -80 /tmp/radare2-static-build.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+  }
 fi
 
 export LD_LIBRARY_PATH=/src/radare2/r2-static/usr/lib
@@ -21,7 +26,12 @@ export PATH=/src/radare2/r2-static/usr/bin:$PATH
 make -C test/unit \
   LIBDIR=/src/radare2/r2-static/usr/lib \
   INCLUDEDIR=/src/radare2/libr/include \
-  all >/tmp/radare2-unit-build.log 2>&1
+  all >/tmp/radare2-unit-build.log 2>&1 || {
+    echo "=== make -C test/unit all failed ==="
+    tail -80 /tmp/radare2-unit-build.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
 
 excluded_re='^(test_bin|test_dwarf|test_dwarf_info|test_dwarf_integration|test_get_glibc_version|test_get_main_arena_offset|test_pdb)$'
 tmp_output="$(mktemp)"

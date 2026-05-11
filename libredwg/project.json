@@ -1,0 +1,12 @@
+{
+  "project": "libredwg",
+  "main_repo_url": "https://github.com/LibreDWG/libredwg",
+  "target_dir": "libredwg",
+  "secure_base_commit": "615cd958ff00c13e110c0b87ca96121ed15e34f6",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 254
+  },
+  "dockerhub_image": "vuljector/libredwg:setup"
+}

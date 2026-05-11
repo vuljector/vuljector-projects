@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/PcapPlusPlus
 unset LIB_FUZZING_ENGINE SANITIZER SANITIZER_FLAGS
 export CCACHE_DISABLE=1 CCACHE_COMPILERTYPE="" CC=gcc CXX=g++ CFLAGS="" CXXFLAGS="" CPPFLAGS="" LDFLAGS="" RUSTFLAGS=""
@@ -13,11 +13,17 @@ else
     LIBPCAP_COPY=/tmp/libpcap-gcc-copy
     cp -r "$LIBPCAP_PATH" "$LIBPCAP_COPY"
     (
-        cd "$LIBPCAP_COPY" &&
-        make distclean >/dev/null 2>&1 || true &&
-        CC=gcc CFLAGS='-no-pie' ./configure --disable-shared >/dev/null 2>&1 &&
-        make -j4 >/dev/null 2>&1
-    )
+        cd "$LIBPCAP_COPY" || exit 1
+        make distclean >/dev/null 2>&1 || true
+        CC=gcc CFLAGS='-no-pie' ./configure --disable-shared >/tmp/pcap_libpcap_configure.log 2>&1 || exit 1
+        make -j4 >/tmp/pcap_libpcap_make.log 2>&1 || exit 1
+    ) || {
+        echo "=== libpcap build failed ==="
+        tail -50 /tmp/pcap_libpcap_configure.log 2>/dev/null
+        tail -50 /tmp/pcap_libpcap_make.log 2>/dev/null
+        printf '{"passed": 0, "failed": -1}\n'
+        exit 0
+    }
     BUILD=/tmp/pcap-native
     rm -rf "$BUILD"
     cd /src/PcapPlusPlus
@@ -28,15 +34,33 @@ else
         -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=20 \
         -DPCAPPP_BUILD_FUZZERS=OFF -DPCAPPP_BUILD_TESTS=ON -DPCAPPP_BUILD_EXAMPLES=OFF \
         -DPCAP_INCLUDE_DIR="${LIBPCAP_COPY}/" \
-        -DPCAP_LIBRARY="${LIBPCAP_COPY}/libpcap.a" >/dev/null 2>&1
-    cmake --build "$BUILD" -j4 >/dev/null 2>&1
+        -DPCAP_LIBRARY="${LIBPCAP_COPY}/libpcap.a" >/tmp/pcap_cmake_configure.log 2>&1 || {
+        echo "=== cmake configure failed ==="
+        tail -50 /tmp/pcap_cmake_configure.log
+        printf '{"passed": 0, "failed": -1}\n'
+        exit 0
+    }
+    cmake --build "$BUILD" -j4 >/tmp/pcap_cmake_build.log 2>&1 || {
+        echo "=== cmake --build failed ==="
+        tail -80 /tmp/pcap_cmake_build.log
+        printf '{"passed": 0, "failed": -1}\n'
+        exit 0
+    }
 fi
 
 cd /src/PcapPlusPlus
 mkdir -p Tests/Packet++Test/Bin Tests/Pcap++Test/Bin
-cp "$BUILD/Tests/Packet++Test/Packet++Test" Tests/Packet++Test/Bin/Packet++Test
-cp "$BUILD/Tests/Pcap++Test/Pcap++Test" Tests/Pcap++Test/Bin/Pcap++Test
-cp 3rdParty/OUIDataset/PCPP_OUIDataset.json Tests/Packet++Test/PCPP_OUIDataset.json
+cp "$BUILD/Tests/Packet++Test/Packet++Test" Tests/Packet++Test/Bin/Packet++Test || {
+    echo "=== copy Packet++Test binary failed ==="
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
+cp "$BUILD/Tests/Pcap++Test/Pcap++Test" Tests/Pcap++Test/Bin/Pcap++Test || {
+    echo "=== copy Pcap++Test binary failed ==="
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
+cp 3rdParty/OUIDataset/PCPP_OUIDataset.json Tests/Packet++Test/PCPP_OUIDataset.json || true
 log=/tmp/pcapplusplus-tests.log
 : > "$log"
 echo "=== Packet++Test ===" >> "$log"

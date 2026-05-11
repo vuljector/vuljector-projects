@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/grok
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE
 export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
@@ -11,10 +11,8 @@ export PYTHONPATH="/workspace/run/unit_tests:${PYTHONPATH:-}"
 log=$(mktemp)
 trap 'rm -f "$log"' EXIT
 
-set +e
 python3 /workspace/run/unit_tests/run_tests.py >"$log" 2>&1
 rc=$?
-set -e
 
 cat "$log"
 python3 /workspace/run/unit_tests/parse_results.py --framework generic <"$log"

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/qemu
 # Clear sanitizer flags that break native builds
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE
@@ -8,7 +8,12 @@ export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
 # Build qemu if not already built
 if [ ! -d build-oss-fuzz ]; then
   echo "Building QEMU..." >&2
-  /src/qemu/scripts/oss-fuzz/build.sh >/dev/null 2>&1 || true
+  /src/qemu/scripts/oss-fuzz/build.sh >/tmp/qemu_build.log 2>&1 || {
+    echo "=== qemu oss-fuzz build.sh failed ==="
+    tail -80 /tmp/qemu_build.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+  }
 fi
 
 out=$(mktemp)

@@ -1,0 +1,12 @@
+{
+  "project": "ffmpeg",
+  "main_repo_url": "https://github.com/FFmpeg/FFmpeg",
+  "target_dir": "ffmpeg",
+  "secure_base_commit": "fd25b35dd2c0655754d912b6e85843c6ccdfd0c3",
+  "language": "c++",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 2779
+  },
+  "dockerhub_image": "vuljector/ffmpeg:setup"
+}

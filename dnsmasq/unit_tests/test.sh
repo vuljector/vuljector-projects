@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -uo pipefail
 cd /src/dnsmasq
 # Clear OSS-Fuzz sanitizer flags which break native builds/executables
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE && export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""

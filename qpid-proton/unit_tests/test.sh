@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 
 cd /src/qpid-proton
 
@@ -7,9 +7,20 @@ unset SANITIZER_FLAGS LIB_FUZZING_ENGINE
 export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
 
 mkdir -p /tmp/build
-cd /tmp/build
+cd /tmp/build || { echo "cd /tmp/build failed"; printf '{"passed": 0, "failed": -1}\n'; exit 0; }
 
-cmake /src/qpid-proton -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON
-cmake --build . -j$(nproc)
+cmake /src/qpid-proton -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON >/tmp/qpid-proton_cmake_configure.log 2>&1 || {
+    echo "=== cmake configure failed ==="
+    tail -50 /tmp/qpid-proton_cmake_configure.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
+
+cmake --build . -j$(nproc) >/tmp/qpid-proton_cmake_build.log 2>&1 || {
+    echo "=== cmake --build failed ==="
+    tail -80 /tmp/qpid-proton_cmake_build.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
 
 ctest --output-on-failure -E python-integration-test 2>&1 | python3 /workspace/run/unit_tests/parse_results.py --framework ctest

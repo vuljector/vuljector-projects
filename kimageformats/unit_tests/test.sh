@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/kimageformats
 # Clear sanitizer/env flags that break native builds
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -uo pipefail
 cd /src/wireshark
 # Clear sanitizer flags which break native builds
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE && export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""

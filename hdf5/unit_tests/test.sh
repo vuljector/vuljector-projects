@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 
 cd /src/hdf5
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE
@@ -17,16 +17,24 @@ else
     -DCMAKE_BUILD_TYPE=Debug \
     -DBUILD_TESTING=ON \
     -DCMAKE_C_FLAGS="" \
-    -DCMAKE_CXX_FLAGS=""
-  cmake --build "$BUILD_DIR" -j"$(nproc)"
+    -DCMAKE_CXX_FLAGS="" >/tmp/hdf5_cmake_configure.log 2>&1 || {
+      echo "=== cmake configure failed ==="
+      tail -50 /tmp/hdf5_cmake_configure.log
+      printf '{"passed": 0, "failed": -1}\n'
+      exit 0
+  }
+  cmake --build "$BUILD_DIR" -j"$(nproc)" >/tmp/hdf5_cmake_build.log 2>&1 || {
+      echo "=== cmake --build failed ==="
+      tail -80 /tmp/hdf5_cmake_build.log
+      printf '{"passed": 0, "failed": -1}\n'
+      exit 0
+  }
 fi
 
 log=$(mktemp)
 trap 'rm -f "$log"' EXIT
-set +e
 ( cd "$BUILD_DIR" && ctest -j16 --output-on-failure ) >"$log" 2>&1
 rc=$?
-set -e
 cat "$log"
 python3 /workspace/run/unit_tests/parse_results.py --framework ctest <"$log"
 exit "$rc"

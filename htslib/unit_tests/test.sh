@@ -1,16 +1,28 @@
 #!/bin/bash
-set -euo pipefail
-cd /src/htslib || exit 1
+set -uo pipefail
+cd /src/htslib || { echo "cd /src/htslib failed"; printf '{"passed": 0, "failed": -1}\n'; exit 0; }
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE || true
 export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
 make clean >/dev/null 2>&1 || true
 autoheader >/dev/null 2>&1 || true
 autoconf >/dev/null 2>&1 || true
-./configure LIBS="-lz -lm -lbz2 -llzma -lcurl -lcrypto -lpthread" >/dev/null 2>&1
-make -j4 >/dev/null
+
+./configure LIBS="-lz -lm -lbz2 -llzma -lcurl -lcrypto -lpthread" >/tmp/htslib_configure.log 2>&1 || {
+    echo "=== ./configure failed ==="
+    tail -50 /tmp/htslib_configure.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
+
+make -j4 >/tmp/htslib_make.log 2>&1 || {
+    echo "=== make -j4 (library build) failed ==="
+    tail -80 /tmp/htslib_make.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
 
 # Run from the test directory to avoid relative-path issues in test scripts
-cd /src/htslib/test || exit 1
+cd /src/htslib/test || { echo "cd /src/htslib/test failed"; printf '{"passed": 0, "failed": -1}\n'; exit 0; }
 
 tmp_output="$(mktemp)"
 python3 - test.pl <<'PY'

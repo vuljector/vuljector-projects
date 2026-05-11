@@ -1,0 +1,12 @@
+{
+  "project": "open5gs",
+  "main_repo_url": "https://github.com/open5gs/open5gs",
+  "target_dir": "open5gs",
+  "secure_base_commit": "774ace0f7a9e1c83f31e092f466ed8571edc7955",
+  "language": "c",
+  "unit_tests": {
+    "enabled": true,
+    "expected_passing_count": 3
+  },
+  "dockerhub_image": "vuljector/open5gs:setup"
+}

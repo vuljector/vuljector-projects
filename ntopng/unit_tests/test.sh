@@ -1,10 +1,10 @@
 #!/bin/bash
-set -e
+set -uo pipefail
 cd /src/ntopng
 # Clear sanitizer flags (avoid breaking native builds)
 unset SANITIZER_FLAGS LIB_FUZZING_ENGINE && export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
 # Ensure python package is importable
-export PYTHONPATH=/src/ntopng/python:${PYTHONPATH}
+export PYTHONPATH=/src/ntopng/python:${PYTHONPATH:-}
 # Provide a lightweight dummy pandas to satisfy imports in historical.py
 cat > /src/ntopng/python/pandas.py <<'PY'
 # Minimal stub for pandas used by unit tests import only

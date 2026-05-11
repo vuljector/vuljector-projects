@@ -1,17 +1,24 @@
 #!/bin/bash
-set -euo pipefail
+set -uo pipefail
 cd /src/selinux
 # Clear sanitizer flags
-unset SANITIZER_FLAGS LIB_FUZZING_ENGINE && export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
+unset SANITIZER_FLAGS LIB_FUZZING_ENGINE
+export CFLAGS="" CXXFLAGS="" LDFLAGS="" RUSTFLAGS=""
 
 # Install build deps for Python extension
 export DEBIAN_FRONTEND=noninteractive
-apt-get update -y >/dev/null
+apt-get update -y >/dev/null 2>&1 || true
 apt-get install -y --no-install-recommends swig python3-dev build-essential selinux-policy-dev libpcre3-dev >/dev/null || true
 
 # Build a native libselinux shared library that matches the Python extension.
 make -C /src/selinux/libselinux/src clean >/dev/null 2>&1 || true
-make -C /src/selinux/libselinux/src PCRE_LDLIBS=-lpcre -j4 >/dev/null
+
+make -C /src/selinux/libselinux/src PCRE_LDLIBS=-lpcre -j4 >/tmp/selinux_libselinux_make.log 2>&1 || {
+    echo "=== libselinux make -j4 failed ==="
+    tail -80 /tmp/selinux_libselinux_make.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
 
 # Build the libselinux python extension (will produce build/lib.*)
 cd /src/selinux/libselinux/src
@@ -24,7 +31,13 @@ EOF
 if [ -f selinux.py ] && [ ! -f selinux/__init__.py ]; then
   mv -f selinux.py selinux/__init__.py
 fi
-python3 setup.py build_ext --inplace
+
+python3 setup.py build_ext --inplace >/tmp/selinux_setup_build_ext.log 2>&1 || {
+    echo "=== python3 setup.py build_ext --inplace failed ==="
+    tail -80 /tmp/selinux_setup_build_ext.log
+    printf '{"passed": 0, "failed": -1}\n'
+    exit 0
+}
 
 # Locate the built library directory
 BUILD_LIB_DIR=""
