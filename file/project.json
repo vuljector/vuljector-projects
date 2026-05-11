@@ -8,5 +8,5 @@
     "enabled": true,
     "expected_passing_count": 86
   },
-  "dockerhub_image": "vuljector/file:setup"
+  "dockerhub_image": null
 }
