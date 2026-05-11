@@ -4,6 +4,7 @@
   "target_dir": "llvm-project",
   "secure_base_commit": "121f5a96ff38ec0c5d5f7274b1b0ca0df26a1cee",
   "language": "c++",
+  "codeql_build_command": "mkdir -p /tmp/llvm-codeql-build && cmake -G Ninja -B /tmp/llvm-codeql-build -S /src/llvm-project/llvm -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_INCLUDE_TESTS=OFF -DLLVM_INCLUDE_EXAMPLES=OFF -DLLVM_INCLUDE_BENCHMARKS=OFF -DLLVM_ENABLE_PROJECTS= 2>&1 | tail -10 && cmake --build /tmp/llvm-codeql-build --target LLVMSupport LLVMCore LLVMAnalysis LLVMBitReader LLVMBitWriter -j 4 || true",
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 10

@@ -4,6 +4,7 @@
   "target_dir": "serenity",
   "secure_base_commit": "6075be9543bcdaf8a1fff80fcd27f7042c9a1251",
   "language": "c++",
+  "codeql_build_command": "cd /src/serenity && mkdir -p Build/lagom-codeql && cmake -G Ninja -B Build/lagom-codeql -S Meta/Lagom -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DBUILD_LAGOM=ON -DENABLE_FUZZERS_LIBFUZZER=OFF 2>&1 | tail -10 && cmake --build Build/lagom-codeql --target LibCore LibCrypto LibCompress LibTextCodec LibGfx -j 4 || true",
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 7

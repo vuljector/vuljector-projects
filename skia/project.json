@@ -4,6 +4,7 @@
   "target_dir": "skia",
   "secure_base_commit": "c84e8a86b13b47ef828c80bf79e3c7f32e9d36ff",
   "language": "c++",
+  "codeql_build_command": "cd /src/skia && (python3 tools/git-sync-deps 2>&1 | tail -5) && bin/gn gen /tmp/skia-codeql --args='is_debug=false cc=\"clang\" cxx=\"clang++\" target_cpu=\"x64\" skia_use_system_libpng=false skia_use_system_libwebp=false skia_use_system_zlib=false skia_use_system_freetype2=false skia_use_system_libjpeg_turbo=false skia_use_system_harfbuzz=false skia_use_system_icu=false skia_use_system_expat=false skia_enable_pdf=false skia_enable_skshaper=false' 2>&1 | tail -10 && ninja -C /tmp/skia-codeql skia -j 4 || true",
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 8
