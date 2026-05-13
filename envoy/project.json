@@ -4,6 +4,7 @@
   "target_dir": "envoy",
   "secure_base_commit": "ccb42a3545bd77cd01883074c9a9247b2dbbd0d3",
   "language": "c++",
+  "codeql_build_command": "mkdir -p /tmp/envoy-obj && cd /src/envoy && EXTRA=\"-Ibazel-envoy/external $(find -L bazel-envoy/external -maxdepth 1 -mindepth 1 2>/dev/null | sed 's|^|-I|' | tr '\\n' ' ') -Ibazel-envoy/external/boringssl/src/include -Ibazel-envoy/external/com_google_protobuf/src -Ibazel-envoy/external/com_github_grpc_grpc/include\" && find source/exe source/common source/server -maxdepth 5 -name '*.cc' 2>/dev/null | head -400 | xargs -P 4 -I FILE bash -c \"clang++ -c -std=c++20 -DABSL_INTERNAL_DISABLE_DEPRECATED_DECLARATION_ERROR -I . -I source -I include $EXTRA FILE -o /tmp/envoy-obj/\\$(basename FILE).o 2>/dev/null\" || true; ls /tmp/envoy-obj/ 2>/dev/null | wc -l || true",
   "unit_tests": {
     "enabled": true,
     "expected_passing_count": 8
