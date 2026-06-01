@@ -8,5 +8,6 @@
     "enabled": true,
     "expected_passing_count": 18
   },
-  "dockerhub_image": "vuljector/liblouis:setup"
+  "dockerhub_image": "vuljector/liblouis:setup",
+  "clean_build_command": "sed -i 's|find \\.\\./\\.\\. -name \"\\*\\.o\" -exec ar rcs fuzz_lib.a {} \\\\;|find ../.. -name \"*.o\" ! -path \"*/tools/*\" ! -path \"*/tests/*\" ! -path \"*/extra/*\" -exec ar rcs fuzz_lib.a {} \\\\;|' \"$SRC/liblouis/tests/fuzzing/build.sh\""
 }

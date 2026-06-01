@@ -8,5 +8,6 @@
     "enabled": true,
     "expected_passing_count": 254
   },
-  "dockerhub_image": "vuljector/libredwg:setup"
+  "dockerhub_image": "vuljector/libredwg:setup",
+  "build_timeout_seconds": 5400
 }

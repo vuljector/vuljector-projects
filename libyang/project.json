@@ -8,5 +8,6 @@
     "enabled": true,
     "expected_passing_count": 61
   },
-  "dockerhub_image": "vuljector/libyang:setup"
+  "dockerhub_image": "vuljector/libyang:setup",
+  "clean_build_command": "sed -i 's|^git checkout devel|true|' /src/build.sh; cd /src/libyang && git add -A && git -c user.email=v@x -c user.name=v commit -m vuljector-patch --allow-empty -q"
 }

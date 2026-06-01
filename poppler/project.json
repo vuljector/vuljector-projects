@@ -9,5 +9,6 @@
     "enabled": true,
     "expected_passing_count": 15
   },
-  "dockerhub_image": "vuljector/poppler:setup"
+  "dockerhub_image": "vuljector/poppler:setup",
+  "build_timeout_seconds": 5400
 }

@@ -8,5 +8,6 @@
     "enabled": true,
     "expected_passing_count": 88
   },
-  "dockerhub_image": "vuljector/unbound:setup"
+  "dockerhub_image": "vuljector/unbound:setup",
+  "clean_build_command": "sed -i '/^\\.\\//configure$/a sed -i \"s|#define HAVE_PTHREAD_SET_NAME_NP 1|\\\\/* #undef HAVE_PTHREAD_SET_NAME_NP *\\\\/|\" config.h' /src/build.sh"
 }

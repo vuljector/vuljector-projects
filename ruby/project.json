@@ -8,5 +8,6 @@
     "enabled": true,
     "expected_passing_count": 894
   },
-  "dockerhub_image": "vuljector/ruby:setup"
+  "dockerhub_image": "vuljector/ruby:setup",
+  "clean_build_command": "cd /src/ruby && git add -A && git -c user.email=v@x -c user.name=v commit -m vuljector-patch --allow-empty -q"
 }
