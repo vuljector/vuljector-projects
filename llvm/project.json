@@ -9,5 +9,6 @@
     "enabled": true,
     "expected_passing_count": 10
   },
-  "dockerhub_image": "vuljector/llvm:setup"
+  "dockerhub_image": "vuljector/llvm:setup",
+  "build_timeout_seconds": 5400
 }

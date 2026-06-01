@@ -8,5 +8,6 @@
     "enabled": true,
     "expected_passing_count": 113
   },
-  "dockerhub_image": "vuljector/zeek:setup"
+  "dockerhub_image": "vuljector/zeek:setup",
+  "clean_build_command": "sed -i 's/--disable-broker-tests$/--disable-broker-tests \\\\\n                --disable-cluster-backend-zeromq/' /src/build.sh"
 }

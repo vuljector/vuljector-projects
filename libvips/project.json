@@ -8,5 +8,6 @@
     "enabled": true,
     "expected_passing_count": 7
   },
-  "dockerhub_image": "vuljector/libvips:setup"
+  "dockerhub_image": "vuljector/libvips:setup",
+  "build_timeout_seconds": 5400
 }

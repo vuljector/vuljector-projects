@@ -8,5 +8,6 @@
     "enabled": true,
     "expected_passing_count": 5
   },
-  "dockerhub_image": "vuljector/cryptofuzz:setup"
+  "dockerhub_image": "vuljector/cryptofuzz:setup",
+  "clean_build_command": "rm -f /src/go-dev/src/cmd/dist/notgo124.go || true"
 }

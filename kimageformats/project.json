@@ -8,5 +8,6 @@
     "enabled": true,
     "expected_passing_count": 45
   },
-  "dockerhub_image": "vuljector/kimageformats:setup"
+  "dockerhub_image": "vuljector/kimageformats:setup",
+  "build_timeout_seconds": 5400
 }
