@@ -1,0 +1,12 @@
+(function() {
+  try {
+    // Force a huge value via to_digit
+    let s = "!".repeat(1000);
+    let n = Number(s);
+    
+    // Try to use this huge number in a way that triggers ASAN
+    // e.g., allocating a huge array or using it as an index
+    let arr = new Array(n);
+    arr[0] = 1;
+  } catch(e) {}
+})();
