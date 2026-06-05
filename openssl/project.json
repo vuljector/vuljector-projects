@@ -1,5 +1,6 @@
 {
   "project": "openssl",
+  "language": "c",
   "main_repo_url": "https://github.com/openssl/openssl",
   "target_dir": "openssl",
   "secure_base_commit": "4e65cd46e74792f77b5523c12c46365fd4835f63",
