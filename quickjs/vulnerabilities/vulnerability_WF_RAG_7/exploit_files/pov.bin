@@ -1,0 +1,11 @@
+for (let i = 0; i < 10000; i++) {
+  let name = "p" + i;
+  Object.defineProperty(globalThis, name, {
+    get: function() { return 1; },
+    configurable: true
+  });
+  Object.defineProperty(globalThis, name, {
+    value: 2,
+    configurable: true
+  });
+}

