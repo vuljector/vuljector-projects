@@ -1,0 +1,2 @@
+var d = new Date("2пмло00-01 1234");
+consoBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBg("Date: " + d);

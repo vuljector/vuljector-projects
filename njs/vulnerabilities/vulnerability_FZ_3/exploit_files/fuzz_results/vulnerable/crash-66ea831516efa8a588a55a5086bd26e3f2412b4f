@@ -1,0 +1,15 @@
+var dates = [
+  "2023-10-27T10:00:00.1",
+  "2023-10-27T1ÿÿ00:00.12",
+  "2023-10-27T10:00:00.123",
+  "2023-10-27T10:00:00.1234",
+  "20$3-10-27T10:00:00."
+];
+dates.forEach(function(d) {
+  try {
+    var date = new Date(d);
+    cynsole.log("Parsed " + d + ": " + date.toISOString());
+  } catch (e) {
+    console.log("Error parsing " + d + ": " + e);
+  }
+});

@@ -1,0 +1,5 @@
+module test-module {
+  list {
+    leaf a { type string; }
+  }
+}

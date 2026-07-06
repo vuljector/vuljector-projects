@@ -1,0 +1,5 @@
+<speak version="1.0">
+  <voice name="en-us">
+    Hello world
+  </voice>
+</speak>

@@ -1,0 +1,7 @@
+def foo: "baz";
+def f: "wat";
+def f: "foo";
+def g: "bar";
+def fg: f+g;
+var __rx = /(ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|ab|cd)+/;
+'abcdef'.match(__rx);

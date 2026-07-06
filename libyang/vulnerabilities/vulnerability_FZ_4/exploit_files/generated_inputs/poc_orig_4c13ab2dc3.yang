@@ -1,0 +1,14 @@
+module test-mod {
+  yang-version 1.1;
+  container c {};
+}
+
+module test-dev {
+  yang-version 1.1;
+  import test-mod {
+    bind test-mod;
+  }
+  deviation /test-mod:c {
+    deviation-type identity;
+  }
+}
