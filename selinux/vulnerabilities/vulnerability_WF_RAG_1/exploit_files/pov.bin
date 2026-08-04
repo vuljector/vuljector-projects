@@ -1,0 +1,2 @@
+class myclass (attr1)
+allow mydomain mydomain myclass myperm

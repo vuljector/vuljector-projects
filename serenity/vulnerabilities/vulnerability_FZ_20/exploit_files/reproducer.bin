@@ -1,0 +1,2 @@
+UTF-8|DATA|hello
+(function(){return 1+2;})();
