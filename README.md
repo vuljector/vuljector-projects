@@ -41,3 +41,9 @@ Real OSS-Fuzz C/C++ projects with injected, PoV-validated vulnerabilities, built
 ## Reproduce
 
 Pull `dockerhub_image` (or build `setup/`), check out `secure_base_commit`, apply `inject_vulnerability.diff`, rebuild, and run `exploit_files/exploit.sh`: the sanitizer fires on the vulnerable build and stays silent on the secure build.
+
+## Related
+
+- Teacher trajectories used for SFT: [cyberforge-teacher-traj-gemma4-31b](https://huggingface.co/datasets/AmL-hug/cyberforge-teacher-traj-gemma4-31b) and [cyberforge-teacher-traj-gpt-5.4-mini](https://huggingface.co/datasets/AmL-hug/cyberforge-teacher-traj-gpt-5.4-mini)
+- Framework: [CyberForge](https://github.com/vuljector/CyberForge)
+- This dataset on Hugging Face: [cyberforge-projects](https://huggingface.co/datasets/AmL-hug/cyberforge-projects)
